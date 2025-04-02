@@ -1,0 +1,170 @@
+***************************************************************************************
+*                      PROJECT ARCHIVE SUMMARY REPORT
+*
+*                      (archive_project_summary.txt)
+*
+*  PLEASE READ THIS REPORT TO GET THE DETAILED INFORMATION ABOUT THE PROJECT DATA THAT
+*  WAS ARCHIVED FOR THE CURRENT PROJECT
+*
+* The report is divided into following five sections:-
+*
+* Section (1) - PROJECT INFORMATION
+*  This section provides the details of the current project that was archived
+*
+* Section (2) - INCLUDED/EXCLUDED RUNS
+*  This section summarizes the list of design runs for which the results were included
+*  or excluded from the archive
+*
+* Section (3) - ARCHIVED SOURCES
+*  This section summarizes the list of files that were added to the archive
+*
+* Section (3.1) - INCLUDE FILES
+*  This section summarizes the list of 'include' files that were added to the archive
+*
+* Section (3.1.1) - INCLUDE_DIRS SETTINGS
+*  This section summarizes the 'verilog include directory' path settings, if any
+*
+* Section (3.2) - REMOTE SOURCES
+*  This section summarizes the list of referenced 'remote' files that were 'imported'
+*  into the archived project
+*
+* Section (3.3) - SOURCES SUMMARY
+*  This section summarizes the list of all the files present in the archive
+*
+* Section (3.4) - REMOTE IP DEFINITIONS
+*  This section summarizes the list of all the remote IP's present in the archive
+*
+* Section (4) - JOURNAL/LOG FILES
+*  This section summarizes the list of journal/log files that were added to the archive
+*
+* Section (5) - CONFIGURATION SETTINGS/FILES
+*  This section summarizes the configuration settings/files that were added to the archive
+*
+***************************************************************************************
+
+Section (1) - PROJECT INFORMATION
+---------------------------------
+Name      = seg_mem_integration
+Directory = C:/Users/Administrator/Desktop/dense_layers_correct_fix_pt_weights/seg_mem_integration
+
+WARNING: Please verify the compiled library directory path for the following property in the
+         current project. The path may point to an invalid location after opening this project.
+         This could happen if the project was unarchived in a location where this path is not
+         accessible. To resolve this issue, please set this property with the desired path
+         before launching simulation:-
+
+Property = compxlib.xsim_compiled_library_dir
+Path     = 
+
+Section (2) - INCLUDED RUNS
+---------------------------
+The run results were included for the following runs in the archived project:-
+
+<synth_1>
+<impl_1>
+
+Section (3) - ARCHIVED SOURCES
+------------------------------
+The following sub-sections describes the list of sources that were archived for the current project:-
+
+Section (3.1) - INCLUDE FILES
+-----------------------------
+List of referenced 'RTL Include' files that were 'imported' into the archived project:-
+
+None
+
+Section (3.1.1) - INCLUDE_DIRS SETTINGS
+---------------------------------------
+List of the "INCLUDE_DIRS" fileset property settings that may or may not be applicable in the archived
+project, since most the 'RTL Include' files referenced in the original project were 'imported' into the
+archived project.
+
+<sources_1> fileset RTL include directory paths (INCLUDE_DIRS):-
+None
+
+<sim_1> fileset RTL include directory paths (INCLUDE_DIRS):-
+None
+
+Section (3.2) - REMOTE SOURCES
+------------------------------
+List of referenced 'remote' design files that were 'imported' into the archived project:-
+
+<constrs_1>
+None
+
+<sim_1>
+None
+
+<sources_1>
+C:/Users/Administrator/Desktop/dense_layers_correct_fix_pt_weights/seg_mem_integration/archive_project_summary.txt
+
+<utils_1>
+None
+
+Section (3.3) - SOURCES SUMMARY
+-------------------------------
+List of all the source files present in the archived project:-
+
+<sources_1>
+./seg_mem_integration.srcs/sources_1/new/cnn_interface.v
+./seg_mem_integration.srcs/sources_1/new/debouncer.v
+./seg_mem_integration.srcs/sources_1/new/maxpooling.v
+./seg_mem_integration.srcs/sources_1/new/mem_control.v
+./seg_mem_integration.srcs/sources_1/new/padding_zeros.v
+./seg_mem_integration.srcs/sources_1/new/rescaling.v
+./seg_mem_integration.srcs/sources_1/new/segmentation.v
+./seg_mem_integration.srcs/sources_1/new/size_trim.v
+./seg_mem_integration.srcs/sources_1/new/vga_driver.v
+./seg_mem_integration.srcs/sources_1/new/vga_top.v
+./seg_mem_integration.srcs/sources_1/new/CNN_pixel.sv
+./seg_mem_integration.srcs/sources_1/new/dense_layer_1.sv
+./seg_mem_integration.srcs/sources_1/new/dense_layer_2.sv
+./seg_mem_integration.srcs/sources_1/new/top.v
+./seg_mem_integration.srcs/sources_1/imports/Desktop/640_output.mem
+./seg_mem_integration.srcs/sources_1/imports/seg_mem_integration/archive_project_summary.txt
+
+<constrs_1>
+None
+
+<sim_1>
+./seg_mem_integration.srcs/sim_1/new/test_1.v
+./seg_mem_integration.srcs/sim_1/imports/Desktop/640_output.mem
+./seg_mem_integration.srcs/sim_1/imports/Desktop/seg_mem_integration/vga_top_tb_behav.wcfg
+./seg_mem_integration.srcs/sim_1/imports/v3/weights_ones_L1.mem
+./seg_mem_integration.srcs/sim_1/imports/v3/biases_L1.mem
+./seg_mem_integration.srcs/sim_1/imports/v3/weights_L1.mem
+./seg_mem_integration.srcs/sim_1/imports/v3/weights_ones_L2.mem
+./seg_mem_integration.srcs/sim_1/imports/v3/biases_L2.mem
+./seg_mem_integration.srcs/sim_1/imports/v3/weights_L2.mem
+./seg_mem_integration.srcs/sim_1/imports/real_weights_biases/dense_1_biases_dec.mem
+./seg_mem_integration.srcs/sim_1/imports/real_weights_biases/dense_biases_dec.mem
+./seg_mem_integration.srcs/sim_1/imports/real_weights_biases/dense_weights_dec.mem
+./seg_mem_integration.srcs/sim_1/imports/real_weights_biases/dense_1_weights_dec.mem
+
+<utils_1>
+None
+
+Section (3.4) - REMOTE IP DEFINITIONS
+-------------------------------------
+List of all the remote IP's present in the archived project:-
+
+<sources_1>
+None
+
+None
+
+Section (4) - JOURNAL/LOG FILES
+-------------------------------
+List of Journal/Log files that were added to the archived project:-
+
+Source File = C:/Users/Administrator/AppData/Roaming/Xilinx/Vivado/vivado.jou
+Archived Location = ./seg_mem_integration/vivado.jou
+
+Source File = C:/Users/Administrator/AppData/Roaming/Xilinx/Vivado/vivado.log
+Archived Location = ./seg_mem_integration/vivado.log
+
+Section (5) - CONFIGURATION SETTINGS/FILES
+------------------------------------------
+List of configuration settings/files that were added to the archived project:-
+
+

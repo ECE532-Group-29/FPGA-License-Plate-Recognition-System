@@ -1,0 +1,644 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="vga_top_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="vga_top_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="2952129000000fs"></ZoomStartTime>
+      <ZoomEndTime time="2955087000001fs"></ZoomEndTime>
+      <Cursor1Time time="2953815000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="280"></NameColumnWidth>
+      <ValueColumnWidth column_width="90"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="148" />
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/padding_bram_to_conv1/i_clk" type="logic">
+      <obj_property name="ElementShortName">i_clk</obj_property>
+      <obj_property name="ObjectShortName">i_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/padding_bram_to_conv1/i_rstn" type="logic">
+      <obj_property name="ElementShortName">i_rstn</obj_property>
+      <obj_property name="ObjectShortName">i_rstn</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/padding_bram_to_conv1/i_en" type="logic">
+      <obj_property name="ElementShortName">i_en</obj_property>
+      <obj_property name="ObjectShortName">i_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/padding_bram_to_conv1/i_pix_data" type="array">
+      <obj_property name="ElementShortName">i_pix_data[14:0]</obj_property>
+      <obj_property name="ObjectShortName">i_pix_data[14:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/padding_bram_to_conv1/i_pix_addr" type="array">
+      <obj_property name="ElementShortName">i_pix_addr[9:0]</obj_property>
+      <obj_property name="ObjectShortName">i_pix_addr[9:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/padding_bram_to_conv1/o_valid" type="logic">
+      <obj_property name="ElementShortName">o_valid</obj_property>
+      <obj_property name="ObjectShortName">o_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/padding_bram_to_conv1/o_ready" type="logic">
+      <obj_property name="ElementShortName">o_ready</obj_property>
+      <obj_property name="ObjectShortName">o_ready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/padding_bram_to_conv1/o_pix_data" type="array">
+      <obj_property name="ElementShortName">o_pix_data[14:0]</obj_property>
+      <obj_property name="ObjectShortName">o_pix_data[14:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/padding_bram_to_conv1/padded_image" type="array">
+      <obj_property name="ElementShortName">padded_image[0:899][14:0]</obj_property>
+      <obj_property name="ObjectShortName">padded_image[0:899][14:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/padding_bram_to_conv1/counter" type="array">
+      <obj_property name="ElementShortName">counter[9:0]</obj_property>
+      <obj_property name="ObjectShortName">counter[9:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/padding_bram_to_conv1/counter_padded" type="array">
+      <obj_property name="ElementShortName">counter_padded[9:0]</obj_property>
+      <obj_property name="ObjectShortName">counter_padded[9:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/padding_bram_to_conv1/capture_done_flag" type="logic">
+      <obj_property name="ElementShortName">capture_done_flag</obj_property>
+      <obj_property name="ObjectShortName">capture_done_flag</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/padding_bram_to_conv1/w_valid" type="logic">
+      <obj_property name="ElementShortName">w_valid</obj_property>
+      <obj_property name="ObjectShortName">w_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/padding_bram_to_conv1/w_ready" type="logic">
+      <obj_property name="ElementShortName">w_ready</obj_property>
+      <obj_property name="ObjectShortName">w_ready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/padding_bram_to_conv1/w_pix_data" type="array">
+      <obj_property name="ElementShortName">w_pix_data[14:0]</obj_property>
+      <obj_property name="ObjectShortName">w_pix_data[14:0]</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider4004">
+      <obj_property name="label">conv1</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/conv_layer_1/i_valid" type="logic">
+      <obj_property name="ElementShortName">i_valid</obj_property>
+      <obj_property name="ObjectShortName">i_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/conv_layer_1/i_ready" type="logic">
+      <obj_property name="ElementShortName">i_ready</obj_property>
+      <obj_property name="ObjectShortName">i_ready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/conv_layer_1/i_x" type="array">
+      <obj_property name="ElementShortName">i_x[14:0]</obj_property>
+      <obj_property name="ObjectShortName">i_x[14:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/conv_layer_1/kernal_filter" type="array">
+      <obj_property name="ElementShortName">kernal_filter[143:0]</obj_property>
+      <obj_property name="ObjectShortName">kernal_filter[143:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/conv_layer_1/bias" type="array">
+      <obj_property name="ElementShortName">bias[15:0]</obj_property>
+      <obj_property name="ObjectShortName">bias[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/conv_layer_1/o_valid" type="logic">
+      <obj_property name="ElementShortName">o_valid</obj_property>
+      <obj_property name="ObjectShortName">o_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/conv_layer_1/o_ready" type="logic">
+      <obj_property name="ElementShortName">o_ready</obj_property>
+      <obj_property name="ObjectShortName">o_ready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/conv_layer_1/pix_count" type="array">
+      <obj_property name="ElementShortName">pix_count[9:0]</obj_property>
+      <obj_property name="ObjectShortName">pix_count[9:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/conv_layer_1/o_conv_data_addr" type="array">
+      <obj_property name="ElementShortName">o_conv_data_addr[9:0]</obj_property>
+      <obj_property name="ObjectShortName">o_conv_data_addr[9:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/conv_layer_1/o_y" type="array">
+      <obj_property name="ElementShortName">o_y[14:0]</obj_property>
+      <obj_property name="ObjectShortName">o_y[14:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/conv_layer_1/i_bias_reg" type="array">
+      <obj_property name="ElementShortName">i_bias_reg[15:0]</obj_property>
+      <obj_property name="ObjectShortName">i_bias_reg[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/conv_layer_1/i_bias_32" type="array">
+      <obj_property name="ElementShortName">i_bias_32[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i_bias_32[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/conv_layer_1/r_f" type="array">
+      <obj_property name="ElementShortName">r_f[2:0][2:0][15:0]</obj_property>
+      <obj_property name="ObjectShortName">r_f[2:0][2:0][15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/conv_layer_1/col" type="array">
+      <obj_property name="ElementShortName">col[31:0]</obj_property>
+      <obj_property name="ObjectShortName">col[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/conv_layer_1/row" type="array">
+      <obj_property name="ElementShortName">row[31:0]</obj_property>
+      <obj_property name="ObjectShortName">row[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/conv_layer_1/FIFO" type="array">
+      <obj_property name="ElementShortName">FIFO[0:62][15:0]</obj_property>
+      <obj_property name="ObjectShortName">FIFO[0:62][15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/conv_layer_1/data_valid" type="array">
+      <obj_property name="ElementShortName">data_valid[0:62]</obj_property>
+      <obj_property name="ObjectShortName">data_valid[0:62]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/conv_layer_1/mult_out" type="array">
+      <obj_property name="ElementShortName">mult_out[0:8][31:0]</obj_property>
+      <obj_property name="ObjectShortName">mult_out[0:8][31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/conv_layer_1/data_valid_mult" type="logic">
+      <obj_property name="ElementShortName">data_valid_mult</obj_property>
+      <obj_property name="ObjectShortName">data_valid_mult</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/conv_layer_1/reg_stage_1_out" type="array">
+      <obj_property name="ElementShortName">reg_stage_1_out[0:3][31:0]</obj_property>
+      <obj_property name="ObjectShortName">reg_stage_1_out[0:3][31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/conv_layer_1/reg_stage_2_out" type="array">
+      <obj_property name="ElementShortName">reg_stage_2_out[0:1][31:0]</obj_property>
+      <obj_property name="ObjectShortName">reg_stage_2_out[0:1][31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/conv_layer_1/reg_stage_3_out" type="array">
+      <obj_property name="ElementShortName">reg_stage_3_out[31:0]</obj_property>
+      <obj_property name="ObjectShortName">reg_stage_3_out[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/conv_layer_1/reg_stage_4_out" type="array">
+      <obj_property name="ElementShortName">reg_stage_4_out[31:0]</obj_property>
+      <obj_property name="ObjectShortName">reg_stage_4_out[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/conv_layer_1/mult_out_pl" type="array">
+      <obj_property name="ElementShortName">mult_out_pl[0:8][31:0]</obj_property>
+      <obj_property name="ObjectShortName">mult_out_pl[0:8][31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/conv_layer_1/data_valid_mult_pl" type="logic">
+      <obj_property name="ElementShortName">data_valid_mult_pl</obj_property>
+      <obj_property name="ObjectShortName">data_valid_mult_pl</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/conv_layer_1/reg_stage_1_out_pl" type="array">
+      <obj_property name="ElementShortName">reg_stage_1_out_pl[0:4][31:0]</obj_property>
+      <obj_property name="ObjectShortName">reg_stage_1_out_pl[0:4][31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/conv_layer_1/data_valid_reg_stage_1_pl" type="logic">
+      <obj_property name="ElementShortName">data_valid_reg_stage_1_pl</obj_property>
+      <obj_property name="ObjectShortName">data_valid_reg_stage_1_pl</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/conv_layer_1/reg_stage_2_out_pl" type="array">
+      <obj_property name="ElementShortName">reg_stage_2_out_pl[0:2][31:0]</obj_property>
+      <obj_property name="ObjectShortName">reg_stage_2_out_pl[0:2][31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/conv_layer_1/data_valid_reg_stage_2_pl" type="logic">
+      <obj_property name="ElementShortName">data_valid_reg_stage_2_pl</obj_property>
+      <obj_property name="ObjectShortName">data_valid_reg_stage_2_pl</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/conv_layer_1/reg_stage_3_out_pl" type="array">
+      <obj_property name="ElementShortName">reg_stage_3_out_pl[0:1][31:0]</obj_property>
+      <obj_property name="ObjectShortName">reg_stage_3_out_pl[0:1][31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/conv_layer_1/data_valid_reg_stage_3_pl" type="logic">
+      <obj_property name="ElementShortName">data_valid_reg_stage_3_pl</obj_property>
+      <obj_property name="ObjectShortName">data_valid_reg_stage_3_pl</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/conv_layer_1/reg_stage_4_out_pl" type="array">
+      <obj_property name="ElementShortName">reg_stage_4_out_pl[14:0]</obj_property>
+      <obj_property name="ObjectShortName">reg_stage_4_out_pl[14:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/conv_layer_1/data_valid_reg_stage_4_pl" type="logic">
+      <obj_property name="ElementShortName">data_valid_reg_stage_4_pl</obj_property>
+      <obj_property name="ObjectShortName">data_valid_reg_stage_4_pl</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/conv_layer_1/count" type="array">
+      <obj_property name="ElementShortName">count[15:0]</obj_property>
+      <obj_property name="ObjectShortName">count[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/conv_layer_1/enable" type="logic">
+      <obj_property name="ElementShortName">enable</obj_property>
+      <obj_property name="ObjectShortName">enable</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/conv_layer_1/i" type="array">
+      <obj_property name="ElementShortName">i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/conv_layer_1/r_conv_data_addr" type="array">
+      <obj_property name="ElementShortName">r_conv_data_addr[9:0]</obj_property>
+      <obj_property name="ObjectShortName">r_conv_data_addr[9:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/conv_layer_1/input_L1_conv_image" type="array">
+      <obj_property name="ElementShortName">input_L1_conv_image[0:783][14:0]</obj_property>
+      <obj_property name="ObjectShortName">input_L1_conv_image[0:783][14:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/conv_layer_1/output_L1_conv_image" type="array">
+      <obj_property name="ElementShortName">output_L1_conv_image[0:783][14:0]</obj_property>
+      <obj_property name="ObjectShortName">output_L1_conv_image[0:783][14:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/conv_layer_1/dummy_conv_input_data_addr" type="array">
+      <obj_property name="ElementShortName">dummy_conv_input_data_addr[9:0]</obj_property>
+      <obj_property name="ObjectShortName">dummy_conv_input_data_addr[9:0]</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider1490">
+      <obj_property name="label">maxp3</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/maxpooling_L3/i_clk" type="logic">
+      <obj_property name="ElementShortName">i_clk</obj_property>
+      <obj_property name="ObjectShortName">i_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/maxpooling_L3/i_rstn" type="logic">
+      <obj_property name="ElementShortName">i_rstn</obj_property>
+      <obj_property name="ObjectShortName">i_rstn</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/maxpooling_L3/i_large_image_data" type="array">
+      <obj_property name="ElementShortName">i_large_image_data[14:0]</obj_property>
+      <obj_property name="ObjectShortName">i_large_image_data[14:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/maxpooling_L3/i_large_image_data_valid" type="logic">
+      <obj_property name="ElementShortName">i_large_image_data_valid</obj_property>
+      <obj_property name="ObjectShortName">i_large_image_data_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/maxpooling_L3/i_large_image_addr" type="array">
+      <obj_property name="ElementShortName">i_large_image_addr[5:0]</obj_property>
+      <obj_property name="ObjectShortName">i_large_image_addr[5:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/maxpooling_L3/o_small_image_data" type="array">
+      <obj_property name="ElementShortName">o_small_image_data[14:0]</obj_property>
+      <obj_property name="ObjectShortName">o_small_image_data[14:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/maxpooling_L3/o_small_image_data_valid" type="logic">
+      <obj_property name="ElementShortName">o_small_image_data_valid</obj_property>
+      <obj_property name="ObjectShortName">o_small_image_data_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/maxpooling_L3/o_small_image_addr" type="array">
+      <obj_property name="ElementShortName">o_small_image_addr[3:0]</obj_property>
+      <obj_property name="ObjectShortName">o_small_image_addr[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/maxpooling_L3/o_small_image_read_addr" type="array">
+      <obj_property name="ElementShortName">o_small_image_read_addr[3:0]</obj_property>
+      <obj_property name="ObjectShortName">o_small_image_read_addr[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/maxpooling_L3/o_small_image_data_ready" type="logic">
+      <obj_property name="ElementShortName">o_small_image_data_ready</obj_property>
+      <obj_property name="ObjectShortName">o_small_image_data_ready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/maxpooling_L3/small_image_addr" type="array">
+      <obj_property name="ElementShortName">small_image_addr[3:0]</obj_property>
+      <obj_property name="ObjectShortName">small_image_addr[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/maxpooling_L3/small_image_read_addr" type="array">
+      <obj_property name="ElementShortName">small_image_read_addr[3:0]</obj_property>
+      <obj_property name="ObjectShortName">small_image_read_addr[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/maxpooling_L3/small_image_data" type="array">
+      <obj_property name="ElementShortName">small_image_data[14:0]</obj_property>
+      <obj_property name="ObjectShortName">small_image_data[14:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/maxpooling_L3/small_image_data_valid" type="logic">
+      <obj_property name="ElementShortName">small_image_data_valid</obj_property>
+      <obj_property name="ObjectShortName">small_image_data_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/maxpooling_L3/small_image_data_ready" type="logic">
+      <obj_property name="ElementShortName">small_image_data_ready</obj_property>
+      <obj_property name="ObjectShortName">small_image_data_ready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/maxpooling_L3/i" type="array">
+      <obj_property name="ElementShortName">i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/maxpooling_L3/FIFO" type="array">
+      <obj_property name="ElementShortName">FIFO[0:7][14:0]</obj_property>
+      <obj_property name="ObjectShortName">FIFO[0:7][14:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/maxpooling_L3/small_addr_reset" type="logic">
+      <obj_property name="ElementShortName">small_addr_reset</obj_property>
+      <obj_property name="ObjectShortName">small_addr_reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/maxpooling_L3/read_bram_done" type="logic">
+      <obj_property name="ElementShortName">read_bram_done</obj_property>
+      <obj_property name="ObjectShortName">read_bram_done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/maxpooling_L3/fix_timing_glitch" type="logic">
+      <obj_property name="ElementShortName">fix_timing_glitch</obj_property>
+      <obj_property name="ObjectShortName">fix_timing_glitch</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/maxpooling_L3/maxp_out_image" type="array">
+      <obj_property name="ElementShortName">maxp_out_image[0:8][14:0]</obj_property>
+      <obj_property name="ObjectShortName">maxp_out_image[0:8][14:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/maxpooling_L3/input_image" type="array">
+      <obj_property name="ElementShortName">input_image[0:35][14:0]</obj_property>
+      <obj_property name="ObjectShortName">input_image[0:35][14:0]</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider1217">
+      <obj_property name="label">dense1</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/dense_L1/i_clk" type="logic">
+      <obj_property name="ElementShortName">i_clk</obj_property>
+      <obj_property name="ObjectShortName">i_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/dense_L1/i_rstn" type="logic">
+      <obj_property name="ElementShortName">i_rstn</obj_property>
+      <obj_property name="ObjectShortName">i_rstn</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/dense_L1/i_data" type="array">
+      <obj_property name="ElementShortName">i_data[14:0]</obj_property>
+      <obj_property name="ObjectShortName">i_data[14:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">UNSIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">10</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/dense_L1/i_addr" type="array">
+      <obj_property name="ElementShortName">i_addr[3:0]</obj_property>
+      <obj_property name="ObjectShortName">i_addr[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/dense_L1/i_valid" type="logic">
+      <obj_property name="ElementShortName">i_valid</obj_property>
+      <obj_property name="ObjectShortName">i_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/dense_L1/o_valid" type="logic">
+      <obj_property name="ElementShortName">o_valid</obj_property>
+      <obj_property name="ObjectShortName">o_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/dense_L1/o_addr" type="array">
+      <obj_property name="ElementShortName">o_addr[4:0]</obj_property>
+      <obj_property name="ObjectShortName">o_addr[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/dense_L1/o_data" type="array">
+      <obj_property name="ElementShortName">o_data[14:0]</obj_property>
+      <obj_property name="ObjectShortName">o_data[14:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/dense_L1/input_matrix" type="array">
+      <obj_property name="ElementShortName">input_matrix[8:0][15:0]</obj_property>
+      <obj_property name="ObjectShortName">input_matrix[8:0][15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/dense_L1/counter_input" type="array">
+      <obj_property name="ElementShortName">counter_input[3:0]</obj_property>
+      <obj_property name="ObjectShortName">counter_input[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/dense_L1/counter_output" type="array">
+      <obj_property name="ElementShortName">counter_output[4:0]</obj_property>
+      <obj_property name="ObjectShortName">counter_output[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/dense_L1/capture_done_flag" type="logic">
+      <obj_property name="ElementShortName">capture_done_flag</obj_property>
+      <obj_property name="ObjectShortName">capture_done_flag</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/dense_L1/mult_done_flag" type="logic">
+      <obj_property name="ElementShortName">mult_done_flag</obj_property>
+      <obj_property name="ObjectShortName">mult_done_flag</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/dense_L1/sum_done_flag" type="logic">
+      <obj_property name="ElementShortName">sum_done_flag</obj_property>
+      <obj_property name="ObjectShortName">sum_done_flag</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/dense_L1/r_valid" type="logic">
+      <obj_property name="ElementShortName">r_valid</obj_property>
+      <obj_property name="ObjectShortName">r_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/dense_L1/r_addr" type="array">
+      <obj_property name="ElementShortName">r_addr[4:0]</obj_property>
+      <obj_property name="ObjectShortName">r_addr[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/dense_L1/r_data" type="array">
+      <obj_property name="ElementShortName">r_data[14:0]</obj_property>
+      <obj_property name="ObjectShortName">r_data[14:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/dense_L1/weight_matrix" type="array">
+      <obj_property name="ElementShortName">weight_matrix[0:161][15:0]</obj_property>
+      <obj_property name="ObjectShortName">weight_matrix[0:161][15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/dense_L1/mult_matrix" type="array">
+      <obj_property name="ElementShortName">mult_matrix[161:0][31:0]</obj_property>
+      <obj_property name="ObjectShortName">mult_matrix[161:0][31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/dense_L1/result_matrix" type="array">
+      <obj_property name="ElementShortName">result_matrix[17:0][31:0]</obj_property>
+      <obj_property name="ObjectShortName">result_matrix[17:0][31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/dense_L1/bias_matrix" type="array">
+      <obj_property name="ElementShortName">bias_matrix[0:17][15:0]</obj_property>
+      <obj_property name="ObjectShortName">bias_matrix[0:17][15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/dense_L1/bias_matrix_32" type="array">
+      <obj_property name="ElementShortName">bias_matrix_32[0:17][31:0]</obj_property>
+      <obj_property name="ObjectShortName">bias_matrix_32[0:17][31:0]</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider1218">
+      <obj_property name="label">dense2</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/dense_L2/i_clk" type="logic">
+      <obj_property name="ElementShortName">i_clk</obj_property>
+      <obj_property name="ObjectShortName">i_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/dense_L2/i_rstn" type="logic">
+      <obj_property name="ElementShortName">i_rstn</obj_property>
+      <obj_property name="ObjectShortName">i_rstn</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/dense_L2/i_data" type="array">
+      <obj_property name="ElementShortName">i_data[14:0]</obj_property>
+      <obj_property name="ObjectShortName">i_data[14:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/dense_L2/i_addr" type="array">
+      <obj_property name="ElementShortName">i_addr[4:0]</obj_property>
+      <obj_property name="ObjectShortName">i_addr[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/dense_L2/i_valid" type="logic">
+      <obj_property name="ElementShortName">i_valid</obj_property>
+      <obj_property name="ObjectShortName">i_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/dense_L2/o_valid" type="logic">
+      <obj_property name="ElementShortName">o_valid</obj_property>
+      <obj_property name="ObjectShortName">o_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/dense_L2/o_index1" type="array">
+      <obj_property name="ElementShortName">o_index1[7:0]</obj_property>
+      <obj_property name="ObjectShortName">o_index1[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/dense_L2/o_index2" type="array">
+      <obj_property name="ElementShortName">o_index2[7:0]</obj_property>
+      <obj_property name="ObjectShortName">o_index2[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/dense_L2/o_index3" type="array">
+      <obj_property name="ElementShortName">o_index3[7:0]</obj_property>
+      <obj_property name="ObjectShortName">o_index3[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/dense_L2/input_matrix" type="array">
+      <obj_property name="ElementShortName">input_matrix[17:0][15:0]</obj_property>
+      <obj_property name="ObjectShortName">input_matrix[17:0][15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/dense_L2/counter_input" type="array">
+      <obj_property name="ElementShortName">counter_input[4:0]</obj_property>
+      <obj_property name="ObjectShortName">counter_input[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/dense_L2/capture_done_flag" type="logic">
+      <obj_property name="ElementShortName">capture_done_flag</obj_property>
+      <obj_property name="ObjectShortName">capture_done_flag</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/dense_L2/mult1_flag" type="logic">
+      <obj_property name="ElementShortName">mult1_flag</obj_property>
+      <obj_property name="ObjectShortName">mult1_flag</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/dense_L2/mult2_flag" type="logic">
+      <obj_property name="ElementShortName">mult2_flag</obj_property>
+      <obj_property name="ObjectShortName">mult2_flag</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/dense_L2/mult3_flag" type="logic">
+      <obj_property name="ElementShortName">mult3_flag</obj_property>
+      <obj_property name="ObjectShortName">mult3_flag</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/dense_L2/mult4_flag" type="logic">
+      <obj_property name="ElementShortName">mult4_flag</obj_property>
+      <obj_property name="ObjectShortName">mult4_flag</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/dense_L2/mult5_flag" type="logic">
+      <obj_property name="ElementShortName">mult5_flag</obj_property>
+      <obj_property name="ObjectShortName">mult5_flag</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/dense_L2/mult_done_flag" type="logic">
+      <obj_property name="ElementShortName">mult_done_flag</obj_property>
+      <obj_property name="ObjectShortName">mult_done_flag</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/dense_L2/sum1_flag" type="logic">
+      <obj_property name="ElementShortName">sum1_flag</obj_property>
+      <obj_property name="ObjectShortName">sum1_flag</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/dense_L2/sum2_flag" type="logic">
+      <obj_property name="ElementShortName">sum2_flag</obj_property>
+      <obj_property name="ObjectShortName">sum2_flag</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/dense_L2/sum3_flag" type="logic">
+      <obj_property name="ElementShortName">sum3_flag</obj_property>
+      <obj_property name="ObjectShortName">sum3_flag</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/dense_L2/sum4_flag" type="logic">
+      <obj_property name="ElementShortName">sum4_flag</obj_property>
+      <obj_property name="ObjectShortName">sum4_flag</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/dense_L2/sum5_flag" type="logic">
+      <obj_property name="ElementShortName">sum5_flag</obj_property>
+      <obj_property name="ObjectShortName">sum5_flag</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/dense_L2/sum_done_flag" type="logic">
+      <obj_property name="ElementShortName">sum_done_flag</obj_property>
+      <obj_property name="ObjectShortName">sum_done_flag</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/dense_L2/r_valid" type="logic">
+      <obj_property name="ElementShortName">r_valid</obj_property>
+      <obj_property name="ObjectShortName">r_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/dense_L2/r_index1" type="array">
+      <obj_property name="ElementShortName">r_index1[7:0]</obj_property>
+      <obj_property name="ObjectShortName">r_index1[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="radix_realType">UNSIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">10</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/dense_L2/r_index2" type="array">
+      <obj_property name="ElementShortName">r_index2[7:0]</obj_property>
+      <obj_property name="ObjectShortName">r_index2[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="radix_realType">UNSIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">10</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/dense_L2/r_index3" type="array">
+      <obj_property name="ElementShortName">r_index3[7:0]</obj_property>
+      <obj_property name="ObjectShortName">r_index3[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="radix_realType">UNSIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">10</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/dense_L2/r_max1" type="array">
+      <obj_property name="ElementShortName">r_max1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">r_max1[31:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">20</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/dense_L2/r_max2" type="array">
+      <obj_property name="ElementShortName">r_max2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">r_max2[31:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">20</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/dense_L2/r_max3" type="array">
+      <obj_property name="ElementShortName">r_max3[31:0]</obj_property>
+      <obj_property name="ObjectShortName">r_max3[31:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">20</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/dense_L2/weight_matrix" type="array">
+      <obj_property name="ElementShortName">weight_matrix[0:107][15:0]</obj_property>
+      <obj_property name="ObjectShortName">weight_matrix[0:107][15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/dense_L2/mult_matrix" type="array">
+      <obj_property name="ElementShortName">mult_matrix[107:0][31:0]</obj_property>
+      <obj_property name="ObjectShortName">mult_matrix[107:0][31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/dense_L2/bias_matrix" type="array">
+      <obj_property name="ElementShortName">bias_matrix[0:35][15:0]</obj_property>
+      <obj_property name="ObjectShortName">bias_matrix[0:35][15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/dense_L2/bias_matrix_32" type="array">
+      <obj_property name="ElementShortName">bias_matrix_32[0:35][31:0]</obj_property>
+      <obj_property name="ObjectShortName">bias_matrix_32[0:35][31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/dense_L2/result_matrix" type="array">
+      <obj_property name="ElementShortName">result_matrix[35:0][31:0]</obj_property>
+      <obj_property name="ObjectShortName">result_matrix[35:0][31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/dense_L2/i" type="array">
+      <obj_property name="ElementShortName">i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/dense_L2/j" type="array">
+      <obj_property name="ElementShortName">j[31:0]</obj_property>
+      <obj_property name="ObjectShortName">j[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/dense_L2/k" type="array">
+      <obj_property name="ElementShortName">k[31:0]</obj_property>
+      <obj_property name="ObjectShortName">k[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/dense_L2/l" type="array">
+      <obj_property name="ElementShortName">l[31:0]</obj_property>
+      <obj_property name="ObjectShortName">l[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/dense_L2/a" type="array">
+      <obj_property name="ElementShortName">a[31:0]</obj_property>
+      <obj_property name="ObjectShortName">a[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/dense_L2/b" type="array">
+      <obj_property name="ElementShortName">b[31:0]</obj_property>
+      <obj_property name="ObjectShortName">b[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/dense_L2/L1_dense_output_file_mem" type="array">
+      <obj_property name="ElementShortName">L1_dense_output_file_mem[31:0]</obj_property>
+      <obj_property name="ObjectShortName">L1_dense_output_file_mem[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/dense_L2/L2_dense_output_file_mem" type="array">
+      <obj_property name="ElementShortName">L2_dense_output_file_mem[31:0]</obj_property>
+      <obj_property name="ObjectShortName">L2_dense_output_file_mem[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_top_tb/uut/cnn_interface/conv_layer_1/pix_count" type="array">
+      <obj_property name="ElementShortName">pix_count[9:0]</obj_property>
+      <obj_property name="ObjectShortName">pix_count[9:0]</obj_property>
+   </wvobject>
+</wave_config>

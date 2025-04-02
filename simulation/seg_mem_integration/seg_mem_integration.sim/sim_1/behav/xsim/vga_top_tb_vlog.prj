@@ -1,0 +1,27 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../seg_mem_integration.srcs/sources_1/new/cnn_interface.v" \
+"../../../../seg_mem_integration.srcs/sources_1/new/debouncer.v" \
+"../../../../seg_mem_integration.srcs/sources_1/new/maxpooling.v" \
+"../../../../seg_mem_integration.srcs/sources_1/new/mem_control.v" \
+"../../../../seg_mem_integration.srcs/sources_1/new/padding_zeros.v" \
+"../../../../seg_mem_integration.srcs/sources_1/new/rescaling.v" \
+"../../../../seg_mem_integration.srcs/sources_1/new/segmentation.v" \
+"../../../../seg_mem_integration.srcs/sources_1/new/size_trim.v" \
+"../../../../seg_mem_integration.srcs/sources_1/new/top.v" \
+"../../../../seg_mem_integration.srcs/sources_1/new/vga_driver.v" \
+"../../../../seg_mem_integration.srcs/sources_1/new/vga_top.v" \
+
+sv xil_defaultlib  \
+"../../../../seg_mem_integration.srcs/sources_1/new/CNN_pixel.sv" \
+"../../../../seg_mem_integration.srcs/sources_1/new/dense_layer_1.sv" \
+"../../../../seg_mem_integration.srcs/sources_1/new/dense_layer_2.sv" \
+
+verilog xil_defaultlib  \
+"../../../../seg_mem_integration.srcs/sim_1/new/test_1.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

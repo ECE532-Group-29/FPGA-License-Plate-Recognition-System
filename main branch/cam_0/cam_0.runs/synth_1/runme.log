@@ -1,0 +1,373 @@
+
+*** Running vivado
+    with args -log top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
+
+
+****** Vivado v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source top.tcl -notrace
+Command: synth_design -top top -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 19900 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 494.234 ; gain = 99.664
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top' [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/imports/rtl/top.v:5]
+	Parameter SMALL_DEPTH bound to: 784 - type: integer 
+	Parameter LARGE_DEPTH bound to: 3136 - type: integer 
+	Parameter DELAY_TOP_TB bound to: 240000 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.runs/synth_1/.Xil/Vivado-16312-SKY-20200103SKM/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (1#1) [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.runs/synth_1/.Xil/Vivado-16312-SKY-20200103SKM/realtime/clk_wiz_0_stub.v:5]
+WARNING: [Synth 8-350] instance 'clock_gen' of module 'clk_wiz_0' requires 5 connections, but only 3 given [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/imports/rtl/top.v:98]
+INFO: [Synth 8-6157] synthesizing module 'debouncer' [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/imports/rtl/debounce.v:16]
+	Parameter DELAY bound to: 240000 - type: integer 
+	Parameter MAX_COUNT bound to: 18 - type: integer 
+WARNING: [Synth 8-589] replacing case/wildcard equality operator !== with logical equality operator != [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/imports/rtl/debounce.v:32]
+INFO: [Synth 8-6155] done synthesizing module 'debouncer' (2#1) [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/imports/rtl/debounce.v:16]
+INFO: [Synth 8-6157] synthesizing module 'cam_top' [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/imports/rtl/cam_top.v:12]
+	Parameter CAM_CONFIG_CLK bound to: 100000000 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'cam_init' [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/imports/rtl/cam_init.v:16]
+	Parameter CLK_F bound to: 100000000 - type: integer 
+	Parameter SCCB_F bound to: 400000 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'cam_rom' [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/imports/rtl/cam_rom.v:15]
+INFO: [Synth 8-6155] done synthesizing module 'cam_rom' (3#1) [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/imports/rtl/cam_rom.v:15]
+INFO: [Synth 8-6157] synthesizing module 'cam_config' [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/imports/rtl/cam_config.v:15]
+	Parameter CLK_F bound to: 100000000 - type: integer 
+	Parameter ten_ms_delay bound to: 1000000 - type: integer 
+	Parameter timer_size bound to: 20 - type: integer 
+	Parameter SM_IDLE bound to: 0 - type: integer 
+	Parameter SM_SEND bound to: 1 - type: integer 
+	Parameter SM_DONE bound to: 2 - type: integer 
+	Parameter SM_TIMER bound to: 3 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/imports/rtl/cam_config.v:54]
+WARNING: [Synth 8-6014] Unused sequential element byte_index_reg was removed.  [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/imports/rtl/cam_config.v:46]
+WARNING: [Synth 8-5788] Register SM_return_state_reg in module cam_config is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/imports/rtl/cam_config.v:66]
+WARNING: [Synth 8-5788] Register timer_reg in module cam_config is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/imports/rtl/cam_config.v:67]
+INFO: [Synth 8-6155] done synthesizing module 'cam_config' (4#1) [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/imports/rtl/cam_config.v:15]
+INFO: [Synth 8-6157] synthesizing module 'sccb_master' [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/imports/rtl/sccb_master.v:10]
+	Parameter CLK_F bound to: 100000000 - type: integer 
+	Parameter SCCB_F bound to: 400000 - type: integer 
+	Parameter CAM_ADDR bound to: 7'b0100001 
+	Parameter IDLE bound to: 4'b0000 
+	Parameter START_1 bound to: 4'b0001 
+	Parameter START_2 bound to: 4'b0010 
+	Parameter WAIT bound to: 4'b0011 
+	Parameter DATA_1 bound to: 4'b0100 
+	Parameter DATA_2 bound to: 4'b0101 
+	Parameter DATA_3 bound to: 4'b0110 
+	Parameter DATA_4 bound to: 4'b0111 
+	Parameter DATA_DONE bound to: 4'b1000 
+	Parameter RESTART bound to: 4'b1001 
+	Parameter END_1 bound to: 4'b1010 
+	Parameter END_2 bound to: 4'b1011 
+	Parameter TIMER_WIDTH bound to: 8 - type: integer 
+	Parameter HALF bound to: 125 - type: integer 
+	Parameter QUARTER bound to: 62 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/imports/rtl/sccb_master.v:115]
+INFO: [Synth 8-6155] done synthesizing module 'sccb_master' (5#1) [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/imports/rtl/sccb_master.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'cam_init' (6#1) [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/imports/rtl/cam_init.v:16]
+INFO: [Synth 8-6157] synthesizing module 'cam_capture' [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/imports/rtl/cam_capture.v:21]
+	Parameter WAIT bound to: 2'b00 
+	Parameter IDLE bound to: 2'b01 
+	Parameter CAPTURE bound to: 2'b10 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/imports/rtl/cam_capture.v:59]
+INFO: [Synth 8-6155] done synthesizing module 'cam_capture' (7#1) [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/imports/rtl/cam_capture.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'cam_top' (8#1) [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/imports/rtl/cam_top.v:12]
+INFO: [Synth 8-6157] synthesizing module 'mem_bram' [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/imports/rtl/mem_bram.v:12]
+	Parameter WIDTH bound to: 12 - type: integer 
+	Parameter DEPTH bound to: 307200 - type: integer 
+	Parameter CAPTURED_DEPTH bound to: 79101 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mem_bram' (9#1) [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/imports/rtl/mem_bram.v:12]
+INFO: [Synth 8-6157] synthesizing module 'vga_top' [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/imports/rtl/vga_top.v:23]
+	Parameter SMALL_DEPTH bound to: 784 - type: integer 
+	Parameter WAIT_1 bound to: 2'b00 
+	Parameter WAIT_2 bound to: 2'b01 
+	Parameter READ bound to: 2'b10 
+	Parameter WINDOW_LOCATION bound to: 50 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'vga_driver' [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/imports/rtl/vga_driver.v:19]
+	Parameter hDisp bound to: 640 - type: integer 
+	Parameter hFp bound to: 16 - type: integer 
+	Parameter hPulse bound to: 96 - type: integer 
+	Parameter hBp bound to: 48 - type: integer 
+	Parameter vDisp bound to: 480 - type: integer 
+	Parameter vFp bound to: 10 - type: integer 
+	Parameter vPulse bound to: 2 - type: integer 
+	Parameter vBp bound to: 33 - type: integer 
+	Parameter hEND bound to: 800 - type: integer 
+	Parameter hSyncStart bound to: 656 - type: integer 
+	Parameter hSyncEnd bound to: 752 - type: integer 
+	Parameter vEND bound to: 525 - type: integer 
+	Parameter vSyncStart bound to: 490 - type: integer 
+	Parameter vSyncEnd bound to: 492 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'vga_driver' (10#1) [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/imports/rtl/vga_driver.v:19]
+INFO: [Synth 8-6157] synthesizing module 'grayscale' [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/new/grayscale.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'grayscale' (11#1) [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/new/grayscale.v:8]
+INFO: [Synth 8-6157] synthesizing module 'segmentation' [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/new/segmentation.v:23]
+	Parameter WIDTH bound to: 12 - type: integer 
+	Parameter DEPTH bound to: 307200 - type: integer 
+	Parameter CHAR_DEPTH bound to: 3136 - type: integer 
+	Parameter SMALL_DEPTH bound to: 784 - type: integer 
+WARNING: [Synth 8-5856] 3D RAM char_bound_reg  for this pattern/configuration is not supported. This will most likely be implemented in registers
+WARNING: [Synth 8-5788] Register segment_start_flag_reg in module segmentation is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/new/segmentation.v:179]
+INFO: [Synth 8-6155] done synthesizing module 'segmentation' (12#1) [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/new/segmentation.v:23]
+WARNING: [Synth 8-350] instance 'segmentation' of module 'segmentation' requires 20 connections, but only 18 given [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/imports/rtl/vga_top.v:96]
+INFO: [Synth 8-6157] synthesizing module 'rescaling' [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/new/rescaling.v:3]
+	Parameter SMALL_SIZE bound to: 28 - type: integer 
+	Parameter LARGE_SIZE bound to: 56 - type: integer 
+	Parameter SMALL_DEPTH bound to: 784 - type: integer 
+	Parameter LARGE_DEPTH bound to: 3136 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'rescaling' (13#1) [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/new/rescaling.v:3]
+INFO: [Synth 8-6157] synthesizing module 'mem_control' [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/new/mem_control.v:5]
+	Parameter SMALL_DEPTH bound to: 784 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mem_control' (14#1) [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/new/mem_control.v:5]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/imports/rtl/vga_top.v:180]
+INFO: [Synth 8-6155] done synthesizing module 'vga_top' (15#1) [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/imports/rtl/vga_top.v:23]
+INFO: [Synth 8-6157] synthesizing module 'data_flow_loop_control' [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/new/data_flow_loop_control.v:4]
+INFO: [Synth 8-6157] synthesizing module 'seven_seg_display_interface' [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/new/seven_seg_display_interface.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'seven_seg_display_interface' (16#1) [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/new/seven_seg_display_interface.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'data_flow_loop_control' (17#1) [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/new/data_flow_loop_control.v:4]
+INFO: [Synth 8-6157] synthesizing module 'custom_clk_gen' [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/new/custom_clk_gen.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'custom_clk_gen' (18#1) [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/new/custom_clk_gen.v:23]
+INFO: [Synth 8-6157] synthesizing module 'cnn_interface' [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/new/cnn_interface.v:3]
+	Parameter BRAM_IMAGE_DEPTH bound to: 784 - type: integer 
+	Parameter L1_CONV_O_DATA_DEPTH bound to: 784 - type: integer 
+	Parameter L1_POOL_O_DATA_DEPTH bound to: 196 - type: integer 
+	Parameter L2_CONV_O_DATA_DEPTH bound to: 196 - type: integer 
+	Parameter L2_POOL_O_DATA_DEPTH bound to: 49 - type: integer 
+	Parameter L3_CONV_O_DATA_DEPTH bound to: 49 - type: integer 
+	Parameter L3_POOL_O_DATA_DEPTH bound to: 9 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'padding_zeros' [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/new/padding_zeros.v:3]
+	Parameter WIDTH bound to: 28 - type: integer 
+	Parameter INPUT_SIZE bound to: 784 - type: integer 
+	Parameter DEPTH bound to: 784 - type: integer 
+	Parameter DEPTH_PADDED bound to: 900 - type: integer 
+WARNING: [Synth 8-6014] Unused sequential element counter_reg was removed.  [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/new/padding_zeros.v:41]
+INFO: [Synth 8-6155] done synthesizing module 'padding_zeros' (19#1) [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/new/padding_zeros.v:3]
+INFO: [Synth 8-6157] synthesizing module 'CNN_pixel' [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/new/CNN_pixel.sv:7]
+	Parameter TOTAL_PIX bound to: 900 - type: integer 
+	Parameter total_pix_out bound to: 784 - type: integer 
+	Parameter pix_out_size bound to: 28 - type: integer 
+	Parameter FILTER_SIZE bound to: 3 - type: integer 
+	Parameter PIXEL_DATAW bound to: 16 - type: integer 
+	Parameter PIC_WIDTH bound to: 30 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'mult8x8' [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/new/CNN_pixel.sv:367]
+INFO: [Synth 8-6155] done synthesizing module 'mult8x8' (20#1) [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/new/CNN_pixel.sv:367]
+WARNING: [Synth 8-689] width (16) of port connection 'in_datab' does not match port width (15) of module 'mult8x8' [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/new/CNN_pixel.sv:110]
+WARNING: [Synth 8-689] width (16) of port connection 'in_datab' does not match port width (15) of module 'mult8x8' [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/new/CNN_pixel.sv:110]
+WARNING: [Synth 8-689] width (16) of port connection 'in_datab' does not match port width (15) of module 'mult8x8' [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/new/CNN_pixel.sv:110]
+WARNING: [Synth 8-689] width (16) of port connection 'in_datab' does not match port width (15) of module 'mult8x8' [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/new/CNN_pixel.sv:110]
+WARNING: [Synth 8-689] width (16) of port connection 'in_datab' does not match port width (15) of module 'mult8x8' [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/new/CNN_pixel.sv:110]
+WARNING: [Synth 8-689] width (16) of port connection 'in_datab' does not match port width (15) of module 'mult8x8' [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/new/CNN_pixel.sv:110]
+WARNING: [Synth 8-689] width (16) of port connection 'in_datab' does not match port width (15) of module 'mult8x8' [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/new/CNN_pixel.sv:110]
+WARNING: [Synth 8-689] width (16) of port connection 'in_datab' does not match port width (15) of module 'mult8x8' [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/new/CNN_pixel.sv:110]
+WARNING: [Synth 8-689] width (16) of port connection 'in_datab' does not match port width (15) of module 'mult8x8' [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/new/CNN_pixel.sv:110]
+INFO: [Synth 8-6157] synthesizing module 'reg32p32' [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/new/CNN_pixel.sv:389]
+INFO: [Synth 8-6155] done synthesizing module 'reg32p32' (21#1) [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/new/CNN_pixel.sv:389]
+WARNING: [Synth 8-5856] 3D RAM r_f_reg  for this pattern/configuration is not supported. This will most likely be implemented in registers
+WARNING: [Synth 8-6014] Unused sequential element output_L1_conv_image_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element dummy_conv_input_data_addr_reg was removed.  [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/new/CNN_pixel.sv:277]
+WARNING: [Synth 8-6014] Unused sequential element input_L1_conv_image_reg was removed. 
+INFO: [Synth 8-6155] done synthesizing module 'CNN_pixel' (22#1) [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/new/CNN_pixel.sv:7]
+INFO: [Synth 8-6157] synthesizing module 'maxpooling' [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/new/maxpooling.v:3]
+	Parameter SMALL_SIZE bound to: 14 - type: integer 
+	Parameter LARGE_SIZE bound to: 28 - type: integer 
+	Parameter SMALL_DEPTH bound to: 196 - type: integer 
+	Parameter LARGE_DEPTH bound to: 784 - type: integer 
+WARNING: [Synth 8-6014] Unused sequential element win_3_reg was removed.  [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/new/maxpooling.v:90]
+WARNING: [Synth 8-6014] Unused sequential element win_2_reg was removed.  [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/new/maxpooling.v:91]
+WARNING: [Synth 8-6014] Unused sequential element win_1_reg was removed.  [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/new/maxpooling.v:92]
+WARNING: [Synth 8-6014] Unused sequential element win_0_reg was removed.  [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/new/maxpooling.v:93]
+INFO: [Synth 8-6155] done synthesizing module 'maxpooling' (23#1) [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/new/maxpooling.v:3]
+INFO: [Synth 8-6157] synthesizing module 'padding_zeros__parameterized0' [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/new/padding_zeros.v:3]
+	Parameter WIDTH bound to: 14 - type: integer 
+	Parameter INPUT_SIZE bound to: 196 - type: integer 
+	Parameter DEPTH bound to: 196 - type: integer 
+	Parameter DEPTH_PADDED bound to: 256 - type: integer 
+WARNING: [Synth 8-6014] Unused sequential element counter_reg was removed.  [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/new/padding_zeros.v:41]
+INFO: [Synth 8-6155] done synthesizing module 'padding_zeros__parameterized0' (23#1) [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/new/padding_zeros.v:3]
+INFO: [Synth 8-6157] synthesizing module 'CNN_pixel__parameterized0' [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/new/CNN_pixel.sv:7]
+	Parameter TOTAL_PIX bound to: 256 - type: integer 
+	Parameter total_pix_out bound to: 196 - type: integer 
+	Parameter pix_out_size bound to: 14 - type: integer 
+	Parameter FILTER_SIZE bound to: 3 - type: integer 
+	Parameter PIXEL_DATAW bound to: 16 - type: integer 
+	Parameter PIC_WIDTH bound to: 16 - type: integer 
+WARNING: [Synth 8-689] width (16) of port connection 'in_datab' does not match port width (15) of module 'mult8x8' [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/new/CNN_pixel.sv:110]
+WARNING: [Synth 8-689] width (16) of port connection 'in_datab' does not match port width (15) of module 'mult8x8' [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/new/CNN_pixel.sv:110]
+WARNING: [Synth 8-689] width (16) of port connection 'in_datab' does not match port width (15) of module 'mult8x8' [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/new/CNN_pixel.sv:110]
+WARNING: [Synth 8-689] width (16) of port connection 'in_datab' does not match port width (15) of module 'mult8x8' [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/new/CNN_pixel.sv:110]
+WARNING: [Synth 8-689] width (16) of port connection 'in_datab' does not match port width (15) of module 'mult8x8' [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/new/CNN_pixel.sv:110]
+WARNING: [Synth 8-689] width (16) of port connection 'in_datab' does not match port width (15) of module 'mult8x8' [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/new/CNN_pixel.sv:110]
+WARNING: [Synth 8-689] width (16) of port connection 'in_datab' does not match port width (15) of module 'mult8x8' [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/new/CNN_pixel.sv:110]
+WARNING: [Synth 8-689] width (16) of port connection 'in_datab' does not match port width (15) of module 'mult8x8' [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/new/CNN_pixel.sv:110]
+WARNING: [Synth 8-689] width (16) of port connection 'in_datab' does not match port width (15) of module 'mult8x8' [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/new/CNN_pixel.sv:110]
+WARNING: [Synth 8-5856] 3D RAM r_f_reg  for this pattern/configuration is not supported. This will most likely be implemented in registers
+WARNING: [Synth 8-6014] Unused sequential element pix_count_reg was removed.  [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/new/CNN_pixel.sv:164]
+WARNING: [Synth 8-6014] Unused sequential element output_L1_conv_image_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element dummy_conv_input_data_addr_reg was removed.  [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/new/CNN_pixel.sv:277]
+WARNING: [Synth 8-6014] Unused sequential element input_L1_conv_image_reg was removed. 
+INFO: [Synth 8-6155] done synthesizing module 'CNN_pixel__parameterized0' (23#1) [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/new/CNN_pixel.sv:7]
+INFO: [Synth 8-6157] synthesizing module 'maxpooling__parameterized0' [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/new/maxpooling.v:3]
+	Parameter SMALL_SIZE bound to: 7 - type: integer 
+	Parameter LARGE_SIZE bound to: 14 - type: integer 
+	Parameter SMALL_DEPTH bound to: 49 - type: integer 
+	Parameter LARGE_DEPTH bound to: 196 - type: integer 
+WARNING: [Synth 8-6014] Unused sequential element win_3_reg was removed.  [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/new/maxpooling.v:90]
+WARNING: [Synth 8-6014] Unused sequential element win_2_reg was removed.  [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/new/maxpooling.v:91]
+WARNING: [Synth 8-6014] Unused sequential element win_1_reg was removed.  [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/new/maxpooling.v:92]
+WARNING: [Synth 8-6014] Unused sequential element win_0_reg was removed.  [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/new/maxpooling.v:93]
+INFO: [Synth 8-6155] done synthesizing module 'maxpooling__parameterized0' (23#1) [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/new/maxpooling.v:3]
+INFO: [Synth 8-6157] synthesizing module 'padding_zeros__parameterized1' [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/new/padding_zeros.v:3]
+	Parameter WIDTH bound to: 7 - type: integer 
+	Parameter INPUT_SIZE bound to: 49 - type: integer 
+	Parameter DEPTH bound to: 49 - type: integer 
+	Parameter DEPTH_PADDED bound to: 81 - type: integer 
+WARNING: [Synth 8-6014] Unused sequential element counter_reg was removed.  [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/new/padding_zeros.v:41]
+INFO: [Synth 8-6155] done synthesizing module 'padding_zeros__parameterized1' (23#1) [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/new/padding_zeros.v:3]
+INFO: [Synth 8-6157] synthesizing module 'CNN_pixel__parameterized1' [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/new/CNN_pixel.sv:7]
+	Parameter TOTAL_PIX bound to: 81 - type: integer 
+	Parameter total_pix_out bound to: 49 - type: integer 
+	Parameter pix_out_size bound to: 7 - type: integer 
+	Parameter FILTER_SIZE bound to: 3 - type: integer 
+	Parameter PIXEL_DATAW bound to: 16 - type: integer 
+	Parameter PIC_WIDTH bound to: 9 - type: integer 
+WARNING: [Synth 8-689] width (16) of port connection 'in_datab' does not match port width (15) of module 'mult8x8' [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/new/CNN_pixel.sv:110]
+WARNING: [Synth 8-689] width (16) of port connection 'in_datab' does not match port width (15) of module 'mult8x8' [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/new/CNN_pixel.sv:110]
+WARNING: [Synth 8-689] width (16) of port connection 'in_datab' does not match port width (15) of module 'mult8x8' [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/new/CNN_pixel.sv:110]
+WARNING: [Synth 8-689] width (16) of port connection 'in_datab' does not match port width (15) of module 'mult8x8' [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/new/CNN_pixel.sv:110]
+WARNING: [Synth 8-689] width (16) of port connection 'in_datab' does not match port width (15) of module 'mult8x8' [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/new/CNN_pixel.sv:110]
+WARNING: [Synth 8-689] width (16) of port connection 'in_datab' does not match port width (15) of module 'mult8x8' [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/new/CNN_pixel.sv:110]
+WARNING: [Synth 8-689] width (16) of port connection 'in_datab' does not match port width (15) of module 'mult8x8' [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/new/CNN_pixel.sv:110]
+WARNING: [Synth 8-689] width (16) of port connection 'in_datab' does not match port width (15) of module 'mult8x8' [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/new/CNN_pixel.sv:110]
+WARNING: [Synth 8-689] width (16) of port connection 'in_datab' does not match port width (15) of module 'mult8x8' [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/new/CNN_pixel.sv:110]
+WARNING: [Synth 8-5856] 3D RAM r_f_reg  for this pattern/configuration is not supported. This will most likely be implemented in registers
+WARNING: [Synth 8-6014] Unused sequential element output_L1_conv_image_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element dummy_conv_input_data_addr_reg was removed.  [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/new/CNN_pixel.sv:277]
+WARNING: [Synth 8-6014] Unused sequential element input_L1_conv_image_reg was removed. 
+INFO: [Synth 8-6155] done synthesizing module 'CNN_pixel__parameterized1' (23#1) [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/new/CNN_pixel.sv:7]
+INFO: [Synth 8-6157] synthesizing module 'size_trim' [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/new/size_trim.v:3]
+	Parameter INPUT_SIZE bound to: 7 - type: integer 
+	Parameter OUTPUT_SIZE bound to: 6 - type: integer 
+	Parameter INPUT_DEPTH bound to: 49 - type: integer 
+	Parameter OUTPUT_DEPTH bound to: 36 - type: integer 
+WARNING: [Synth 8-6014] Unused sequential element current_row_reg was removed.  [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/new/size_trim.v:33]
+WARNING: [Synth 8-6014] Unused sequential element current_col_reg was removed.  [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/new/size_trim.v:34]
+INFO: [Synth 8-6155] done synthesizing module 'size_trim' (24#1) [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/new/size_trim.v:3]
+INFO: [Synth 8-6157] synthesizing module 'maxpooling__parameterized1' [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/new/maxpooling.v:3]
+	Parameter SMALL_SIZE bound to: 3 - type: integer 
+	Parameter LARGE_SIZE bound to: 6 - type: integer 
+	Parameter SMALL_DEPTH bound to: 9 - type: integer 
+	Parameter LARGE_DEPTH bound to: 36 - type: integer 
+WARNING: [Synth 8-6014] Unused sequential element win_3_reg was removed.  [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/new/maxpooling.v:90]
+WARNING: [Synth 8-6014] Unused sequential element win_2_reg was removed.  [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/new/maxpooling.v:91]
+WARNING: [Synth 8-6014] Unused sequential element win_1_reg was removed.  [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/new/maxpooling.v:92]
+WARNING: [Synth 8-6014] Unused sequential element win_0_reg was removed.  [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/new/maxpooling.v:93]
+INFO: [Synth 8-6155] done synthesizing module 'maxpooling__parameterized1' (24#1) [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/new/maxpooling.v:3]
+INFO: [Synth 8-6157] synthesizing module 'dense_layer_1' [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/new/dense_layer_1.sv:23]
+	Parameter US_DATA_WIDTH bound to: 15 - type: integer 
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+	Parameter INPUT_SIZE bound to: 9 - type: integer 
+	Parameter OUTPUT_SIZE bound to: 18 - type: integer 
+	Parameter WEIGHT_SIZE bound to: 162 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'dense_layer_1' (25#1) [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/new/dense_layer_1.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'dense_layer_2' [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/new/dense_layer_2.sv:23]
+	Parameter US_DATA_WIDTH bound to: 15 - type: integer 
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+	Parameter INPUT_SIZE bound to: 18 - type: integer 
+	Parameter OUTPUT_SIZE bound to: 36 - type: integer 
+	Parameter WEIGHT_SIZE bound to: 648 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "block" *) [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/new/dense_layer_2.sv:49]
+INFO: [Synth 8-6155] done synthesizing module 'dense_layer_2' (26#1) [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/new/dense_layer_2.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'cnn_interface' (27#1) [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/new/cnn_interface.v:3]
+WARNING: [Synth 8-3848] Net o_top_dummy_output in module/entity top does not have driver. [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/imports/rtl/top.v:50]
+INFO: [Synth 8-6155] done synthesizing module 'top' (28#1) [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/imports/rtl/top.v:5]
+WARNING: [Synth 8-3917] design top has port o_top_led3_done driven by constant 0
+WARNING: [Synth 8-3917] design top has port o_top_led4_done driven by constant 0
+WARNING: [Synth 8-3917] design top has port o_top_led5_done driven by constant 0
+WARNING: [Synth 8-3917] design top has port o_top_led6_done driven by constant 0
+WARNING: [Synth 8-3917] design top has port o_top_led7_done driven by constant 0
+WARNING: [Synth 8-3917] design top has port o_top_led8_done driven by constant 0
+WARNING: [Synth 8-3917] design top has port o_top_led9_done driven by constant 0
+WARNING: [Synth 8-3917] design top has port o_top_led10_done driven by constant 0
+WARNING: [Synth 8-3917] design top has port o_top_led11_done driven by constant 0
+WARNING: [Synth 8-3917] design top has port o_top_led12_done driven by constant 0
+WARNING: [Synth 8-3917] design top has port o_top_led13_done driven by constant 0
+WARNING: [Synth 8-3917] design top has port o_top_led14_done driven by constant 0
+WARNING: [Synth 8-3331] design mem_bram has unconnected port i_rd_addr[18]
+WARNING: [Synth 8-3331] design mem_bram has unconnected port i_rd_addr[17]
+WARNING: [Synth 8-3331] design mem_bram has unconnected port i_rd_addr[16]
+WARNING: [Synth 8-3331] design mem_bram has unconnected port i_rd_addr[15]
+WARNING: [Synth 8-3331] design mem_bram has unconnected port i_rd_addr[14]
+WARNING: [Synth 8-3331] design mem_bram has unconnected port i_rd_addr[13]
+WARNING: [Synth 8-3331] design mem_bram has unconnected port i_rd_addr[12]
+WARNING: [Synth 8-3331] design mem_bram has unconnected port i_rd_addr[11]
+WARNING: [Synth 8-3331] design mem_bram has unconnected port i_rd_addr[10]
+WARNING: [Synth 8-3331] design mem_bram has unconnected port i_rd_addr[9]
+WARNING: [Synth 8-3331] design mem_bram has unconnected port i_rd_addr[8]
+WARNING: [Synth 8-3331] design mem_bram has unconnected port i_rd_addr[7]
+WARNING: [Synth 8-3331] design mem_bram has unconnected port i_rd_addr[6]
+WARNING: [Synth 8-3331] design mem_bram has unconnected port i_rd_addr[5]
+WARNING: [Synth 8-3331] design mem_bram has unconnected port i_rd_addr[4]
+WARNING: [Synth 8-3331] design mem_bram has unconnected port i_rd_addr[3]
+WARNING: [Synth 8-3331] design mem_bram has unconnected port i_rd_addr[2]
+WARNING: [Synth 8-3331] design mem_bram has unconnected port i_rd_addr[1]
+WARNING: [Synth 8-3331] design mem_bram has unconnected port i_rd_addr[0]
+WARNING: [Synth 8-3331] design cam_top has unconnected port i_rstn_pclk
+WARNING: [Synth 8-3331] design top has unconnected port o_top_dummy_output
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 935.484 ; gain = 540.914
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 935.484 ; gain = 540.914
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 935.484 ; gain = 540.914
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'clock_gen'
+Finished Parsing XDC File [c:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'clock_gen'
+Parsing XDC File [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/constrs_1/imports/OV7670-camera-main/Nexys-A7-100T-Master.xdc]
+WARNING: [Vivado 12-507] No nets matched 'i_top_pclk_IBUF'. [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/constrs_1/imports/OV7670-camera-main/Nexys-A7-100T-Master.xdc:44]
+Finished Parsing XDC File [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/constrs_1/imports/OV7670-camera-main/Nexys-A7-100T-Master.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/constrs_1/imports/OV7670-camera-main/Nexys-A7-100T-Master.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/top_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Administrator/Desktop/final_merge/cam_0/cam_0.srcs/constrs_1/imports/OV7670-camera-main/Nexys-A7-100T-Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.022 . Memory (MB): peak = 1430.887 ; gain = 0.207
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 1432.031 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 1432.031 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.100 . Memory (MB): peak = 1432.031 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:42 ; elapsed = 00:00:59 . Memory (MB): peak = 1432.031 ; gain = 1037.461
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5580] Multithreading enabled for synth_design using a maximum of 2 processes.
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:42 ; elapsed = 00:00:59 . Memory (MB): peak = 1432.031 ; gain = 1037.461

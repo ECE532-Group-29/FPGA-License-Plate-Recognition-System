@@ -1,0 +1,26 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../cam_0.srcs/sources_1/ip/clk_wiz_0" \
+"../../../../cam_0.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v" \
+"../../../../cam_0.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.v" \
+"../../../../cam_0.srcs/sources_1/imports/rtl/cam_capture.v" \
+"../../../../cam_0.srcs/sources_1/imports/rtl/cam_config.v" \
+"../../../../cam_0.srcs/sources_1/imports/rtl/cam_init.v" \
+"../../../../cam_0.srcs/sources_1/imports/rtl/cam_rom.v" \
+"../../../../cam_0.srcs/sources_1/imports/rtl/cam_top.v" \
+"../../../../cam_0.srcs/sources_1/new/cnn_to_seven.v" \
+"../../../../cam_0.srcs/sources_1/new/custom_clk_gen.v" \
+"../../../../cam_0.srcs/sources_1/imports/rtl/debounce.v" \
+"../../../../cam_0.srcs/sources_1/new/grayscale.v" \
+"../../../../cam_0.srcs/sources_1/imports/rtl/mem_bram.v" \
+"../../../../cam_0.srcs/sources_1/imports/rtl/sccb_master.v" \
+"../../../../cam_0.srcs/sources_1/new/seven_seg_display_interface.v" \
+"../../../../cam_0.srcs/sources_1/imports/rtl/top.v" \
+"../../../../cam_0.srcs/sources_1/imports/rtl/vga_driver.v" \
+"../../../../cam_0.srcs/sources_1/imports/rtl/vga_top.v" \
+"../../../../cam_0.srcs/sim_1/new/test_7_seg.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

@@ -1,0 +1,97 @@
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: F:/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto a5af18e764234b2caac5c2e2af0a201c --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot vga_top_tb_behav xil_defaultlib.vga_top_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-2861] module 'CNN_pixel' does not have a parameter named total_pix [C:/Users/Administrator/Desktop/dense_layers_correct_fix_pt_weights/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/cnn_interface.v:62]
+WARNING: [VRFC 10-2861] module 'CNN_pixel' does not have a parameter named total_pix [C:/Users/Administrator/Desktop/dense_layers_correct_fix_pt_weights/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/cnn_interface.v:129]
+WARNING: [VRFC 10-2861] module 'CNN_pixel' does not have a parameter named total_pix [C:/Users/Administrator/Desktop/dense_layers_correct_fix_pt_weights/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/cnn_interface.v:195]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'i_gray_en' [C:/Users/Administrator/Desktop/dense_layers_correct_fix_pt_weights/seg_mem_integration/seg_mem_integration.srcs/sim_1/new/test_1.v:20]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'i_inverse_gray_en' [C:/Users/Administrator/Desktop/dense_layers_correct_fix_pt_weights/seg_mem_integration/seg_mem_integration.srcs/sim_1/new/test_1.v:21]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'i_high_contrast_en' [C:/Users/Administrator/Desktop/dense_layers_correct_fix_pt_weights/seg_mem_integration/seg_mem_integration.srcs/sim_1/new/test_1.v:22]
+WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 1 for port 'o_small_image_data' [C:/Users/Administrator/Desktop/dense_layers_correct_fix_pt_weights/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/vga_top.v:136]
+WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 1 for port 'Wr_Data' [C:/Users/Administrator/Desktop/dense_layers_correct_fix_pt_weights/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/vga_top.v:152]
+WARNING: [VRFC 10-3091] actual bit length 16 differs from formal bit length 15 for port 'in_datab' [C:/Users/Administrator/Desktop/dense_layers_correct_fix_pt_weights/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/CNN_pixel.sv:109]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "C:/Users/Administrator/Desktop/dense_layers_correct_fix_pt_weights/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/CNN_pixel.sv" Line 7. Module CNN_pixel(total_pix_out=784,pix_out_size=28) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/Administrator/Desktop/dense_layers_correct_fix_pt_weights/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/CNN_pixel.sv" Line 366. Module mult8x8 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/Administrator/Desktop/dense_layers_correct_fix_pt_weights/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/CNN_pixel.sv" Line 366. Module mult8x8 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/Administrator/Desktop/dense_layers_correct_fix_pt_weights/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/CNN_pixel.sv" Line 366. Module mult8x8 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/Administrator/Desktop/dense_layers_correct_fix_pt_weights/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/CNN_pixel.sv" Line 366. Module mult8x8 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/Administrator/Desktop/dense_layers_correct_fix_pt_weights/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/CNN_pixel.sv" Line 366. Module mult8x8 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/Administrator/Desktop/dense_layers_correct_fix_pt_weights/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/CNN_pixel.sv" Line 366. Module mult8x8 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/Administrator/Desktop/dense_layers_correct_fix_pt_weights/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/CNN_pixel.sv" Line 366. Module mult8x8 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/Administrator/Desktop/dense_layers_correct_fix_pt_weights/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/CNN_pixel.sv" Line 366. Module mult8x8 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/Administrator/Desktop/dense_layers_correct_fix_pt_weights/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/CNN_pixel.sv" Line 366. Module mult8x8 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/Administrator/Desktop/dense_layers_correct_fix_pt_weights/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/CNN_pixel.sv" Line 388. Module reg32p32 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/Administrator/Desktop/dense_layers_correct_fix_pt_weights/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/CNN_pixel.sv" Line 388. Module reg32p32 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/Administrator/Desktop/dense_layers_correct_fix_pt_weights/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/CNN_pixel.sv" Line 388. Module reg32p32 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/Administrator/Desktop/dense_layers_correct_fix_pt_weights/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/CNN_pixel.sv" Line 388. Module reg32p32 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/Administrator/Desktop/dense_layers_correct_fix_pt_weights/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/CNN_pixel.sv" Line 388. Module reg32p32 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/Administrator/Desktop/dense_layers_correct_fix_pt_weights/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/CNN_pixel.sv" Line 388. Module reg32p32 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/Administrator/Desktop/dense_layers_correct_fix_pt_weights/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/CNN_pixel.sv" Line 388. Module reg32p32 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/Administrator/Desktop/dense_layers_correct_fix_pt_weights/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/CNN_pixel.sv" Line 388. Module reg32p32 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/Administrator/Desktop/dense_layers_correct_fix_pt_weights/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/CNN_pixel.sv" Line 7. Module CNN_pixel(total_pix_out=196,pix_out_size=14) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/Administrator/Desktop/dense_layers_correct_fix_pt_weights/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/CNN_pixel.sv" Line 366. Module mult8x8 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/Administrator/Desktop/dense_layers_correct_fix_pt_weights/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/CNN_pixel.sv" Line 366. Module mult8x8 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/Administrator/Desktop/dense_layers_correct_fix_pt_weights/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/CNN_pixel.sv" Line 366. Module mult8x8 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/Administrator/Desktop/dense_layers_correct_fix_pt_weights/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/CNN_pixel.sv" Line 366. Module mult8x8 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/Administrator/Desktop/dense_layers_correct_fix_pt_weights/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/CNN_pixel.sv" Line 366. Module mult8x8 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/Administrator/Desktop/dense_layers_correct_fix_pt_weights/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/CNN_pixel.sv" Line 366. Module mult8x8 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/Administrator/Desktop/dense_layers_correct_fix_pt_weights/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/CNN_pixel.sv" Line 366. Module mult8x8 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/Administrator/Desktop/dense_layers_correct_fix_pt_weights/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/CNN_pixel.sv" Line 366. Module mult8x8 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/Administrator/Desktop/dense_layers_correct_fix_pt_weights/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/CNN_pixel.sv" Line 366. Module mult8x8 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/Administrator/Desktop/dense_layers_correct_fix_pt_weights/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/CNN_pixel.sv" Line 388. Module reg32p32 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/Administrator/Desktop/dense_layers_correct_fix_pt_weights/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/CNN_pixel.sv" Line 388. Module reg32p32 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/Administrator/Desktop/dense_layers_correct_fix_pt_weights/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/CNN_pixel.sv" Line 388. Module reg32p32 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/Administrator/Desktop/dense_layers_correct_fix_pt_weights/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/CNN_pixel.sv" Line 388. Module reg32p32 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/Administrator/Desktop/dense_layers_correct_fix_pt_weights/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/CNN_pixel.sv" Line 388. Module reg32p32 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/Administrator/Desktop/dense_layers_correct_fix_pt_weights/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/CNN_pixel.sv" Line 388. Module reg32p32 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/Administrator/Desktop/dense_layers_correct_fix_pt_weights/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/CNN_pixel.sv" Line 388. Module reg32p32 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/Administrator/Desktop/dense_layers_correct_fix_pt_weights/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/CNN_pixel.sv" Line 388. Module reg32p32 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/Administrator/Desktop/dense_layers_correct_fix_pt_weights/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/CNN_pixel.sv" Line 7. Module CNN_pixel(total_pix_out=49,pix_out_size=7) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/Administrator/Desktop/dense_layers_correct_fix_pt_weights/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/CNN_pixel.sv" Line 366. Module mult8x8 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/Administrator/Desktop/dense_layers_correct_fix_pt_weights/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/CNN_pixel.sv" Line 366. Module mult8x8 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/Administrator/Desktop/dense_layers_correct_fix_pt_weights/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/CNN_pixel.sv" Line 366. Module mult8x8 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/Administrator/Desktop/dense_layers_correct_fix_pt_weights/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/CNN_pixel.sv" Line 366. Module mult8x8 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/Administrator/Desktop/dense_layers_correct_fix_pt_weights/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/CNN_pixel.sv" Line 366. Module mult8x8 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/Administrator/Desktop/dense_layers_correct_fix_pt_weights/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/CNN_pixel.sv" Line 366. Module mult8x8 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/Administrator/Desktop/dense_layers_correct_fix_pt_weights/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/CNN_pixel.sv" Line 366. Module mult8x8 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/Administrator/Desktop/dense_layers_correct_fix_pt_weights/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/CNN_pixel.sv" Line 366. Module mult8x8 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/Administrator/Desktop/dense_layers_correct_fix_pt_weights/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/CNN_pixel.sv" Line 366. Module mult8x8 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/Administrator/Desktop/dense_layers_correct_fix_pt_weights/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/CNN_pixel.sv" Line 388. Module reg32p32 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/Administrator/Desktop/dense_layers_correct_fix_pt_weights/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/CNN_pixel.sv" Line 388. Module reg32p32 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/Administrator/Desktop/dense_layers_correct_fix_pt_weights/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/CNN_pixel.sv" Line 388. Module reg32p32 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/Administrator/Desktop/dense_layers_correct_fix_pt_weights/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/CNN_pixel.sv" Line 388. Module reg32p32 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/Administrator/Desktop/dense_layers_correct_fix_pt_weights/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/CNN_pixel.sv" Line 388. Module reg32p32 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/Administrator/Desktop/dense_layers_correct_fix_pt_weights/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/CNN_pixel.sv" Line 388. Module reg32p32 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/Administrator/Desktop/dense_layers_correct_fix_pt_weights/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/CNN_pixel.sv" Line 388. Module reg32p32 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/Administrator/Desktop/dense_layers_correct_fix_pt_weights/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/CNN_pixel.sv" Line 388. Module reg32p32 doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.vga_driver_default
+Compiling module xil_defaultlib.debouncer(DELAY=240000)
+Compiling module xil_defaultlib.segmentation
+Compiling module xil_defaultlib.rescaling_default
+Compiling module xil_defaultlib.mem_control
+Compiling module xil_defaultlib.vga_top
+Compiling module xil_defaultlib.padding_zeros_default
+Compiling module xil_defaultlib.mult8x8
+Compiling module xil_defaultlib.reg32p32
+Compiling module xil_defaultlib.CNN_pixel(total_pix_out=784,pix_...
+Compiling module xil_defaultlib.maxpooling(SMALL_SIZE=14,LARGE_S...
+Compiling module xil_defaultlib.padding_zeros(WIDTH=14)
+Compiling module xil_defaultlib.CNN_pixel(total_pix_out=196,pix_...
+Compiling module xil_defaultlib.maxpooling(SMALL_SIZE=7,LARGE_SI...
+Compiling module xil_defaultlib.padding_zeros(WIDTH=7)
+Compiling module xil_defaultlib.CNN_pixel(total_pix_out=49,pix_o...
+Compiling module xil_defaultlib.size_trim_default
+Compiling module xil_defaultlib.maxpooling(LARGE_SIZE=6)
+Compiling module xil_defaultlib.dense_layer_1_default
+Compiling module xil_defaultlib.dense_layer_2_default
+Compiling module xil_defaultlib.cnn_interface
+Compiling module xil_defaultlib.top
+Compiling module xil_defaultlib.vga_top_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot vga_top_tb_behav

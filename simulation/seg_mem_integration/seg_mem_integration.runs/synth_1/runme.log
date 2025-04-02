@@ -1,0 +1,1847 @@
+
+*** Running vivado
+    with args -log top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
+
+
+****** Vivado v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source top.tcl -notrace
+Command: synth_design -top top -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 33284 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 434.090 ; gain = 98.203
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/top.v:23]
+	Parameter SMALL_DEPTH bound to: 784 - type: integer 
+	Parameter LARGE_DEPTH bound to: 3136 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'vga_top' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/vga_top.v:23]
+	Parameter SMALL_DEPTH bound to: 784 - type: integer 
+	Parameter FRAME_DEPTH bound to: 307200 - type: integer 
+	Parameter WAIT_1 bound to: 2'b00 
+	Parameter WAIT_2 bound to: 2'b01 
+	Parameter READ bound to: 2'b10 
+INFO: [Synth 8-3876] $readmem data file '640_output.mem' is read successfully [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/vga_top.v:252]
+INFO: [Synth 8-6157] synthesizing module 'vga_driver' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/vga_driver.v:19]
+	Parameter hDisp bound to: 640 - type: integer 
+	Parameter hFp bound to: 16 - type: integer 
+	Parameter hPulse bound to: 96 - type: integer 
+	Parameter hBp bound to: 48 - type: integer 
+	Parameter vDisp bound to: 480 - type: integer 
+	Parameter vFp bound to: 10 - type: integer 
+	Parameter vPulse bound to: 2 - type: integer 
+	Parameter vBp bound to: 33 - type: integer 
+	Parameter hEND bound to: 800 - type: integer 
+	Parameter hSyncStart bound to: 656 - type: integer 
+	Parameter hSyncEnd bound to: 752 - type: integer 
+	Parameter vEND bound to: 525 - type: integer 
+	Parameter vSyncStart bound to: 490 - type: integer 
+	Parameter vSyncEnd bound to: 492 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'vga_driver' (1#1) [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/vga_driver.v:19]
+INFO: [Synth 8-6157] synthesizing module 'segmentation' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/segmentation.v:23]
+	Parameter WIDTH bound to: 12 - type: integer 
+	Parameter DEPTH bound to: 307200 - type: integer 
+	Parameter CHAR_DEPTH bound to: 3136 - type: integer 
+	Parameter SMALL_DEPTH bound to: 784 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'debouncer' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/debouncer.v:16]
+	Parameter DELAY bound to: 240000 - type: integer 
+	Parameter MAX_COUNT bound to: 18 - type: integer 
+WARNING: [Synth 8-589] replacing case/wildcard equality operator !== with logical equality operator != [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/debouncer.v:32]
+INFO: [Synth 8-6155] done synthesizing module 'debouncer' (2#1) [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/debouncer.v:16]
+WARNING: [Synth 8-6014] Unused sequential element prev_VGA_x_reg was removed.  [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/segmentation.v:234]
+WARNING: [Synth 8-6014] Unused sequential element prev_VGA_y_reg was removed.  [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/segmentation.v:235]
+WARNING: [Synth 8-5788] Register segment_start_flag_reg in module segmentation is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/segmentation.v:227]
+WARNING: [Synth 8-5788] Register o_char_addr_reg in module segmentation is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/segmentation.v:378]
+INFO: [Synth 8-6155] done synthesizing module 'segmentation' (3#1) [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/segmentation.v:23]
+WARNING: [Synth 8-350] instance 'segmentation' of module 'segmentation' requires 31 connections, but only 29 given [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/vga_top.v:98]
+INFO: [Synth 8-6157] synthesizing module 'rescaling' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/rescaling.v:3]
+	Parameter SMALL_SIZE bound to: 28 - type: integer 
+	Parameter LARGE_SIZE bound to: 56 - type: integer 
+	Parameter SMALL_DEPTH bound to: 784 - type: integer 
+	Parameter LARGE_DEPTH bound to: 3136 - type: integer 
+WARNING: [Synth 8-639] system function call 'fopen' not supported [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/rescaling.v:147]
+WARNING: [Synth 8-6014] Unused sequential element large_image_reg was removed. 
+INFO: [Synth 8-6155] done synthesizing module 'rescaling' (4#1) [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/rescaling.v:3]
+WARNING: [Synth 8-689] width (4) of port connection 'o_small_image_data' does not match port width (1) of module 'rescaling' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/vga_top.v:147]
+INFO: [Synth 8-6157] synthesizing module 'mem_control' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/mem_control.v:5]
+	Parameter SMALL_DEPTH bound to: 784 - type: integer 
+WARNING: [Synth 8-639] system function call 'fopen' not supported [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/mem_control.v:35]
+INFO: [Synth 8-6155] done synthesizing module 'mem_control' (5#1) [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/mem_control.v:5]
+WARNING: [Synth 8-689] width (4) of port connection 'Wr_Data' does not match port width (1) of module 'mem_control' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/vga_top.v:163]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/vga_top.v:195]
+INFO: [Synth 8-6155] done synthesizing module 'vga_top' (6#1) [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/vga_top.v:23]
+WARNING: [Synth 8-350] instance 'vga_top' of module 'vga_top' requires 33 connections, but only 9 given [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/top.v:48]
+INFO: [Synth 8-6157] synthesizing module 'cnn_interface' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/cnn_interface.v:3]
+	Parameter BRAM_IMAGE_DEPTH bound to: 784 - type: integer 
+	Parameter L1_CONV_O_DATA_DEPTH bound to: 784 - type: integer 
+	Parameter L1_POOL_O_DATA_DEPTH bound to: 196 - type: integer 
+	Parameter L2_CONV_O_DATA_DEPTH bound to: 196 - type: integer 
+	Parameter L2_POOL_O_DATA_DEPTH bound to: 49 - type: integer 
+	Parameter L3_CONV_O_DATA_DEPTH bound to: 49 - type: integer 
+	Parameter L3_POOL_O_DATA_DEPTH bound to: 9 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'padding_zeros' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/padding_zeros.v:3]
+	Parameter WIDTH bound to: 28 - type: integer 
+	Parameter DEPTH bound to: 784 - type: integer 
+	Parameter DEPTH_PADDED bound to: 900 - type: integer 
+WARNING: [Synth 8-639] system function call 'fopen' not supported [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/padding_zeros.v:79]
+WARNING: [Synth 8-5788] Register w_pix_data_reg in module padding_zeros is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/padding_zeros.v:56]
+WARNING: [Synth 8-5788] Register w_ready_reg in module padding_zeros is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/padding_zeros.v:59]
+INFO: [Synth 8-6155] done synthesizing module 'padding_zeros' (7#1) [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/padding_zeros.v:3]
+INFO: [Synth 8-6157] synthesizing module 'CNN_pixel' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/CNN_pixel.sv:7]
+	Parameter total_pix bound to: 900 - type: integer 
+	Parameter total_pix_out bound to: 784 - type: integer 
+	Parameter pix_out_size bound to: 28 - type: integer 
+	Parameter FILTER_SIZE bound to: 3 - type: integer 
+	Parameter PIXEL_DATAW bound to: 16 - type: integer 
+	Parameter PIC_WIDTH bound to: 30 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'mult8x8' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/CNN_pixel.sv:366]
+INFO: [Synth 8-6155] done synthesizing module 'mult8x8' (8#1) [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/CNN_pixel.sv:366]
+WARNING: [Synth 8-689] width (16) of port connection 'in_datab' does not match port width (15) of module 'mult8x8' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/CNN_pixel.sv:109]
+WARNING: [Synth 8-689] width (16) of port connection 'in_datab' does not match port width (15) of module 'mult8x8' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/CNN_pixel.sv:109]
+WARNING: [Synth 8-689] width (16) of port connection 'in_datab' does not match port width (15) of module 'mult8x8' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/CNN_pixel.sv:109]
+WARNING: [Synth 8-689] width (16) of port connection 'in_datab' does not match port width (15) of module 'mult8x8' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/CNN_pixel.sv:109]
+WARNING: [Synth 8-689] width (16) of port connection 'in_datab' does not match port width (15) of module 'mult8x8' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/CNN_pixel.sv:109]
+WARNING: [Synth 8-689] width (16) of port connection 'in_datab' does not match port width (15) of module 'mult8x8' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/CNN_pixel.sv:109]
+WARNING: [Synth 8-689] width (16) of port connection 'in_datab' does not match port width (15) of module 'mult8x8' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/CNN_pixel.sv:109]
+WARNING: [Synth 8-689] width (16) of port connection 'in_datab' does not match port width (15) of module 'mult8x8' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/CNN_pixel.sv:109]
+WARNING: [Synth 8-689] width (16) of port connection 'in_datab' does not match port width (15) of module 'mult8x8' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/CNN_pixel.sv:109]
+INFO: [Synth 8-6157] synthesizing module 'reg32p32' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/CNN_pixel.sv:388]
+INFO: [Synth 8-6155] done synthesizing module 'reg32p32' (9#1) [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/CNN_pixel.sv:388]
+WARNING: [Synth 8-639] system function call 'fopen' not supported [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/CNN_pixel.sv:294]
+WARNING: [Synth 8-639] system function call 'fopen' not supported [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/CNN_pixel.sv:330]
+WARNING: [Synth 8-5856] 3D RAM r_f_reg  for this pattern/configuration is not supported. This will most likely be implemented in registers
+WARNING: [Synth 8-6014] Unused sequential element output_L1_conv_image_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element dummy_conv_input_data_addr_reg was removed.  [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/CNN_pixel.sv:276]
+WARNING: [Synth 8-6014] Unused sequential element input_L1_conv_image_reg was removed. 
+INFO: [Synth 8-6155] done synthesizing module 'CNN_pixel' (10#1) [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/CNN_pixel.sv:7]
+INFO: [Synth 8-6157] synthesizing module 'maxpooling' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/maxpooling.v:3]
+	Parameter SMALL_SIZE bound to: 14 - type: integer 
+	Parameter LARGE_SIZE bound to: 28 - type: integer 
+	Parameter SMALL_DEPTH bound to: 196 - type: integer 
+	Parameter LARGE_DEPTH bound to: 784 - type: integer 
+WARNING: [Synth 8-639] system function call 'fopen' not supported [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/maxpooling.v:163]
+WARNING: [Synth 8-639] system function call 'fopen' not supported [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/maxpooling.v:198]
+WARNING: [Synth 8-6014] Unused sequential element win_3_reg was removed.  [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/maxpooling.v:84]
+WARNING: [Synth 8-6014] Unused sequential element win_2_reg was removed.  [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/maxpooling.v:85]
+WARNING: [Synth 8-6014] Unused sequential element win_1_reg was removed.  [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/maxpooling.v:86]
+WARNING: [Synth 8-6014] Unused sequential element win_0_reg was removed.  [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/maxpooling.v:87]
+WARNING: [Synth 8-6014] Unused sequential element maxp_out_image_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element input_image_reg was removed. 
+INFO: [Synth 8-6155] done synthesizing module 'maxpooling' (11#1) [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/maxpooling.v:3]
+INFO: [Synth 8-6157] synthesizing module 'padding_zeros__parameterized0' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/padding_zeros.v:3]
+	Parameter WIDTH bound to: 14 - type: integer 
+	Parameter DEPTH bound to: 196 - type: integer 
+	Parameter DEPTH_PADDED bound to: 256 - type: integer 
+WARNING: [Synth 8-639] system function call 'fopen' not supported [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/padding_zeros.v:89]
+WARNING: [Synth 8-5788] Register w_pix_data_reg in module padding_zeros__parameterized0 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/padding_zeros.v:56]
+WARNING: [Synth 8-5788] Register w_ready_reg in module padding_zeros__parameterized0 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/padding_zeros.v:59]
+INFO: [Synth 8-6155] done synthesizing module 'padding_zeros__parameterized0' (11#1) [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/padding_zeros.v:3]
+INFO: [Synth 8-6157] synthesizing module 'CNN_pixel__parameterized0' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/CNN_pixel.sv:7]
+	Parameter total_pix bound to: 256 - type: integer 
+	Parameter total_pix_out bound to: 196 - type: integer 
+	Parameter pix_out_size bound to: 14 - type: integer 
+	Parameter FILTER_SIZE bound to: 3 - type: integer 
+	Parameter PIXEL_DATAW bound to: 16 - type: integer 
+	Parameter PIC_WIDTH bound to: 16 - type: integer 
+WARNING: [Synth 8-689] width (16) of port connection 'in_datab' does not match port width (15) of module 'mult8x8' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/CNN_pixel.sv:109]
+WARNING: [Synth 8-689] width (16) of port connection 'in_datab' does not match port width (15) of module 'mult8x8' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/CNN_pixel.sv:109]
+WARNING: [Synth 8-689] width (16) of port connection 'in_datab' does not match port width (15) of module 'mult8x8' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/CNN_pixel.sv:109]
+WARNING: [Synth 8-689] width (16) of port connection 'in_datab' does not match port width (15) of module 'mult8x8' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/CNN_pixel.sv:109]
+WARNING: [Synth 8-689] width (16) of port connection 'in_datab' does not match port width (15) of module 'mult8x8' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/CNN_pixel.sv:109]
+WARNING: [Synth 8-689] width (16) of port connection 'in_datab' does not match port width (15) of module 'mult8x8' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/CNN_pixel.sv:109]
+WARNING: [Synth 8-689] width (16) of port connection 'in_datab' does not match port width (15) of module 'mult8x8' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/CNN_pixel.sv:109]
+WARNING: [Synth 8-689] width (16) of port connection 'in_datab' does not match port width (15) of module 'mult8x8' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/CNN_pixel.sv:109]
+WARNING: [Synth 8-689] width (16) of port connection 'in_datab' does not match port width (15) of module 'mult8x8' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/CNN_pixel.sv:109]
+WARNING: [Synth 8-639] system function call 'fopen' not supported [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/CNN_pixel.sv:304]
+WARNING: [Synth 8-639] system function call 'fopen' not supported [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/CNN_pixel.sv:340]
+WARNING: [Synth 8-5856] 3D RAM r_f_reg  for this pattern/configuration is not supported. This will most likely be implemented in registers
+WARNING: [Synth 8-6014] Unused sequential element output_L1_conv_image_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element dummy_conv_input_data_addr_reg was removed.  [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/CNN_pixel.sv:276]
+WARNING: [Synth 8-6014] Unused sequential element input_L1_conv_image_reg was removed. 
+INFO: [Synth 8-6155] done synthesizing module 'CNN_pixel__parameterized0' (11#1) [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/CNN_pixel.sv:7]
+INFO: [Synth 8-6157] synthesizing module 'maxpooling__parameterized0' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/maxpooling.v:3]
+	Parameter SMALL_SIZE bound to: 7 - type: integer 
+	Parameter LARGE_SIZE bound to: 14 - type: integer 
+	Parameter SMALL_DEPTH bound to: 49 - type: integer 
+	Parameter LARGE_DEPTH bound to: 196 - type: integer 
+WARNING: [Synth 8-639] system function call 'fopen' not supported [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/maxpooling.v:173]
+WARNING: [Synth 8-639] system function call 'fopen' not supported [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/maxpooling.v:208]
+WARNING: [Synth 8-6014] Unused sequential element win_3_reg was removed.  [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/maxpooling.v:84]
+WARNING: [Synth 8-6014] Unused sequential element win_2_reg was removed.  [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/maxpooling.v:85]
+WARNING: [Synth 8-6014] Unused sequential element win_1_reg was removed.  [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/maxpooling.v:86]
+WARNING: [Synth 8-6014] Unused sequential element win_0_reg was removed.  [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/maxpooling.v:87]
+WARNING: [Synth 8-6014] Unused sequential element maxp_out_image_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element input_image_reg was removed. 
+INFO: [Synth 8-6155] done synthesizing module 'maxpooling__parameterized0' (11#1) [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/maxpooling.v:3]
+INFO: [Synth 8-6157] synthesizing module 'padding_zeros__parameterized1' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/padding_zeros.v:3]
+	Parameter WIDTH bound to: 7 - type: integer 
+	Parameter DEPTH bound to: 49 - type: integer 
+	Parameter DEPTH_PADDED bound to: 81 - type: integer 
+WARNING: [Synth 8-639] system function call 'fopen' not supported [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/padding_zeros.v:99]
+WARNING: [Synth 8-5788] Register w_pix_data_reg in module padding_zeros__parameterized1 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/padding_zeros.v:56]
+WARNING: [Synth 8-5788] Register w_ready_reg in module padding_zeros__parameterized1 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/padding_zeros.v:59]
+INFO: [Synth 8-6155] done synthesizing module 'padding_zeros__parameterized1' (11#1) [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/padding_zeros.v:3]
+INFO: [Synth 8-6157] synthesizing module 'CNN_pixel__parameterized1' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/CNN_pixel.sv:7]
+	Parameter total_pix bound to: 81 - type: integer 
+	Parameter total_pix_out bound to: 49 - type: integer 
+	Parameter pix_out_size bound to: 7 - type: integer 
+	Parameter FILTER_SIZE bound to: 3 - type: integer 
+	Parameter PIXEL_DATAW bound to: 16 - type: integer 
+	Parameter PIC_WIDTH bound to: 9 - type: integer 
+WARNING: [Synth 8-689] width (16) of port connection 'in_datab' does not match port width (15) of module 'mult8x8' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/CNN_pixel.sv:109]
+WARNING: [Synth 8-689] width (16) of port connection 'in_datab' does not match port width (15) of module 'mult8x8' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/CNN_pixel.sv:109]
+WARNING: [Synth 8-689] width (16) of port connection 'in_datab' does not match port width (15) of module 'mult8x8' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/CNN_pixel.sv:109]
+WARNING: [Synth 8-689] width (16) of port connection 'in_datab' does not match port width (15) of module 'mult8x8' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/CNN_pixel.sv:109]
+WARNING: [Synth 8-689] width (16) of port connection 'in_datab' does not match port width (15) of module 'mult8x8' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/CNN_pixel.sv:109]
+WARNING: [Synth 8-689] width (16) of port connection 'in_datab' does not match port width (15) of module 'mult8x8' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/CNN_pixel.sv:109]
+WARNING: [Synth 8-689] width (16) of port connection 'in_datab' does not match port width (15) of module 'mult8x8' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/CNN_pixel.sv:109]
+WARNING: [Synth 8-689] width (16) of port connection 'in_datab' does not match port width (15) of module 'mult8x8' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/CNN_pixel.sv:109]
+WARNING: [Synth 8-689] width (16) of port connection 'in_datab' does not match port width (15) of module 'mult8x8' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/CNN_pixel.sv:109]
+WARNING: [Synth 8-639] system function call 'fopen' not supported [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/CNN_pixel.sv:314]
+WARNING: [Synth 8-639] system function call 'fopen' not supported [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/CNN_pixel.sv:350]
+WARNING: [Synth 8-5856] 3D RAM r_f_reg  for this pattern/configuration is not supported. This will most likely be implemented in registers
+WARNING: [Synth 8-6014] Unused sequential element output_L1_conv_image_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element dummy_conv_input_data_addr_reg was removed.  [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/CNN_pixel.sv:276]
+WARNING: [Synth 8-6014] Unused sequential element input_L1_conv_image_reg was removed. 
+INFO: [Synth 8-6155] done synthesizing module 'CNN_pixel__parameterized1' (11#1) [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/CNN_pixel.sv:7]
+INFO: [Synth 8-6157] synthesizing module 'size_trim' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/size_trim.v:3]
+	Parameter INPUT_SIZE bound to: 7 - type: integer 
+	Parameter OUTPUT_SIZE bound to: 6 - type: integer 
+	Parameter INPUT_DEPTH bound to: 49 - type: integer 
+	Parameter OUTPUT_DEPTH bound to: 36 - type: integer 
+WARNING: [Synth 8-6014] Unused sequential element current_row_reg was removed.  [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/size_trim.v:32]
+WARNING: [Synth 8-6014] Unused sequential element current_col_reg was removed.  [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/size_trim.v:33]
+INFO: [Synth 8-6155] done synthesizing module 'size_trim' (12#1) [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/size_trim.v:3]
+INFO: [Synth 8-6157] synthesizing module 'maxpooling__parameterized1' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/maxpooling.v:3]
+	Parameter SMALL_SIZE bound to: 3 - type: integer 
+	Parameter LARGE_SIZE bound to: 6 - type: integer 
+	Parameter SMALL_DEPTH bound to: 9 - type: integer 
+	Parameter LARGE_DEPTH bound to: 36 - type: integer 
+WARNING: [Synth 8-639] system function call 'fopen' not supported [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/maxpooling.v:183]
+WARNING: [Synth 8-639] system function call 'fopen' not supported [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/maxpooling.v:218]
+WARNING: [Synth 8-6014] Unused sequential element win_3_reg was removed.  [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/maxpooling.v:84]
+WARNING: [Synth 8-6014] Unused sequential element win_2_reg was removed.  [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/maxpooling.v:85]
+WARNING: [Synth 8-6014] Unused sequential element win_1_reg was removed.  [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/maxpooling.v:86]
+WARNING: [Synth 8-6014] Unused sequential element win_0_reg was removed.  [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/maxpooling.v:87]
+WARNING: [Synth 8-6014] Unused sequential element maxp_out_image_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element input_image_reg was removed. 
+INFO: [Synth 8-6155] done synthesizing module 'maxpooling__parameterized1' (12#1) [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/maxpooling.v:3]
+INFO: [Synth 8-6157] synthesizing module 'dense_layer_1' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/dense_layer_1.sv:23]
+	Parameter US_DATA_WIDTH bound to: 15 - type: integer 
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+	Parameter INPUT_SIZE bound to: 9 - type: integer 
+	Parameter OUTPUT_SIZE bound to: 18 - type: integer 
+	Parameter WEIGHT_SIZE bound to: 162 - type: integer 
+WARNING: [Synth 8-639] system function call 'fopen' not supported [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/dense_layer_1.sv:56]
+WARNING: [Synth 8-639] system function call 'fopen' not supported [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/dense_layer_1.sv:61]
+WARNING: [Synth 8-6014] Unused sequential element input_matrix_reg[8] was removed.  [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/dense_layer_1.sv:87]
+WARNING: [Synth 8-6014] Unused sequential element input_matrix_reg[7] was removed.  [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/dense_layer_1.sv:87]
+WARNING: [Synth 8-6014] Unused sequential element input_matrix_reg[6] was removed.  [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/dense_layer_1.sv:87]
+WARNING: [Synth 8-6014] Unused sequential element input_matrix_reg[5] was removed.  [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/dense_layer_1.sv:87]
+WARNING: [Synth 8-6014] Unused sequential element input_matrix_reg[4] was removed.  [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/dense_layer_1.sv:87]
+WARNING: [Synth 8-6014] Unused sequential element input_matrix_reg[3] was removed.  [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/dense_layer_1.sv:87]
+WARNING: [Synth 8-6014] Unused sequential element input_matrix_reg[2] was removed.  [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/dense_layer_1.sv:87]
+WARNING: [Synth 8-6014] Unused sequential element input_matrix_reg[1] was removed.  [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/dense_layer_1.sv:87]
+WARNING: [Synth 8-6014] Unused sequential element input_matrix_reg[0] was removed.  [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/dense_layer_1.sv:87]
+WARNING: [Synth 8-3848] Net bias_matrix_32[17] in module/entity dense_layer_1 does not have driver. [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/dense_layer_1.sv:51]
+WARNING: [Synth 8-3848] Net bias_matrix_32[16] in module/entity dense_layer_1 does not have driver. [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/dense_layer_1.sv:51]
+WARNING: [Synth 8-3848] Net bias_matrix_32[15] in module/entity dense_layer_1 does not have driver. [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/dense_layer_1.sv:51]
+WARNING: [Synth 8-3848] Net bias_matrix_32[14] in module/entity dense_layer_1 does not have driver. [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/dense_layer_1.sv:51]
+WARNING: [Synth 8-3848] Net bias_matrix_32[13] in module/entity dense_layer_1 does not have driver. [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/dense_layer_1.sv:51]
+WARNING: [Synth 8-3848] Net bias_matrix_32[12] in module/entity dense_layer_1 does not have driver. [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/dense_layer_1.sv:51]
+WARNING: [Synth 8-3848] Net bias_matrix_32[11] in module/entity dense_layer_1 does not have driver. [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/dense_layer_1.sv:51]
+WARNING: [Synth 8-3848] Net bias_matrix_32[10] in module/entity dense_layer_1 does not have driver. [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/dense_layer_1.sv:51]
+WARNING: [Synth 8-3848] Net bias_matrix_32[9] in module/entity dense_layer_1 does not have driver. [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/dense_layer_1.sv:51]
+WARNING: [Synth 8-3848] Net bias_matrix_32[8] in module/entity dense_layer_1 does not have driver. [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/dense_layer_1.sv:51]
+WARNING: [Synth 8-3848] Net bias_matrix_32[7] in module/entity dense_layer_1 does not have driver. [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/dense_layer_1.sv:51]
+WARNING: [Synth 8-3848] Net bias_matrix_32[6] in module/entity dense_layer_1 does not have driver. [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/dense_layer_1.sv:51]
+WARNING: [Synth 8-3848] Net bias_matrix_32[5] in module/entity dense_layer_1 does not have driver. [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/dense_layer_1.sv:51]
+WARNING: [Synth 8-3848] Net bias_matrix_32[4] in module/entity dense_layer_1 does not have driver. [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/dense_layer_1.sv:51]
+WARNING: [Synth 8-3848] Net bias_matrix_32[3] in module/entity dense_layer_1 does not have driver. [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/dense_layer_1.sv:51]
+WARNING: [Synth 8-3848] Net bias_matrix_32[2] in module/entity dense_layer_1 does not have driver. [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/dense_layer_1.sv:51]
+WARNING: [Synth 8-3848] Net bias_matrix_32[1] in module/entity dense_layer_1 does not have driver. [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/dense_layer_1.sv:51]
+WARNING: [Synth 8-3848] Net bias_matrix_32[0] in module/entity dense_layer_1 does not have driver. [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/dense_layer_1.sv:51]
+INFO: [Synth 8-6155] done synthesizing module 'dense_layer_1' (13#1) [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/dense_layer_1.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'dense_layer_2' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/dense_layer_2.sv:23]
+	Parameter US_DATA_WIDTH bound to: 15 - type: integer 
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+	Parameter INPUT_SIZE bound to: 18 - type: integer 
+	Parameter OUTPUT_SIZE bound to: 36 - type: integer 
+	Parameter WEIGHT_SIZE bound to: 648 - type: integer 
+WARNING: [Synth 8-639] system function call 'fopen' not supported [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/dense_layer_2.sv:56]
+WARNING: [Synth 8-639] system function call 'fopen' not supported [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/dense_layer_2.sv:61]
+WARNING: [Synth 8-6014] Unused sequential element input_matrix_reg was removed. 
+WARNING: [Synth 8-3848] Net bias_matrix[1] in module/entity dense_layer_2 does not have driver. [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/dense_layer_2.sv:50]
+WARNING: [Synth 8-3848] Net bias_matrix[0] in module/entity dense_layer_2 does not have driver. [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/dense_layer_2.sv:50]
+WARNING: [Synth 8-3848] Net bias_matrix[2] in module/entity dense_layer_2 does not have driver. [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/dense_layer_2.sv:50]
+WARNING: [Synth 8-3848] Net bias_matrix[3] in module/entity dense_layer_2 does not have driver. [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/dense_layer_2.sv:50]
+WARNING: [Synth 8-3848] Net bias_matrix[4] in module/entity dense_layer_2 does not have driver. [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/dense_layer_2.sv:50]
+WARNING: [Synth 8-3848] Net bias_matrix[5] in module/entity dense_layer_2 does not have driver. [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/dense_layer_2.sv:50]
+WARNING: [Synth 8-3848] Net bias_matrix[6] in module/entity dense_layer_2 does not have driver. [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/dense_layer_2.sv:50]
+WARNING: [Synth 8-3848] Net bias_matrix[7] in module/entity dense_layer_2 does not have driver. [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/dense_layer_2.sv:50]
+WARNING: [Synth 8-3848] Net bias_matrix[8] in module/entity dense_layer_2 does not have driver. [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/dense_layer_2.sv:50]
+WARNING: [Synth 8-3848] Net bias_matrix[9] in module/entity dense_layer_2 does not have driver. [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/dense_layer_2.sv:50]
+WARNING: [Synth 8-3848] Net bias_matrix[10] in module/entity dense_layer_2 does not have driver. [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/dense_layer_2.sv:50]
+WARNING: [Synth 8-3848] Net bias_matrix[11] in module/entity dense_layer_2 does not have driver. [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/dense_layer_2.sv:50]
+WARNING: [Synth 8-3848] Net bias_matrix[12] in module/entity dense_layer_2 does not have driver. [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/dense_layer_2.sv:50]
+WARNING: [Synth 8-3848] Net bias_matrix[13] in module/entity dense_layer_2 does not have driver. [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/dense_layer_2.sv:50]
+WARNING: [Synth 8-3848] Net bias_matrix[14] in module/entity dense_layer_2 does not have driver. [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/dense_layer_2.sv:50]
+WARNING: [Synth 8-3848] Net bias_matrix[15] in module/entity dense_layer_2 does not have driver. [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/dense_layer_2.sv:50]
+WARNING: [Synth 8-3848] Net bias_matrix[16] in module/entity dense_layer_2 does not have driver. [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/dense_layer_2.sv:50]
+WARNING: [Synth 8-3848] Net bias_matrix[17] in module/entity dense_layer_2 does not have driver. [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/dense_layer_2.sv:50]
+WARNING: [Synth 8-3848] Net bias_matrix[18] in module/entity dense_layer_2 does not have driver. [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/dense_layer_2.sv:50]
+WARNING: [Synth 8-3848] Net bias_matrix[19] in module/entity dense_layer_2 does not have driver. [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/dense_layer_2.sv:50]
+WARNING: [Synth 8-3848] Net bias_matrix[20] in module/entity dense_layer_2 does not have driver. [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/dense_layer_2.sv:50]
+WARNING: [Synth 8-3848] Net bias_matrix[21] in module/entity dense_layer_2 does not have driver. [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/dense_layer_2.sv:50]
+WARNING: [Synth 8-3848] Net bias_matrix[22] in module/entity dense_layer_2 does not have driver. [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/dense_layer_2.sv:50]
+WARNING: [Synth 8-3848] Net bias_matrix[23] in module/entity dense_layer_2 does not have driver. [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/dense_layer_2.sv:50]
+WARNING: [Synth 8-3848] Net bias_matrix[24] in module/entity dense_layer_2 does not have driver. [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/dense_layer_2.sv:50]
+WARNING: [Synth 8-3848] Net bias_matrix[25] in module/entity dense_layer_2 does not have driver. [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/dense_layer_2.sv:50]
+WARNING: [Synth 8-3848] Net bias_matrix[26] in module/entity dense_layer_2 does not have driver. [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/dense_layer_2.sv:50]
+WARNING: [Synth 8-3848] Net bias_matrix[27] in module/entity dense_layer_2 does not have driver. [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/dense_layer_2.sv:50]
+WARNING: [Synth 8-3848] Net bias_matrix[28] in module/entity dense_layer_2 does not have driver. [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/dense_layer_2.sv:50]
+WARNING: [Synth 8-3848] Net bias_matrix[29] in module/entity dense_layer_2 does not have driver. [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/dense_layer_2.sv:50]
+WARNING: [Synth 8-3848] Net bias_matrix[30] in module/entity dense_layer_2 does not have driver. [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/dense_layer_2.sv:50]
+WARNING: [Synth 8-3848] Net bias_matrix[31] in module/entity dense_layer_2 does not have driver. [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/dense_layer_2.sv:50]
+WARNING: [Synth 8-3848] Net bias_matrix[32] in module/entity dense_layer_2 does not have driver. [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/dense_layer_2.sv:50]
+WARNING: [Synth 8-3848] Net bias_matrix[33] in module/entity dense_layer_2 does not have driver. [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/dense_layer_2.sv:50]
+WARNING: [Synth 8-3848] Net bias_matrix[34] in module/entity dense_layer_2 does not have driver. [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/dense_layer_2.sv:50]
+WARNING: [Synth 8-3848] Net bias_matrix[35] in module/entity dense_layer_2 does not have driver. [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/dense_layer_2.sv:50]
+INFO: [Synth 8-6155] done synthesizing module 'dense_layer_2' (14#1) [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/dense_layer_2.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'cnn_interface' (15#1) [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/cnn_interface.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'top' (16#1) [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/top.v:23]
+WARNING: [Synth 8-3331] design dense_layer_2 has unconnected port i_data[14]
+WARNING: [Synth 8-3331] design dense_layer_2 has unconnected port i_data[13]
+WARNING: [Synth 8-3331] design dense_layer_2 has unconnected port i_data[12]
+WARNING: [Synth 8-3331] design dense_layer_2 has unconnected port i_data[11]
+WARNING: [Synth 8-3331] design dense_layer_2 has unconnected port i_data[10]
+WARNING: [Synth 8-3331] design dense_layer_2 has unconnected port i_data[9]
+WARNING: [Synth 8-3331] design dense_layer_2 has unconnected port i_data[8]
+WARNING: [Synth 8-3331] design dense_layer_2 has unconnected port i_data[7]
+WARNING: [Synth 8-3331] design dense_layer_2 has unconnected port i_data[6]
+WARNING: [Synth 8-3331] design dense_layer_2 has unconnected port i_data[5]
+WARNING: [Synth 8-3331] design dense_layer_2 has unconnected port i_data[4]
+WARNING: [Synth 8-3331] design dense_layer_2 has unconnected port i_data[3]
+WARNING: [Synth 8-3331] design dense_layer_2 has unconnected port i_data[2]
+WARNING: [Synth 8-3331] design dense_layer_2 has unconnected port i_data[1]
+WARNING: [Synth 8-3331] design dense_layer_2 has unconnected port i_data[0]
+WARNING: [Synth 8-3331] design dense_layer_2 has unconnected port i_addr[4]
+WARNING: [Synth 8-3331] design dense_layer_2 has unconnected port i_addr[3]
+WARNING: [Synth 8-3331] design dense_layer_2 has unconnected port i_addr[2]
+WARNING: [Synth 8-3331] design dense_layer_2 has unconnected port i_addr[1]
+WARNING: [Synth 8-3331] design dense_layer_2 has unconnected port i_addr[0]
+WARNING: [Synth 8-3331] design dense_layer_1 has unconnected port i_data[14]
+WARNING: [Synth 8-3331] design dense_layer_1 has unconnected port i_data[13]
+WARNING: [Synth 8-3331] design dense_layer_1 has unconnected port i_data[12]
+WARNING: [Synth 8-3331] design dense_layer_1 has unconnected port i_data[11]
+WARNING: [Synth 8-3331] design dense_layer_1 has unconnected port i_data[10]
+WARNING: [Synth 8-3331] design dense_layer_1 has unconnected port i_data[9]
+WARNING: [Synth 8-3331] design dense_layer_1 has unconnected port i_data[8]
+WARNING: [Synth 8-3331] design dense_layer_1 has unconnected port i_data[7]
+WARNING: [Synth 8-3331] design dense_layer_1 has unconnected port i_data[6]
+WARNING: [Synth 8-3331] design dense_layer_1 has unconnected port i_data[5]
+WARNING: [Synth 8-3331] design dense_layer_1 has unconnected port i_data[4]
+WARNING: [Synth 8-3331] design dense_layer_1 has unconnected port i_data[3]
+WARNING: [Synth 8-3331] design dense_layer_1 has unconnected port i_data[2]
+WARNING: [Synth 8-3331] design dense_layer_1 has unconnected port i_data[1]
+WARNING: [Synth 8-3331] design dense_layer_1 has unconnected port i_data[0]
+WARNING: [Synth 8-3331] design dense_layer_1 has unconnected port i_addr[3]
+WARNING: [Synth 8-3331] design dense_layer_1 has unconnected port i_addr[2]
+WARNING: [Synth 8-3331] design dense_layer_1 has unconnected port i_addr[1]
+WARNING: [Synth 8-3331] design dense_layer_1 has unconnected port i_addr[0]
+WARNING: [Synth 8-3331] design vga_top has unconnected port i_inverse_gray_en
+WARNING: [Synth 8-3331] design vga_top has unconnected port i_high_contrast_en
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 1091.969 ; gain = 756.082
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 1091.969 ; gain = 756.082
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5580] Multithreading enabled for synth_design using a maximum of 2 processes.
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+INFO: [Synth 8-5546] ROM "vc" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "r_sample" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-4471] merging register 'char2_bound_reg[3][9:0]' into 'char1_bound_reg[3][9:0]' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/segmentation.v:195]
+INFO: [Synth 8-4471] merging register 'char3_bound_reg[3][9:0]' into 'char1_bound_reg[3][9:0]' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/segmentation.v:196]
+INFO: [Synth 8-4471] merging register 'char4_bound_reg[3][9:0]' into 'char1_bound_reg[3][9:0]' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/segmentation.v:197]
+INFO: [Synth 8-4471] merging register 'char5_bound_reg[3][9:0]' into 'char1_bound_reg[3][9:0]' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/segmentation.v:198]
+INFO: [Synth 8-4471] merging register 'char6_bound_reg[3][9:0]' into 'char1_bound_reg[3][9:0]' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/segmentation.v:199]
+INFO: [Synth 8-4471] merging register 'char7_bound_reg[3][9:0]' into 'char1_bound_reg[3][9:0]' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/segmentation.v:200]
+INFO: [Synth 8-4471] merging register 'char2_bound_reg[2][9:0]' into 'char1_bound_reg[2][9:0]' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/segmentation.v:195]
+INFO: [Synth 8-4471] merging register 'char3_bound_reg[2][9:0]' into 'char1_bound_reg[2][9:0]' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/segmentation.v:196]
+INFO: [Synth 8-4471] merging register 'char4_bound_reg[2][9:0]' into 'char1_bound_reg[2][9:0]' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/segmentation.v:197]
+INFO: [Synth 8-4471] merging register 'char5_bound_reg[2][9:0]' into 'char1_bound_reg[2][9:0]' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/segmentation.v:198]
+INFO: [Synth 8-4471] merging register 'char6_bound_reg[2][9:0]' into 'char1_bound_reg[2][9:0]' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/segmentation.v:199]
+INFO: [Synth 8-4471] merging register 'char7_bound_reg[2][9:0]' into 'char1_bound_reg[2][9:0]' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/segmentation.v:200]
+INFO: [Synth 8-5546] ROM "vertical_histogram_count_reg[639]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vertical_histogram_count_reg[638]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vertical_histogram_count_reg[637]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vertical_histogram_count_reg[636]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vertical_histogram_count_reg[635]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vertical_histogram_count_reg[634]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vertical_histogram_count_reg[633]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vertical_histogram_count_reg[632]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vertical_histogram_count_reg[631]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vertical_histogram_count_reg[630]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vertical_histogram_count_reg[629]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vertical_histogram_count_reg[628]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vertical_histogram_count_reg[627]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vertical_histogram_count_reg[626]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vertical_histogram_count_reg[625]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vertical_histogram_count_reg[624]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vertical_histogram_count_reg[623]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vertical_histogram_count_reg[622]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vertical_histogram_count_reg[621]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vertical_histogram_count_reg[620]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vertical_histogram_count_reg[619]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vertical_histogram_count_reg[618]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vertical_histogram_count_reg[617]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vertical_histogram_count_reg[616]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vertical_histogram_count_reg[615]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vertical_histogram_count_reg[614]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vertical_histogram_count_reg[613]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vertical_histogram_count_reg[612]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vertical_histogram_count_reg[611]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vertical_histogram_count_reg[610]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vertical_histogram_count_reg[609]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vertical_histogram_count_reg[608]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vertical_histogram_count_reg[607]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vertical_histogram_count_reg[606]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vertical_histogram_count_reg[605]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vertical_histogram_count_reg[604]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vertical_histogram_count_reg[603]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vertical_histogram_count_reg[602]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vertical_histogram_count_reg[601]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vertical_histogram_count_reg[600]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vertical_histogram_count_reg[599]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vertical_histogram_count_reg[598]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vertical_histogram_count_reg[597]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vertical_histogram_count_reg[596]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vertical_histogram_count_reg[595]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vertical_histogram_count_reg[594]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vertical_histogram_count_reg[593]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vertical_histogram_count_reg[592]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vertical_histogram_count_reg[591]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vertical_histogram_count_reg[590]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vertical_histogram_count_reg[589]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vertical_histogram_count_reg[588]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vertical_histogram_count_reg[587]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vertical_histogram_count_reg[586]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vertical_histogram_count_reg[585]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vertical_histogram_count_reg[584]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vertical_histogram_count_reg[583]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vertical_histogram_count_reg[582]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vertical_histogram_count_reg[581]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vertical_histogram_count_reg[580]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vertical_histogram_count_reg[579]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vertical_histogram_count_reg[578]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vertical_histogram_count_reg[577]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vertical_histogram_count_reg[576]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vertical_histogram_count_reg[575]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vertical_histogram_count_reg[574]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vertical_histogram_count_reg[573]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vertical_histogram_count_reg[572]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vertical_histogram_count_reg[571]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vertical_histogram_count_reg[570]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vertical_histogram_count_reg[569]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vertical_histogram_count_reg[568]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vertical_histogram_count_reg[567]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vertical_histogram_count_reg[566]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vertical_histogram_count_reg[565]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vertical_histogram_count_reg[564]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vertical_histogram_count_reg[563]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vertical_histogram_count_reg[562]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vertical_histogram_count_reg[561]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vertical_histogram_count_reg[560]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vertical_histogram_count_reg[559]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vertical_histogram_count_reg[558]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vertical_histogram_count_reg[557]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vertical_histogram_count_reg[556]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vertical_histogram_count_reg[555]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vertical_histogram_count_reg[554]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vertical_histogram_count_reg[553]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vertical_histogram_count_reg[552]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vertical_histogram_count_reg[551]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vertical_histogram_count_reg[550]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vertical_histogram_count_reg[549]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vertical_histogram_count_reg[548]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vertical_histogram_count_reg[547]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vertical_histogram_count_reg[546]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vertical_histogram_count_reg[545]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vertical_histogram_count_reg[544]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vertical_histogram_count_reg[543]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vertical_histogram_count_reg[542]" won't be mapped to RAM because it is too sparse
+INFO: [Common 17-14] Message 'Synth 8-5546' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-5544] ROM "char1_bound" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "frame_data0" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-4471] merging register 'padded_image_reg[1][14:0]' into 'padded_image_reg[0][14:0]' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/padding_zeros.v:37]
+INFO: [Synth 8-4471] merging register 'padded_image_reg[2][14:0]' into 'padded_image_reg[0][14:0]' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/padding_zeros.v:37]
+INFO: [Synth 8-4471] merging register 'padded_image_reg[3][14:0]' into 'padded_image_reg[0][14:0]' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/padding_zeros.v:37]
+INFO: [Synth 8-4471] merging register 'padded_image_reg[4][14:0]' into 'padded_image_reg[0][14:0]' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/padding_zeros.v:37]
+INFO: [Synth 8-4471] merging register 'padded_image_reg[5][14:0]' into 'padded_image_reg[0][14:0]' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/padding_zeros.v:37]
+INFO: [Synth 8-4471] merging register 'padded_image_reg[6][14:0]' into 'padded_image_reg[0][14:0]' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/padding_zeros.v:37]
+INFO: [Synth 8-4471] merging register 'padded_image_reg[7][14:0]' into 'padded_image_reg[0][14:0]' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/padding_zeros.v:37]
+INFO: [Synth 8-4471] merging register 'padded_image_reg[8][14:0]' into 'padded_image_reg[0][14:0]' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/padding_zeros.v:37]
+INFO: [Synth 8-4471] merging register 'padded_image_reg[9][14:0]' into 'padded_image_reg[0][14:0]' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/padding_zeros.v:37]
+INFO: [Synth 8-4471] merging register 'padded_image_reg[10][14:0]' into 'padded_image_reg[0][14:0]' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/padding_zeros.v:37]
+INFO: [Synth 8-4471] merging register 'padded_image_reg[11][14:0]' into 'padded_image_reg[0][14:0]' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/padding_zeros.v:37]
+INFO: [Synth 8-4471] merging register 'padded_image_reg[12][14:0]' into 'padded_image_reg[0][14:0]' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/padding_zeros.v:37]
+INFO: [Synth 8-4471] merging register 'padded_image_reg[13][14:0]' into 'padded_image_reg[0][14:0]' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/padding_zeros.v:37]
+INFO: [Synth 8-4471] merging register 'padded_image_reg[14][14:0]' into 'padded_image_reg[0][14:0]' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/padding_zeros.v:37]
+INFO: [Synth 8-4471] merging register 'padded_image_reg[15][14:0]' into 'padded_image_reg[0][14:0]' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/padding_zeros.v:37]
+INFO: [Synth 8-4471] merging register 'padded_image_reg[16][14:0]' into 'padded_image_reg[0][14:0]' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/padding_zeros.v:37]
+INFO: [Synth 8-4471] merging register 'padded_image_reg[17][14:0]' into 'padded_image_reg[0][14:0]' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/padding_zeros.v:37]
+INFO: [Synth 8-4471] merging register 'padded_image_reg[18][14:0]' into 'padded_image_reg[0][14:0]' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/padding_zeros.v:37]
+INFO: [Synth 8-4471] merging register 'padded_image_reg[19][14:0]' into 'padded_image_reg[0][14:0]' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/padding_zeros.v:37]
+INFO: [Synth 8-4471] merging register 'padded_image_reg[20][14:0]' into 'padded_image_reg[0][14:0]' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/padding_zeros.v:37]
+INFO: [Synth 8-4471] merging register 'padded_image_reg[21][14:0]' into 'padded_image_reg[0][14:0]' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/padding_zeros.v:37]
+INFO: [Synth 8-4471] merging register 'padded_image_reg[22][14:0]' into 'padded_image_reg[0][14:0]' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/padding_zeros.v:37]
+INFO: [Synth 8-4471] merging register 'padded_image_reg[23][14:0]' into 'padded_image_reg[0][14:0]' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/padding_zeros.v:37]
+INFO: [Synth 8-4471] merging register 'padded_image_reg[24][14:0]' into 'padded_image_reg[0][14:0]' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/padding_zeros.v:37]
+INFO: [Synth 8-4471] merging register 'padded_image_reg[25][14:0]' into 'padded_image_reg[0][14:0]' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/padding_zeros.v:37]
+INFO: [Synth 8-4471] merging register 'padded_image_reg[26][14:0]' into 'padded_image_reg[0][14:0]' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/padding_zeros.v:37]
+INFO: [Synth 8-4471] merging register 'padded_image_reg[27][14:0]' into 'padded_image_reg[0][14:0]' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/padding_zeros.v:37]
+INFO: [Synth 8-4471] merging register 'padded_image_reg[28][14:0]' into 'padded_image_reg[0][14:0]' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/padding_zeros.v:37]
+INFO: [Synth 8-4471] merging register 'padded_image_reg[29][14:0]' into 'padded_image_reg[0][14:0]' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/padding_zeros.v:37]
+INFO: [Synth 8-4471] merging register 'padded_image_reg[30][14:0]' into 'padded_image_reg[0][14:0]' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/padding_zeros.v:37]
+INFO: [Synth 8-5545] ROM "padded_image_reg[31]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "padded_image_reg[32]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "padded_image_reg[33]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "padded_image_reg[34]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "padded_image_reg[35]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "padded_image_reg[36]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "padded_image_reg[37]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "padded_image_reg[38]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "padded_image_reg[39]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "padded_image_reg[40]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "padded_image_reg[41]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "padded_image_reg[42]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "padded_image_reg[43]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "padded_image_reg[44]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "padded_image_reg[45]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "padded_image_reg[46]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "padded_image_reg[47]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "padded_image_reg[48]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "padded_image_reg[49]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "padded_image_reg[50]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "padded_image_reg[51]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "padded_image_reg[52]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "padded_image_reg[53]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "padded_image_reg[54]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "padded_image_reg[55]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "padded_image_reg[56]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "padded_image_reg[57]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "padded_image_reg[58]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "padded_image_reg[59]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "padded_image_reg[60]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "padded_image_reg[61]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "padded_image_reg[62]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "padded_image_reg[63]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "padded_image_reg[64]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "padded_image_reg[65]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "padded_image_reg[66]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "padded_image_reg[67]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "padded_image_reg[68]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "padded_image_reg[69]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "padded_image_reg[70]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "padded_image_reg[71]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "padded_image_reg[72]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "padded_image_reg[73]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "padded_image_reg[74]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "padded_image_reg[75]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "padded_image_reg[76]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "padded_image_reg[77]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "padded_image_reg[78]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "padded_image_reg[79]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "padded_image_reg[80]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "padded_image_reg[81]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "padded_image_reg[82]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "padded_image_reg[83]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "padded_image_reg[84]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "padded_image_reg[85]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "padded_image_reg[86]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "padded_image_reg[87]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "padded_image_reg[88]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "padded_image_reg[89]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "padded_image_reg[90]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "padded_image_reg[91]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "padded_image_reg[92]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "padded_image_reg[93]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "padded_image_reg[94]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "padded_image_reg[95]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "padded_image_reg[96]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "padded_image_reg[97]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "padded_image_reg[98]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "padded_image_reg[99]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "padded_image_reg[100]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "padded_image_reg[101]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "padded_image_reg[102]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "padded_image_reg[103]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "padded_image_reg[104]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "padded_image_reg[105]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "padded_image_reg[106]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "padded_image_reg[107]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "padded_image_reg[108]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "padded_image_reg[109]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "padded_image_reg[110]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "padded_image_reg[111]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "padded_image_reg[112]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "padded_image_reg[113]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "padded_image_reg[114]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "padded_image_reg[115]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "padded_image_reg[116]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "padded_image_reg[117]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "padded_image_reg[118]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "padded_image_reg[119]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "padded_image_reg[120]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "padded_image_reg[121]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "padded_image_reg[122]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "padded_image_reg[123]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "padded_image_reg[124]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "padded_image_reg[125]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "padded_image_reg[126]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "padded_image_reg[127]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "padded_image_reg[128]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "padded_image_reg[129]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "padded_image_reg[130]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Common 17-14] Message 'Synth 8-5545' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-4471] merging register 'padded_image_reg[1][14:0]' into 'padded_image_reg[0][14:0]' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/padding_zeros.v:37]
+INFO: [Synth 8-4471] merging register 'padded_image_reg[2][14:0]' into 'padded_image_reg[0][14:0]' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/padding_zeros.v:37]
+INFO: [Synth 8-4471] merging register 'padded_image_reg[3][14:0]' into 'padded_image_reg[0][14:0]' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/padding_zeros.v:37]
+INFO: [Synth 8-4471] merging register 'padded_image_reg[4][14:0]' into 'padded_image_reg[0][14:0]' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/padding_zeros.v:37]
+INFO: [Synth 8-4471] merging register 'padded_image_reg[5][14:0]' into 'padded_image_reg[0][14:0]' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/padding_zeros.v:37]
+INFO: [Synth 8-4471] merging register 'padded_image_reg[6][14:0]' into 'padded_image_reg[0][14:0]' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/padding_zeros.v:37]
+INFO: [Synth 8-4471] merging register 'padded_image_reg[7][14:0]' into 'padded_image_reg[0][14:0]' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/padding_zeros.v:37]
+INFO: [Synth 8-4471] merging register 'padded_image_reg[8][14:0]' into 'padded_image_reg[0][14:0]' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/padding_zeros.v:37]
+INFO: [Synth 8-4471] merging register 'padded_image_reg[9][14:0]' into 'padded_image_reg[0][14:0]' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/padding_zeros.v:37]
+INFO: [Synth 8-4471] merging register 'padded_image_reg[10][14:0]' into 'padded_image_reg[0][14:0]' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/padding_zeros.v:37]
+INFO: [Synth 8-4471] merging register 'padded_image_reg[11][14:0]' into 'padded_image_reg[0][14:0]' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/padding_zeros.v:37]
+INFO: [Synth 8-4471] merging register 'padded_image_reg[12][14:0]' into 'padded_image_reg[0][14:0]' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/padding_zeros.v:37]
+INFO: [Synth 8-4471] merging register 'padded_image_reg[13][14:0]' into 'padded_image_reg[0][14:0]' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/padding_zeros.v:37]
+INFO: [Synth 8-4471] merging register 'padded_image_reg[14][14:0]' into 'padded_image_reg[0][14:0]' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/padding_zeros.v:37]
+INFO: [Synth 8-4471] merging register 'padded_image_reg[15][14:0]' into 'padded_image_reg[0][14:0]' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/padding_zeros.v:37]
+INFO: [Synth 8-4471] merging register 'padded_image_reg[16][14:0]' into 'padded_image_reg[0][14:0]' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/padding_zeros.v:37]
+INFO: [Synth 8-4471] merging register 'padded_image_reg[1][14:0]' into 'padded_image_reg[0][14:0]' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/padding_zeros.v:37]
+INFO: [Synth 8-4471] merging register 'padded_image_reg[2][14:0]' into 'padded_image_reg[0][14:0]' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/padding_zeros.v:37]
+INFO: [Synth 8-4471] merging register 'padded_image_reg[3][14:0]' into 'padded_image_reg[0][14:0]' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/padding_zeros.v:37]
+INFO: [Synth 8-4471] merging register 'padded_image_reg[4][14:0]' into 'padded_image_reg[0][14:0]' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/padding_zeros.v:37]
+INFO: [Synth 8-4471] merging register 'padded_image_reg[5][14:0]' into 'padded_image_reg[0][14:0]' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/padding_zeros.v:37]
+INFO: [Synth 8-4471] merging register 'padded_image_reg[6][14:0]' into 'padded_image_reg[0][14:0]' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/padding_zeros.v:37]
+INFO: [Synth 8-4471] merging register 'padded_image_reg[7][14:0]' into 'padded_image_reg[0][14:0]' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/padding_zeros.v:37]
+INFO: [Synth 8-4471] merging register 'padded_image_reg[8][14:0]' into 'padded_image_reg[0][14:0]' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/padding_zeros.v:37]
+INFO: [Synth 8-4471] merging register 'padded_image_reg[9][14:0]' into 'padded_image_reg[0][14:0]' [C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.srcs/sources_1/new/padding_zeros.v:37]
+INFO: [Synth 8-5544] ROM "read_bram_done" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "small_image_data_valid" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "capture_done_flag" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-6430] The Block RAM small_image_reg may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:57 ; elapsed = 00:02:09 . Memory (MB): peak = 1563.535 ; gain = 1227.648
+---------------------------------------------------------------------------------
+RAM Pipeline Warning: Read Address Register Found For RAM small_image_reg. We will not be able to pipeline it. This may degrade performance. 
+
+Report RTL Partitions: 
++------+--------------------+------------+----------+
+|      |RTL Partition       |Replication |Instances |
++------+--------------------+------------+----------+
+|1     |segmentation__GB0   |           1|     35992|
+|2     |segmentation__GB1   |           1|      9632|
+|3     |segmentation__GB2   |           1|     32196|
+|4     |rom_vga_top         |           1|     65532|
+|5     |vga_top__GCB1       |           1|      2628|
+|6     |padding_zeros__GB0  |           1|     29230|
+|7     |padding_zeros__GB1  |           1|      6720|
+|8     |padding_zeros__GB2  |           1|     12131|
+|9     |padding_zeros__GB3  |           1|     17526|
+|10    |dense_layer_2__GB0  |           1|     22194|
+|11    |dense_layer_2__GB1  |           1|     12669|
+|12    |dense_layer_2__GB2  |           1|      7371|
+|13    |dense_layer_2__GB3  |           1|     12324|
+|14    |cnn_interface__GCB0 |           1|     28610|
+|15    |cnn_interface__GCB1 |           1|     16444|
++------+--------------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 31    
+	  19 Input     32 Bit       Adders := 36    
+	  10 Input     32 Bit       Adders := 18    
+	   2 Input     19 Bit       Adders := 1     
+	   2 Input     16 Bit       Adders := 3     
+	   2 Input     15 Bit       Adders := 3     
+	   2 Input     10 Bit       Adders := 16    
+	   3 Input     10 Bit       Adders := 8     
+	   2 Input      8 Bit       Adders := 6     
+	   2 Input      7 Bit       Adders := 3     
+	   2 Input      6 Bit       Adders := 5     
+	   2 Input      5 Bit       Adders := 3     
+	   2 Input      4 Bit       Adders := 3     
+	   2 Input      3 Bit       Adders := 1     
+	   4 Input      3 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 111   
+	               29 Bit    Registers := 36    
+	               19 Bit    Registers := 2     
+	               16 Bit    Registers := 149   
+	               15 Bit    Registers := 1248  
+	               12 Bit    Registers := 2     
+	               10 Bit    Registers := 1149  
+	                8 Bit    Registers := 5     
+	                7 Bit    Registers := 2     
+	                6 Bit    Registers := 5     
+	                5 Bit    Registers := 3     
+	                4 Bit    Registers := 4     
+	                3 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1055  
++---RAMs : 
+	              784 Bit         RAMs := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 121   
+	   2 Input     19 Bit        Muxes := 3     
+	   2 Input     16 Bit        Muxes := 3     
+	   3 Input     16 Bit        Muxes := 3     
+	   6 Input     15 Bit        Muxes := 3     
+	   2 Input     15 Bit        Muxes := 10    
+	   2 Input     13 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 12    
+	   2 Input     10 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 2     
+	   2 Input      7 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 2     
+	   2 Input      5 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 9     
+	   5 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 4649  
+	   7 Input      1 Bit        Muxes := 2     
+	   6 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 4     
+	   3 Input      1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module debouncer 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module segmentation 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 8     
+	   3 Input     10 Bit       Adders := 8     
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	               12 Bit    Registers := 1     
+	               10 Bit    Registers := 1140  
+	                3 Bit    Registers := 2     
+	                1 Bit    Registers := 11    
++---Muxes : 
+	   2 Input     10 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 2265  
+	   7 Input      1 Bit        Muxes := 2     
+	   6 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 2     
+Module rescaling 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 2     
+	   4 Input      3 Bit       Adders := 1     
++---Registers : 
+	               12 Bit    Registers := 1     
+	               10 Bit    Registers := 2     
+	                1 Bit    Registers := 65    
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module mem_control 
+Detailed RTL Component Info : 
++---Registers : 
+	               10 Bit    Registers := 2     
++---RAMs : 
+	              784 Bit         RAMs := 1     
+Module vga_driver 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 2     
++---Registers : 
+	               10 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module vga_top 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     19 Bit       Adders := 1     
++---Registers : 
+	               19 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     19 Bit        Muxes := 3     
+	   2 Input      4 Bit        Muxes := 6     
+	   5 Input      2 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 4     
+Module padding_zeros 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 2     
+	   2 Input      7 Bit       Adders := 1     
++---Registers : 
+	               15 Bit    Registers := 871   
+	               10 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input      7 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1739  
+Module dense_layer_2 
+Detailed RTL Component Info : 
++---Adders : 
+	  19 Input     32 Bit       Adders := 36    
+	   2 Input      5 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 36    
+	               29 Bit    Registers := 36    
+	                5 Bit    Registers := 1     
+	                1 Bit    Registers := 652   
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 121   
+	   2 Input      2 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 1     
+Module reg32p32__9 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+Module reg32p32__10 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+Module reg32p32__11 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+Module reg32p32__12 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+Module reg32p32__13 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+Module reg32p32__14 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+Module reg32p32__15 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+Module reg32p32__16 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+Module CNN_pixel 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input     16 Bit       Adders := 1     
+	   2 Input     15 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 19    
+	               16 Bit    Registers := 73    
+	               15 Bit    Registers := 1     
+	               10 Bit    Registers := 2     
+	                1 Bit    Registers := 68    
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+	   3 Input     16 Bit        Muxes := 1     
+	   6 Input     15 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 4     
+Module maxpooling 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 2     
++---Registers : 
+	               15 Bit    Registers := 31    
+	                8 Bit    Registers := 2     
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   2 Input     15 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 4     
+	   3 Input      1 Bit        Muxes := 1     
+Module padding_zeros__parameterized0 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 2     
+	   2 Input      6 Bit       Adders := 1     
++---Registers : 
+	               15 Bit    Registers := 241   
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 2     
+	   2 Input      6 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 479   
+Module maxpooling__parameterized1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 2     
++---Registers : 
+	               15 Bit    Registers := 9     
+	                4 Bit    Registers := 2     
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   2 Input     15 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 4     
+	   3 Input      1 Bit        Muxes := 1     
+Module size_trim 
+Detailed RTL Component Info : 
++---Registers : 
+	               15 Bit    Registers := 1     
+	                6 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module reg32p32__1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+Module reg32p32__2 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+Module reg32p32__3 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+Module reg32p32__4 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+Module reg32p32__5 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+Module reg32p32__6 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+Module reg32p32__7 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+Module reg32p32__8 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+Module CNN_pixel__parameterized1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input     16 Bit       Adders := 1     
+	   2 Input     15 Bit       Adders := 1     
+	   2 Input      7 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 19    
+	               16 Bit    Registers := 31    
+	               15 Bit    Registers := 1     
+	                7 Bit    Registers := 1     
+	                6 Bit    Registers := 1     
+	                1 Bit    Registers := 26    
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+	   3 Input     16 Bit        Muxes := 1     
+	   6 Input     15 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 4     
+Module padding_zeros__parameterized1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      7 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 1     
++---Registers : 
+	               15 Bit    Registers := 73    
+	                7 Bit    Registers := 1     
+	                6 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input      6 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 143   
+Module maxpooling__parameterized0 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 2     
++---Registers : 
+	               15 Bit    Registers := 17    
+	                6 Bit    Registers := 2     
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   2 Input     15 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 4     
+	   3 Input      1 Bit        Muxes := 1     
+Module dense_layer_1 
+Detailed RTL Component Info : 
++---Adders : 
+	  10 Input     32 Bit       Adders := 18    
+	   2 Input      5 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 18    
+	               15 Bit    Registers := 1     
+	                5 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 166   
++---Muxes : 
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module reg32p32__17 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+Module reg32p32__18 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+Module reg32p32__19 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+Module reg32p32__20 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+Module reg32p32__21 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+Module reg32p32__22 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+Module reg32p32__23 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+Module reg32p32 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+Module CNN_pixel__parameterized0 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input     16 Bit       Adders := 1     
+	   2 Input     15 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 19    
+	               16 Bit    Registers := 45    
+	               15 Bit    Registers := 1     
+	                8 Bit    Registers := 2     
+	                1 Bit    Registers := 40    
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+	   3 Input     16 Bit        Muxes := 1     
+	   6 Input     15 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 4     
+Module cnn_interface 
+Detailed RTL Component Info : 
++---Registers : 
+	               15 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     15 Bit        Muxes := 1     
+	   2 Input     13 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5544] ROM "char1_bound" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+WARNING: [Synth 8-3917] design top has port dummy_index1[7] driven by constant 0
+WARNING: [Synth 8-3917] design top has port dummy_index1[6] driven by constant 0
+WARNING: [Synth 8-3917] design top has port dummy_index2[7] driven by constant 0
+WARNING: [Synth 8-3917] design top has port dummy_index2[6] driven by constant 0
+WARNING: [Synth 8-3917] design top has port dummy_index3[7] driven by constant 0
+WARNING: [Synth 8-3917] design top has port dummy_index3[6] driven by constant 0
+WARNING: [Synth 8-3331] design top has unconnected port i_inverse_gray_en
+WARNING: [Synth 8-3331] design top has unconnected port i_high_contrast_en
+RAM Pipeline Warning: Read Address Register Found For RAM mem_control/small_image_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM mem_control/small_image_reg. We will not be able to pipeline it. This may degrade performance. 
+INFO: [Synth 8-6430] The Block RAM mem_control/small_image_reg may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+INFO: [Synth 8-4652] Swapped enable and write-enable on 1 RAM instances of RAM mem_control/small_image_reg to conserve power
+RAM Pipeline Warning: Read Address Register Found For RAM mem_control/small_image_reg. We will not be able to pipeline it. This may degrade performance. 
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\char_num_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\char_num_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\char_num_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\rescaling/FIFO_Valid_reg )
+INFO: [Synth 8-3886] merging instance 'vga_topi_4/frame_data_reg[0]' (FDS) to 'vga_topi_4/frame_data_reg[3]'
+INFO: [Synth 8-3886] merging instance 'vga_topi_4/frame_data_reg[1]' (FDS) to 'vga_topi_4/frame_data_reg[3]'
+INFO: [Synth 8-3886] merging instance 'vga_topi_4/frame_data_reg[2]' (FDS) to 'vga_topi_4/frame_data_reg[3]'
+INFO: [Synth 8-3886] merging instance 'dense_L2i_11/bias_matrix_32_reg[34][0]' (FDE) to 'dense_L2i_11/bias_matrix_32_reg[35][0]'
+INFO: [Synth 8-3886] merging instance 'dense_L2i_11/bias_matrix_32_reg[34][1]' (FDE) to 'dense_L2i_11/bias_matrix_32_reg[35][0]'
+INFO: [Synth 8-3886] merging instance 'dense_L2i_11/bias_matrix_32_reg[34][2]' (FDE) to 'dense_L2i_11/bias_matrix_32_reg[35][0]'
+INFO: [Synth 8-3886] merging instance 'dense_L2i_11/bias_matrix_32_reg[34][3]' (FDE) to 'dense_L2i_11/bias_matrix_32_reg[35][0]'
+INFO: [Synth 8-3886] merging instance 'dense_L2i_11/bias_matrix_32_reg[34][4]' (FDE) to 'dense_L2i_11/bias_matrix_32_reg[35][0]'
+INFO: [Synth 8-3886] merging instance 'dense_L2i_11/bias_matrix_32_reg[34][5]' (FDE) to 'dense_L2i_11/bias_matrix_32_reg[35][0]'
+INFO: [Synth 8-3886] merging instance 'dense_L2i_11/bias_matrix_32_reg[34][6]' (FDE) to 'dense_L2i_11/bias_matrix_32_reg[35][0]'
+INFO: [Synth 8-3886] merging instance 'dense_L2i_11/bias_matrix_32_reg[34][7]' (FDE) to 'dense_L2i_11/bias_matrix_32_reg[35][0]'
+INFO: [Synth 8-3886] merging instance 'dense_L2i_11/bias_matrix_32_reg[34][8]' (FDE) to 'dense_L2i_11/bias_matrix_32_reg[35][0]'
+INFO: [Synth 8-3886] merging instance 'dense_L2i_11/bias_matrix_32_reg[34][9]' (FDE) to 'dense_L2i_11/bias_matrix_32_reg[35][0]'
+INFO: [Synth 8-3886] merging instance 'dense_L2i_11/bias_matrix_32_reg[34][27]' (FDE) to 'dense_L2i_11/bias_matrix_32_reg[34][28]'
+INFO: [Synth 8-3886] merging instance 'dense_L2i_11/bias_matrix_32_reg[35][0]' (FDE) to 'dense_L2i_11/bias_matrix_32_reg[35][1]'
+INFO: [Synth 8-3886] merging instance 'dense_L2i_11/bias_matrix_32_reg[35][1]' (FDE) to 'dense_L2i_11/bias_matrix_32_reg[35][2]'
+INFO: [Synth 8-3886] merging instance 'dense_L2i_11/bias_matrix_32_reg[35][2]' (FDE) to 'dense_L2i_11/bias_matrix_32_reg[35][3]'
+INFO: [Synth 8-3886] merging instance 'dense_L2i_11/bias_matrix_32_reg[35][3]' (FDE) to 'dense_L2i_11/bias_matrix_32_reg[35][4]'
+INFO: [Synth 8-3886] merging instance 'dense_L2i_11/bias_matrix_32_reg[35][4]' (FDE) to 'dense_L2i_11/bias_matrix_32_reg[35][5]'
+INFO: [Synth 8-3886] merging instance 'dense_L2i_11/bias_matrix_32_reg[35][5]' (FDE) to 'dense_L2i_11/bias_matrix_32_reg[35][6]'
+INFO: [Synth 8-3886] merging instance 'dense_L2i_11/bias_matrix_32_reg[35][6]' (FDE) to 'dense_L2i_11/bias_matrix_32_reg[35][7]'
+INFO: [Synth 8-3886] merging instance 'dense_L2i_11/bias_matrix_32_reg[35][7]' (FDE) to 'dense_L2i_11/bias_matrix_32_reg[35][8]'
+INFO: [Synth 8-3886] merging instance 'dense_L2i_11/bias_matrix_32_reg[35][8]' (FDE) to 'dense_L2i_11/bias_matrix_32_reg[35][9]'
+INFO: [Synth 8-3886] merging instance 'dense_L2i_11/bias_matrix_32_reg[35][9]' (FDE) to 'dense_L2i_11/bias_matrix_32_reg[31][0]'
+INFO: [Synth 8-3886] merging instance 'dense_L2i_11/bias_matrix_32_reg[35][27]' (FDE) to 'dense_L2i_11/bias_matrix_32_reg[35][28]'
+INFO: [Synth 8-3886] merging instance 'dense_L2i_11/bias_matrix_32_reg[30][0]' (FDE) to 'dense_L2i_11/bias_matrix_32_reg[31][0]'
+INFO: [Synth 8-3886] merging instance 'dense_L2i_11/bias_matrix_32_reg[30][1]' (FDE) to 'dense_L2i_11/bias_matrix_32_reg[31][0]'
+INFO: [Synth 8-3886] merging instance 'dense_L2i_11/bias_matrix_32_reg[30][2]' (FDE) to 'dense_L2i_11/bias_matrix_32_reg[31][0]'
+INFO: [Synth 8-3886] merging instance 'dense_L2i_11/bias_matrix_32_reg[30][3]' (FDE) to 'dense_L2i_11/bias_matrix_32_reg[31][0]'
+INFO: [Synth 8-3886] merging instance 'dense_L2i_11/bias_matrix_32_reg[30][4]' (FDE) to 'dense_L2i_11/bias_matrix_32_reg[31][0]'
+INFO: [Synth 8-3886] merging instance 'dense_L2i_11/bias_matrix_32_reg[30][5]' (FDE) to 'dense_L2i_11/bias_matrix_32_reg[31][0]'
+INFO: [Synth 8-3886] merging instance 'dense_L2i_11/bias_matrix_32_reg[30][6]' (FDE) to 'dense_L2i_11/bias_matrix_32_reg[31][0]'
+INFO: [Synth 8-3886] merging instance 'dense_L2i_11/bias_matrix_32_reg[30][7]' (FDE) to 'dense_L2i_11/bias_matrix_32_reg[31][0]'
+INFO: [Synth 8-3886] merging instance 'dense_L2i_11/bias_matrix_32_reg[30][8]' (FDE) to 'dense_L2i_11/bias_matrix_32_reg[31][0]'
+INFO: [Synth 8-3886] merging instance 'dense_L2i_11/bias_matrix_32_reg[30][9]' (FDE) to 'dense_L2i_11/bias_matrix_32_reg[31][0]'
+INFO: [Synth 8-3886] merging instance 'dense_L2i_11/bias_matrix_32_reg[30][27]' (FDE) to 'dense_L2i_11/bias_matrix_32_reg[30][28]'
+INFO: [Synth 8-3886] merging instance 'dense_L2i_11/bias_matrix_32_reg[31][0]' (FDE) to 'dense_L2i_11/bias_matrix_32_reg[31][1]'
+INFO: [Synth 8-3886] merging instance 'dense_L2i_11/bias_matrix_32_reg[31][1]' (FDE) to 'dense_L2i_11/bias_matrix_32_reg[31][2]'
+INFO: [Synth 8-3886] merging instance 'dense_L2i_11/bias_matrix_32_reg[31][2]' (FDE) to 'dense_L2i_11/bias_matrix_32_reg[31][3]'
+INFO: [Synth 8-3886] merging instance 'dense_L2i_11/bias_matrix_32_reg[31][3]' (FDE) to 'dense_L2i_11/bias_matrix_32_reg[31][4]'
+INFO: [Synth 8-3886] merging instance 'dense_L2i_11/bias_matrix_32_reg[31][4]' (FDE) to 'dense_L2i_11/bias_matrix_32_reg[31][5]'
+INFO: [Synth 8-3886] merging instance 'dense_L2i_11/bias_matrix_32_reg[31][5]' (FDE) to 'dense_L2i_11/bias_matrix_32_reg[31][6]'
+INFO: [Synth 8-3886] merging instance 'dense_L2i_11/bias_matrix_32_reg[31][6]' (FDE) to 'dense_L2i_11/bias_matrix_32_reg[31][7]'
+INFO: [Synth 8-3886] merging instance 'dense_L2i_11/bias_matrix_32_reg[31][7]' (FDE) to 'dense_L2i_11/bias_matrix_32_reg[31][8]'
+INFO: [Synth 8-3886] merging instance 'dense_L2i_11/bias_matrix_32_reg[31][8]' (FDE) to 'dense_L2i_11/bias_matrix_32_reg[31][9]'
+INFO: [Synth 8-3886] merging instance 'dense_L2i_11/bias_matrix_32_reg[31][9]' (FDE) to 'dense_L2i_11/bias_matrix_32_reg[19][0]'
+INFO: [Synth 8-3886] merging instance 'dense_L2i_11/bias_matrix_32_reg[31][27]' (FDE) to 'dense_L2i_11/bias_matrix_32_reg[31][28]'
+INFO: [Synth 8-3886] merging instance 'dense_L2i_11/bias_matrix_32_reg[29][0]' (FDE) to 'dense_L2i_11/bias_matrix_32_reg[19][0]'
+INFO: [Synth 8-3886] merging instance 'dense_L2i_11/bias_matrix_32_reg[29][1]' (FDE) to 'dense_L2i_11/bias_matrix_32_reg[19][0]'
+INFO: [Synth 8-3886] merging instance 'dense_L2i_11/bias_matrix_32_reg[29][2]' (FDE) to 'dense_L2i_11/bias_matrix_32_reg[19][0]'
+INFO: [Synth 8-3886] merging instance 'dense_L2i_11/bias_matrix_32_reg[29][3]' (FDE) to 'dense_L2i_11/bias_matrix_32_reg[19][0]'
+INFO: [Synth 8-3886] merging instance 'dense_L2i_11/bias_matrix_32_reg[29][4]' (FDE) to 'dense_L2i_11/bias_matrix_32_reg[19][0]'
+INFO: [Synth 8-3886] merging instance 'dense_L2i_11/bias_matrix_32_reg[29][5]' (FDE) to 'dense_L2i_11/bias_matrix_32_reg[19][0]'
+INFO: [Synth 8-3886] merging instance 'dense_L2i_11/bias_matrix_32_reg[29][6]' (FDE) to 'dense_L2i_11/bias_matrix_32_reg[19][0]'
+INFO: [Synth 8-3886] merging instance 'dense_L2i_11/bias_matrix_32_reg[29][7]' (FDE) to 'dense_L2i_11/bias_matrix_32_reg[19][0]'
+INFO: [Synth 8-3886] merging instance 'dense_L2i_11/bias_matrix_32_reg[29][8]' (FDE) to 'dense_L2i_11/bias_matrix_32_reg[19][0]'
+INFO: [Synth 8-3886] merging instance 'dense_L2i_11/bias_matrix_32_reg[29][9]' (FDE) to 'dense_L2i_11/bias_matrix_32_reg[19][0]'
+INFO: [Synth 8-3886] merging instance 'dense_L2i_11/bias_matrix_32_reg[29][27]' (FDE) to 'dense_L2i_11/bias_matrix_32_reg[29][28]'
+INFO: [Synth 8-3886] merging instance 'dense_L2i_11/bias_matrix_32_reg[19][0]' (FDE) to 'dense_L2i_11/bias_matrix_32_reg[19][1]'
+INFO: [Synth 8-3886] merging instance 'dense_L2i_11/bias_matrix_32_reg[19][1]' (FDE) to 'dense_L2i_11/bias_matrix_32_reg[19][2]'
+INFO: [Synth 8-3886] merging instance 'dense_L2i_11/bias_matrix_32_reg[19][2]' (FDE) to 'dense_L2i_11/bias_matrix_32_reg[19][3]'
+INFO: [Synth 8-3886] merging instance 'dense_L2i_11/bias_matrix_32_reg[19][3]' (FDE) to 'dense_L2i_11/bias_matrix_32_reg[19][4]'
+INFO: [Synth 8-3886] merging instance 'dense_L2i_11/bias_matrix_32_reg[19][4]' (FDE) to 'dense_L2i_11/bias_matrix_32_reg[19][5]'
+INFO: [Synth 8-3886] merging instance 'dense_L2i_11/bias_matrix_32_reg[19][5]' (FDE) to 'dense_L2i_11/bias_matrix_32_reg[19][6]'
+INFO: [Synth 8-3886] merging instance 'dense_L2i_11/bias_matrix_32_reg[19][6]' (FDE) to 'dense_L2i_11/bias_matrix_32_reg[19][7]'
+INFO: [Synth 8-3886] merging instance 'dense_L2i_11/bias_matrix_32_reg[19][7]' (FDE) to 'dense_L2i_11/bias_matrix_32_reg[19][8]'
+INFO: [Synth 8-3886] merging instance 'dense_L2i_11/bias_matrix_32_reg[19][8]' (FDE) to 'dense_L2i_11/bias_matrix_32_reg[19][9]'
+INFO: [Synth 8-3886] merging instance 'dense_L2i_11/bias_matrix_32_reg[19][9]' (FDE) to 'dense_L2i_11/bias_matrix_32_reg[16][0]'
+INFO: [Synth 8-3886] merging instance 'dense_L2i_11/bias_matrix_32_reg[19][27]' (FDE) to 'dense_L2i_11/bias_matrix_32_reg[19][28]'
+INFO: [Synth 8-3886] merging instance 'dense_L2i_11/bias_matrix_32_reg[16][0]' (FDE) to 'dense_L2i_11/bias_matrix_32_reg[16][1]'
+INFO: [Synth 8-3886] merging instance 'dense_L2i_11/bias_matrix_32_reg[16][1]' (FDE) to 'dense_L2i_11/bias_matrix_32_reg[16][2]'
+INFO: [Synth 8-3886] merging instance 'dense_L2i_11/bias_matrix_32_reg[16][2]' (FDE) to 'dense_L2i_11/bias_matrix_32_reg[16][3]'
+INFO: [Synth 8-3886] merging instance 'dense_L2i_11/bias_matrix_32_reg[16][3]' (FDE) to 'dense_L2i_11/bias_matrix_32_reg[16][4]'
+INFO: [Synth 8-3886] merging instance 'dense_L2i_11/bias_matrix_32_reg[16][4]' (FDE) to 'dense_L2i_11/bias_matrix_32_reg[16][5]'
+INFO: [Synth 8-3886] merging instance 'dense_L2i_11/bias_matrix_32_reg[16][5]' (FDE) to 'dense_L2i_11/bias_matrix_32_reg[16][6]'
+INFO: [Synth 8-3886] merging instance 'dense_L2i_11/bias_matrix_32_reg[16][6]' (FDE) to 'dense_L2i_11/bias_matrix_32_reg[16][7]'
+INFO: [Synth 8-3886] merging instance 'dense_L2i_11/bias_matrix_32_reg[16][7]' (FDE) to 'dense_L2i_11/bias_matrix_32_reg[16][8]'
+INFO: [Synth 8-3886] merging instance 'dense_L2i_11/bias_matrix_32_reg[16][8]' (FDE) to 'dense_L2i_11/bias_matrix_32_reg[16][9]'
+INFO: [Synth 8-3886] merging instance 'dense_L2i_11/bias_matrix_32_reg[16][9]' (FDE) to 'dense_L2i_11/bias_matrix_32_reg[14][0]'
+INFO: [Synth 8-3886] merging instance 'dense_L2i_11/bias_matrix_32_reg[16][27]' (FDE) to 'dense_L2i_11/bias_matrix_32_reg[16][28]'
+INFO: [Synth 8-3886] merging instance 'dense_L2i_11/bias_matrix_32_reg[17][0]' (FDE) to 'dense_L2i_11/bias_matrix_32_reg[14][0]'
+INFO: [Synth 8-3886] merging instance 'dense_L2i_11/bias_matrix_32_reg[17][1]' (FDE) to 'dense_L2i_11/bias_matrix_32_reg[14][0]'
+INFO: [Synth 8-3886] merging instance 'dense_L2i_11/bias_matrix_32_reg[17][2]' (FDE) to 'dense_L2i_11/bias_matrix_32_reg[14][0]'
+INFO: [Synth 8-3886] merging instance 'dense_L2i_11/bias_matrix_32_reg[17][3]' (FDE) to 'dense_L2i_11/bias_matrix_32_reg[14][0]'
+INFO: [Synth 8-3886] merging instance 'dense_L2i_11/bias_matrix_32_reg[17][4]' (FDE) to 'dense_L2i_11/bias_matrix_32_reg[14][0]'
+INFO: [Synth 8-3886] merging instance 'dense_L2i_11/bias_matrix_32_reg[17][5]' (FDE) to 'dense_L2i_11/bias_matrix_32_reg[14][0]'
+INFO: [Synth 8-3886] merging instance 'dense_L2i_11/bias_matrix_32_reg[17][6]' (FDE) to 'dense_L2i_11/bias_matrix_32_reg[14][0]'
+INFO: [Synth 8-3886] merging instance 'dense_L2i_11/bias_matrix_32_reg[17][7]' (FDE) to 'dense_L2i_11/bias_matrix_32_reg[14][0]'
+INFO: [Synth 8-3886] merging instance 'dense_L2i_11/bias_matrix_32_reg[17][8]' (FDE) to 'dense_L2i_11/bias_matrix_32_reg[14][0]'
+INFO: [Synth 8-3886] merging instance 'dense_L2i_11/bias_matrix_32_reg[17][9]' (FDE) to 'dense_L2i_11/bias_matrix_32_reg[14][0]'
+INFO: [Synth 8-3886] merging instance 'dense_L2i_11/bias_matrix_32_reg[17][27]' (FDE) to 'dense_L2i_11/bias_matrix_32_reg[17][28]'
+INFO: [Synth 8-3886] merging instance 'dense_L2i_11/bias_matrix_32_reg[14][0]' (FDE) to 'dense_L2i_11/bias_matrix_32_reg[14][1]'
+INFO: [Synth 8-3886] merging instance 'dense_L2i_11/bias_matrix_32_reg[14][1]' (FDE) to 'dense_L2i_11/bias_matrix_32_reg[14][2]'
+INFO: [Synth 8-3886] merging instance 'dense_L2i_11/bias_matrix_32_reg[14][2]' (FDE) to 'dense_L2i_11/bias_matrix_32_reg[14][3]'
+INFO: [Synth 8-3886] merging instance 'dense_L2i_11/bias_matrix_32_reg[14][3]' (FDE) to 'dense_L2i_11/bias_matrix_32_reg[14][4]'
+INFO: [Synth 8-3886] merging instance 'dense_L2i_11/bias_matrix_32_reg[14][4]' (FDE) to 'dense_L2i_11/bias_matrix_32_reg[14][5]'
+INFO: [Synth 8-3886] merging instance 'dense_L2i_11/bias_matrix_32_reg[14][5]' (FDE) to 'dense_L2i_11/bias_matrix_32_reg[14][6]'
+INFO: [Synth 8-3886] merging instance 'dense_L2i_11/bias_matrix_32_reg[14][6]' (FDE) to 'dense_L2i_11/bias_matrix_32_reg[14][7]'
+INFO: [Synth 8-3886] merging instance 'dense_L2i_11/bias_matrix_32_reg[14][7]' (FDE) to 'dense_L2i_11/bias_matrix_32_reg[14][8]'
+INFO: [Synth 8-3886] merging instance 'dense_L2i_11/bias_matrix_32_reg[14][8]' (FDE) to 'dense_L2i_11/bias_matrix_32_reg[14][9]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\bias_matrix_32_reg[11][9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\result_matrix_reg[7][9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (segment_start_flag_reg_C)
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\rescaling/read_bram_done_reg )
+INFO: [Common 17-14] Message 'Synth 8-5546' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Common 17-14] Message 'Synth 8-5546' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\padded_image_reg[0][14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\bias_matrix_32_reg[32][9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\result_matrix_reg[20][9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\bias_matrix_32_reg[18][9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\result_matrix_reg[1][9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\bias_matrix_32_reg[13][9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\result_matrix_reg[10][9] )
+DSP Report: Generating DSP reg_stage_2_out_pl_reg[2], operation Mode is: (A2*B2)'.
+DSP Report: register mult_out_pl_reg[8] is absorbed into DSP reg_stage_2_out_pl_reg[2].
+DSP Report: register mult_out_pl_reg[8] is absorbed into DSP reg_stage_2_out_pl_reg[2].
+DSP Report: register reg_stage_2_out_pl_reg[2] is absorbed into DSP reg_stage_2_out_pl_reg[2].
+DSP Report: register reg_stage_1_out_pl_reg[4] is absorbed into DSP reg_stage_2_out_pl_reg[2].
+DSP Report: operator gen_mult[8].convo_mult/o_res0 is absorbed into DSP reg_stage_2_out_pl_reg[2].
+DSP Report: Generating DSP mult_out_pl_reg[0], operation Mode is: (A''*B2)'.
+DSP Report: register r_f_reg[0][0] is absorbed into DSP mult_out_pl_reg[0].
+DSP Report: register A is absorbed into DSP mult_out_pl_reg[0].
+DSP Report: register A is absorbed into DSP mult_out_pl_reg[0].
+DSP Report: register mult_out_pl_reg[0] is absorbed into DSP mult_out_pl_reg[0].
+DSP Report: operator gen_mult[0].convo_mult/o_res0 is absorbed into DSP mult_out_pl_reg[0].
+DSP Report: Generating DSP reg_stage_1_out_pl_reg[0], operation Mode is: (PCIN+(A''*B2)')'.
+DSP Report: register r_f_reg[0][1] is absorbed into DSP reg_stage_1_out_pl_reg[0].
+DSP Report: register A is absorbed into DSP reg_stage_1_out_pl_reg[0].
+DSP Report: register A is absorbed into DSP reg_stage_1_out_pl_reg[0].
+DSP Report: register reg_stage_1_out_pl_reg[0] is absorbed into DSP reg_stage_1_out_pl_reg[0].
+DSP Report: register mult_out_pl_reg[1] is absorbed into DSP reg_stage_1_out_pl_reg[0].
+DSP Report: operator gen_adder_1[0].adder_stage_1/o_res is absorbed into DSP reg_stage_1_out_pl_reg[0].
+DSP Report: operator gen_mult[1].convo_mult/o_res0 is absorbed into DSP reg_stage_1_out_pl_reg[0].
+DSP Report: Generating DSP mult_out_pl_reg[2], operation Mode is: (A''*B2)'.
+DSP Report: register r_f_reg[0][2] is absorbed into DSP mult_out_pl_reg[2].
+DSP Report: register A is absorbed into DSP mult_out_pl_reg[2].
+DSP Report: register A is absorbed into DSP mult_out_pl_reg[2].
+DSP Report: register mult_out_pl_reg[2] is absorbed into DSP mult_out_pl_reg[2].
+DSP Report: operator gen_mult[2].convo_mult/o_res0 is absorbed into DSP mult_out_pl_reg[2].
+DSP Report: Generating DSP reg_stage_1_out_pl_reg[1], operation Mode is: (PCIN+(A''*B2)')'.
+DSP Report: register r_f_reg[1][0] is absorbed into DSP reg_stage_1_out_pl_reg[1].
+DSP Report: register A is absorbed into DSP reg_stage_1_out_pl_reg[1].
+DSP Report: register A is absorbed into DSP reg_stage_1_out_pl_reg[1].
+DSP Report: register reg_stage_1_out_pl_reg[1] is absorbed into DSP reg_stage_1_out_pl_reg[1].
+DSP Report: register mult_out_pl_reg[3] is absorbed into DSP reg_stage_1_out_pl_reg[1].
+DSP Report: operator gen_adder_1[1].adder_stage_1/o_res is absorbed into DSP reg_stage_1_out_pl_reg[1].
+DSP Report: operator gen_mult[3].convo_mult/o_res0 is absorbed into DSP reg_stage_1_out_pl_reg[1].
+DSP Report: Generating DSP reg_stage_2_out_pl_reg[0], operation Mode is: (PCIN+A:B)'.
+DSP Report: register reg_stage_2_out_pl_reg[0] is absorbed into DSP reg_stage_2_out_pl_reg[0].
+DSP Report: operator convo_reg_stage_2_0/o_res is absorbed into DSP reg_stage_2_out_pl_reg[0].
+DSP Report: Generating DSP mult_out_pl_reg[4], operation Mode is: (A''*B2)'.
+DSP Report: register r_f_reg[1][1] is absorbed into DSP mult_out_pl_reg[4].
+DSP Report: register A is absorbed into DSP mult_out_pl_reg[4].
+DSP Report: register A is absorbed into DSP mult_out_pl_reg[4].
+DSP Report: register mult_out_pl_reg[4] is absorbed into DSP mult_out_pl_reg[4].
+DSP Report: operator gen_mult[4].convo_mult/o_res0 is absorbed into DSP mult_out_pl_reg[4].
+DSP Report: Generating DSP reg_stage_1_out_pl_reg[2], operation Mode is: (PCIN+(A''*B2)')'.
+DSP Report: register r_f_reg[1][2] is absorbed into DSP reg_stage_1_out_pl_reg[2].
+DSP Report: register A is absorbed into DSP reg_stage_1_out_pl_reg[2].
+DSP Report: register A is absorbed into DSP reg_stage_1_out_pl_reg[2].
+DSP Report: register reg_stage_1_out_pl_reg[2] is absorbed into DSP reg_stage_1_out_pl_reg[2].
+DSP Report: register mult_out_pl_reg[5] is absorbed into DSP reg_stage_1_out_pl_reg[2].
+DSP Report: operator gen_adder_1[2].adder_stage_1/o_res is absorbed into DSP reg_stage_1_out_pl_reg[2].
+DSP Report: operator gen_mult[5].convo_mult/o_res0 is absorbed into DSP reg_stage_1_out_pl_reg[2].
+DSP Report: Generating DSP mult_out_pl_reg[6], operation Mode is: (A''*B2)'.
+DSP Report: register r_f_reg[2][0] is absorbed into DSP mult_out_pl_reg[6].
+DSP Report: register A is absorbed into DSP mult_out_pl_reg[6].
+DSP Report: register A is absorbed into DSP mult_out_pl_reg[6].
+DSP Report: register mult_out_pl_reg[6] is absorbed into DSP mult_out_pl_reg[6].
+DSP Report: operator gen_mult[6].convo_mult/o_res0 is absorbed into DSP mult_out_pl_reg[6].
+DSP Report: Generating DSP reg_stage_1_out_pl_reg[3], operation Mode is: (PCIN+(A2*B2)')'.
+DSP Report: register r_f_reg[2][1] is absorbed into DSP reg_stage_1_out_pl_reg[3].
+DSP Report: register A is absorbed into DSP reg_stage_1_out_pl_reg[3].
+DSP Report: register reg_stage_1_out_pl_reg[3] is absorbed into DSP reg_stage_1_out_pl_reg[3].
+DSP Report: register mult_out_pl_reg[7] is absorbed into DSP reg_stage_1_out_pl_reg[3].
+DSP Report: operator gen_adder_1[3].adder_stage_1/o_res is absorbed into DSP reg_stage_1_out_pl_reg[3].
+DSP Report: operator gen_mult[7].convo_mult/o_res0 is absorbed into DSP reg_stage_1_out_pl_reg[3].
+DSP Report: Generating DSP reg_stage_2_out_pl_reg[1], operation Mode is: (PCIN+A:B)'.
+DSP Report: register reg_stage_2_out_pl_reg[1] is absorbed into DSP reg_stage_2_out_pl_reg[1].
+DSP Report: operator convo_reg_stage_2_1/o_res is absorbed into DSP reg_stage_2_out_pl_reg[1].
+DSP Report: Generating DSP reg_stage_3_out_pl_reg[0], operation Mode is: (PCIN+A:B)'.
+DSP Report: register reg_stage_3_out_pl_reg[0] is absorbed into DSP reg_stage_3_out_pl_reg[0].
+DSP Report: operator convo_reg_stage_3_0/o_res is absorbed into DSP reg_stage_3_out_pl_reg[0].
+INFO: [Common 17-14] Message 'Synth 8-5545' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+DSP Report: Generating DSP reg_stage_2_out_pl_reg[2], operation Mode is: (A2*B2)'.
+DSP Report: register mult_out_pl_reg[8] is absorbed into DSP reg_stage_2_out_pl_reg[2].
+DSP Report: register mult_out_pl_reg[8] is absorbed into DSP reg_stage_2_out_pl_reg[2].
+DSP Report: register reg_stage_2_out_pl_reg[2] is absorbed into DSP reg_stage_2_out_pl_reg[2].
+DSP Report: register reg_stage_1_out_pl_reg[4] is absorbed into DSP reg_stage_2_out_pl_reg[2].
+DSP Report: operator gen_mult[8].convo_mult/o_res0 is absorbed into DSP reg_stage_2_out_pl_reg[2].
+DSP Report: Generating DSP mult_out_pl_reg[0], operation Mode is: (A''*B2)'.
+DSP Report: register r_f_reg[0][0] is absorbed into DSP mult_out_pl_reg[0].
+DSP Report: register A is absorbed into DSP mult_out_pl_reg[0].
+DSP Report: register A is absorbed into DSP mult_out_pl_reg[0].
+DSP Report: register mult_out_pl_reg[0] is absorbed into DSP mult_out_pl_reg[0].
+DSP Report: operator gen_mult[0].convo_mult/o_res0 is absorbed into DSP mult_out_pl_reg[0].
+DSP Report: Generating DSP reg_stage_1_out_pl_reg[0], operation Mode is: (PCIN+(A''*B2)')'.
+DSP Report: register r_f_reg[0][1] is absorbed into DSP reg_stage_1_out_pl_reg[0].
+DSP Report: register A is absorbed into DSP reg_stage_1_out_pl_reg[0].
+DSP Report: register A is absorbed into DSP reg_stage_1_out_pl_reg[0].
+DSP Report: register reg_stage_1_out_pl_reg[0] is absorbed into DSP reg_stage_1_out_pl_reg[0].
+DSP Report: register mult_out_pl_reg[1] is absorbed into DSP reg_stage_1_out_pl_reg[0].
+DSP Report: operator gen_adder_1[0].adder_stage_1/o_res is absorbed into DSP reg_stage_1_out_pl_reg[0].
+DSP Report: operator gen_mult[1].convo_mult/o_res0 is absorbed into DSP reg_stage_1_out_pl_reg[0].
+DSP Report: Generating DSP mult_out_pl_reg[2], operation Mode is: (A''*B2)'.
+DSP Report: register r_f_reg[0][2] is absorbed into DSP mult_out_pl_reg[2].
+DSP Report: register A is absorbed into DSP mult_out_pl_reg[2].
+DSP Report: register A is absorbed into DSP mult_out_pl_reg[2].
+DSP Report: register mult_out_pl_reg[2] is absorbed into DSP mult_out_pl_reg[2].
+DSP Report: operator gen_mult[2].convo_mult/o_res0 is absorbed into DSP mult_out_pl_reg[2].
+DSP Report: Generating DSP reg_stage_1_out_pl_reg[1], operation Mode is: (PCIN+(A''*B2)')'.
+DSP Report: register r_f_reg[1][0] is absorbed into DSP reg_stage_1_out_pl_reg[1].
+DSP Report: register A is absorbed into DSP reg_stage_1_out_pl_reg[1].
+DSP Report: register A is absorbed into DSP reg_stage_1_out_pl_reg[1].
+DSP Report: register reg_stage_1_out_pl_reg[1] is absorbed into DSP reg_stage_1_out_pl_reg[1].
+DSP Report: register mult_out_pl_reg[3] is absorbed into DSP reg_stage_1_out_pl_reg[1].
+DSP Report: operator gen_adder_1[1].adder_stage_1/o_res is absorbed into DSP reg_stage_1_out_pl_reg[1].
+DSP Report: operator gen_mult[3].convo_mult/o_res0 is absorbed into DSP reg_stage_1_out_pl_reg[1].
+DSP Report: Generating DSP reg_stage_2_out_pl_reg[0], operation Mode is: (PCIN+A:B)'.
+DSP Report: register reg_stage_2_out_pl_reg[0] is absorbed into DSP reg_stage_2_out_pl_reg[0].
+DSP Report: operator convo_reg_stage_2_0/o_res is absorbed into DSP reg_stage_2_out_pl_reg[0].
+DSP Report: Generating DSP mult_out_pl_reg[4], operation Mode is: (A''*B2)'.
+DSP Report: register r_f_reg[1][1] is absorbed into DSP mult_out_pl_reg[4].
+DSP Report: register A is absorbed into DSP mult_out_pl_reg[4].
+DSP Report: register A is absorbed into DSP mult_out_pl_reg[4].
+DSP Report: register mult_out_pl_reg[4] is absorbed into DSP mult_out_pl_reg[4].
+DSP Report: operator gen_mult[4].convo_mult/o_res0 is absorbed into DSP mult_out_pl_reg[4].
+DSP Report: Generating DSP reg_stage_1_out_pl_reg[2], operation Mode is: (PCIN+(A''*B2)')'.
+DSP Report: register r_f_reg[1][2] is absorbed into DSP reg_stage_1_out_pl_reg[2].
+DSP Report: register A is absorbed into DSP reg_stage_1_out_pl_reg[2].
+DSP Report: register A is absorbed into DSP reg_stage_1_out_pl_reg[2].
+DSP Report: register reg_stage_1_out_pl_reg[2] is absorbed into DSP reg_stage_1_out_pl_reg[2].
+DSP Report: register mult_out_pl_reg[5] is absorbed into DSP reg_stage_1_out_pl_reg[2].
+DSP Report: operator gen_adder_1[2].adder_stage_1/o_res is absorbed into DSP reg_stage_1_out_pl_reg[2].
+DSP Report: operator gen_mult[5].convo_mult/o_res0 is absorbed into DSP reg_stage_1_out_pl_reg[2].
+DSP Report: Generating DSP mult_out_pl_reg[6], operation Mode is: (A''*B2)'.
+DSP Report: register r_f_reg[2][0] is absorbed into DSP mult_out_pl_reg[6].
+DSP Report: register A is absorbed into DSP mult_out_pl_reg[6].
+DSP Report: register A is absorbed into DSP mult_out_pl_reg[6].
+DSP Report: register mult_out_pl_reg[6] is absorbed into DSP mult_out_pl_reg[6].
+DSP Report: operator gen_mult[6].convo_mult/o_res0 is absorbed into DSP mult_out_pl_reg[6].
+DSP Report: Generating DSP reg_stage_1_out_pl_reg[3], operation Mode is: (PCIN+(A2*B2)')'.
+DSP Report: register r_f_reg[2][1] is absorbed into DSP reg_stage_1_out_pl_reg[3].
+DSP Report: register A is absorbed into DSP reg_stage_1_out_pl_reg[3].
+DSP Report: register reg_stage_1_out_pl_reg[3] is absorbed into DSP reg_stage_1_out_pl_reg[3].
+DSP Report: register mult_out_pl_reg[7] is absorbed into DSP reg_stage_1_out_pl_reg[3].
+DSP Report: operator gen_adder_1[3].adder_stage_1/o_res is absorbed into DSP reg_stage_1_out_pl_reg[3].
+DSP Report: operator gen_mult[7].convo_mult/o_res0 is absorbed into DSP reg_stage_1_out_pl_reg[3].
+DSP Report: Generating DSP reg_stage_2_out_pl_reg[1], operation Mode is: (PCIN+A:B)'.
+DSP Report: register reg_stage_2_out_pl_reg[1] is absorbed into DSP reg_stage_2_out_pl_reg[1].
+DSP Report: operator convo_reg_stage_2_1/o_res is absorbed into DSP reg_stage_2_out_pl_reg[1].
+DSP Report: Generating DSP reg_stage_3_out_pl_reg[0], operation Mode is: (PCIN+A:B)'.
+DSP Report: register reg_stage_3_out_pl_reg[0] is absorbed into DSP reg_stage_3_out_pl_reg[0].
+DSP Report: operator convo_reg_stage_3_0/o_res is absorbed into DSP reg_stage_3_out_pl_reg[0].
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (conv_layer_1/\FIFO_reg[0][15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (conv_layer_1/\r_f_reg[2][2][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (conv_layer_1/\r_f_reg[2][2][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (conv_layer_1/\r_f_reg[2][2][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (conv_layer_1/\r_f_reg[2][2][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (conv_layer_1/\r_f_reg[2][2][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (conv_layer_3/\FIFO_reg[0][15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (conv_layer_3/\r_f_reg[2][2][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (padding_maxp1_to_conv2/\padded_image_reg[0][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (padding_maxp1_to_conv2/\padded_image_reg[0][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (padding_maxp1_to_conv2/\padded_image_reg[0][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (padding_maxp1_to_conv2/\padded_image_reg[0][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (padding_maxp1_to_conv2/\padded_image_reg[0][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (padding_maxp1_to_conv2/\padded_image_reg[0][5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (padding_maxp1_to_conv2/\padded_image_reg[0][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (padding_maxp1_to_conv2/\padded_image_reg[0][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (padding_maxp1_to_conv2/\padded_image_reg[0][8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (padding_maxp1_to_conv2/\padded_image_reg[0][9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (padding_maxp1_to_conv2/\padded_image_reg[0][10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (padding_maxp1_to_conv2/\padded_image_reg[0][11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (padding_maxp1_to_conv2/\padded_image_reg[0][12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (padding_maxp1_to_conv2/\padded_image_reg[0][13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (padding_maxp1_to_conv2/\padded_image_reg[0][14] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (maxpooling_L3/small_image_data_ready_reg)
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (conv_layer_1/\FIFO_reg[29][15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (conv_layer_3/\FIFO_reg[8][15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (conv_layer_1/\FIFO_reg[29][15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (conv_layer_3/\FIFO_reg[8][15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (conv_layer_1/\FIFO_reg[60][15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (conv_layer_3/\FIFO_reg[18][15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (maxpooling_L1/read_bram_done_reg)
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (maxpooling_L3/read_bram_done_reg)
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (padding_maxp1_to_conv2/\padded_image_reg[31][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (padding_maxp1_to_conv2/\padded_image_reg[31][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (padding_maxp1_to_conv2/\padded_image_reg[31][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (padding_maxp1_to_conv2/\padded_image_reg[31][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (padding_maxp1_to_conv2/\padded_image_reg[31][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (padding_maxp1_to_conv2/\padded_image_reg[31][5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (padding_maxp1_to_conv2/\padded_image_reg[31][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (padding_maxp1_to_conv2/\padded_image_reg[31][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (padding_maxp1_to_conv2/\padded_image_reg[31][8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (padding_maxp1_to_conv2/\padded_image_reg[31][9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (padding_maxp1_to_conv2/\padded_image_reg[31][10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (padding_maxp1_to_conv2/\padded_image_reg[31][11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (padding_maxp1_to_conv2/\padded_image_reg[31][12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (padding_maxp1_to_conv2/\padded_image_reg[31][13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (padding_maxp1_to_conv2/\padded_image_reg[31][14] )
+DSP Report: Generating DSP reg_stage_2_out_pl_reg[2], operation Mode is: (A2*B2)'.
+DSP Report: register mult_out_pl_reg[8] is absorbed into DSP reg_stage_2_out_pl_reg[2].
+DSP Report: register mult_out_pl_reg[8] is absorbed into DSP reg_stage_2_out_pl_reg[2].
+DSP Report: register reg_stage_2_out_pl_reg[2] is absorbed into DSP reg_stage_2_out_pl_reg[2].
+DSP Report: register reg_stage_1_out_pl_reg[4] is absorbed into DSP reg_stage_2_out_pl_reg[2].
+DSP Report: operator gen_mult[8].convo_mult/o_res0 is absorbed into DSP reg_stage_2_out_pl_reg[2].
+DSP Report: Generating DSP mult_out_pl_reg[0], operation Mode is: (A''*B2)'.
+DSP Report: register r_f_reg[0][0] is absorbed into DSP mult_out_pl_reg[0].
+DSP Report: register A is absorbed into DSP mult_out_pl_reg[0].
+DSP Report: register A is absorbed into DSP mult_out_pl_reg[0].
+DSP Report: register mult_out_pl_reg[0] is absorbed into DSP mult_out_pl_reg[0].
+DSP Report: operator gen_mult[0].convo_mult/o_res0 is absorbed into DSP mult_out_pl_reg[0].
+DSP Report: Generating DSP reg_stage_1_out_pl_reg[0], operation Mode is: (PCIN+(A''*B2)')'.
+DSP Report: register r_f_reg[0][1] is absorbed into DSP reg_stage_1_out_pl_reg[0].
+DSP Report: register A is absorbed into DSP reg_stage_1_out_pl_reg[0].
+DSP Report: register A is absorbed into DSP reg_stage_1_out_pl_reg[0].
+DSP Report: register reg_stage_1_out_pl_reg[0] is absorbed into DSP reg_stage_1_out_pl_reg[0].
+DSP Report: register mult_out_pl_reg[1] is absorbed into DSP reg_stage_1_out_pl_reg[0].
+DSP Report: operator gen_adder_1[0].adder_stage_1/o_res is absorbed into DSP reg_stage_1_out_pl_reg[0].
+DSP Report: operator gen_mult[1].convo_mult/o_res0 is absorbed into DSP reg_stage_1_out_pl_reg[0].
+DSP Report: Generating DSP mult_out_pl_reg[2], operation Mode is: (A''*B2)'.
+DSP Report: register r_f_reg[0][2] is absorbed into DSP mult_out_pl_reg[2].
+DSP Report: register A is absorbed into DSP mult_out_pl_reg[2].
+DSP Report: register A is absorbed into DSP mult_out_pl_reg[2].
+DSP Report: register mult_out_pl_reg[2] is absorbed into DSP mult_out_pl_reg[2].
+DSP Report: operator gen_mult[2].convo_mult/o_res0 is absorbed into DSP mult_out_pl_reg[2].
+DSP Report: Generating DSP reg_stage_1_out_pl_reg[1], operation Mode is: (PCIN+(A''*B2)')'.
+DSP Report: register r_f_reg[1][0] is absorbed into DSP reg_stage_1_out_pl_reg[1].
+DSP Report: register A is absorbed into DSP reg_stage_1_out_pl_reg[1].
+DSP Report: register A is absorbed into DSP reg_stage_1_out_pl_reg[1].
+DSP Report: register reg_stage_1_out_pl_reg[1] is absorbed into DSP reg_stage_1_out_pl_reg[1].
+DSP Report: register mult_out_pl_reg[3] is absorbed into DSP reg_stage_1_out_pl_reg[1].
+DSP Report: operator gen_adder_1[1].adder_stage_1/o_res is absorbed into DSP reg_stage_1_out_pl_reg[1].
+DSP Report: operator gen_mult[3].convo_mult/o_res0 is absorbed into DSP reg_stage_1_out_pl_reg[1].
+DSP Report: Generating DSP reg_stage_2_out_pl_reg[0], operation Mode is: (PCIN+A:B)'.
+DSP Report: register reg_stage_2_out_pl_reg[0] is absorbed into DSP reg_stage_2_out_pl_reg[0].
+DSP Report: operator convo_reg_stage_2_0/o_res is absorbed into DSP reg_stage_2_out_pl_reg[0].
+DSP Report: Generating DSP mult_out_pl_reg[4], operation Mode is: (A''*B2)'.
+DSP Report: register r_f_reg[1][1] is absorbed into DSP mult_out_pl_reg[4].
+DSP Report: register A is absorbed into DSP mult_out_pl_reg[4].
+DSP Report: register A is absorbed into DSP mult_out_pl_reg[4].
+DSP Report: register mult_out_pl_reg[4] is absorbed into DSP mult_out_pl_reg[4].
+DSP Report: operator gen_mult[4].convo_mult/o_res0 is absorbed into DSP mult_out_pl_reg[4].
+DSP Report: Generating DSP reg_stage_1_out_pl_reg[2], operation Mode is: (PCIN+(A''*B2)')'.
+DSP Report: register r_f_reg[1][2] is absorbed into DSP reg_stage_1_out_pl_reg[2].
+DSP Report: register A is absorbed into DSP reg_stage_1_out_pl_reg[2].
+DSP Report: register A is absorbed into DSP reg_stage_1_out_pl_reg[2].
+DSP Report: register reg_stage_1_out_pl_reg[2] is absorbed into DSP reg_stage_1_out_pl_reg[2].
+DSP Report: register mult_out_pl_reg[5] is absorbed into DSP reg_stage_1_out_pl_reg[2].
+DSP Report: operator gen_adder_1[2].adder_stage_1/o_res is absorbed into DSP reg_stage_1_out_pl_reg[2].
+DSP Report: operator gen_mult[5].convo_mult/o_res0 is absorbed into DSP reg_stage_1_out_pl_reg[2].
+DSP Report: Generating DSP mult_out_pl_reg[6], operation Mode is: (A''*B2)'.
+DSP Report: register r_f_reg[2][0] is absorbed into DSP mult_out_pl_reg[6].
+DSP Report: register A is absorbed into DSP mult_out_pl_reg[6].
+DSP Report: register A is absorbed into DSP mult_out_pl_reg[6].
+DSP Report: register mult_out_pl_reg[6] is absorbed into DSP mult_out_pl_reg[6].
+DSP Report: operator gen_mult[6].convo_mult/o_res0 is absorbed into DSP mult_out_pl_reg[6].
+DSP Report: Generating DSP reg_stage_1_out_pl_reg[3], operation Mode is: (PCIN+(A2*B2)')'.
+DSP Report: register r_f_reg[2][1] is absorbed into DSP reg_stage_1_out_pl_reg[3].
+DSP Report: register A is absorbed into DSP reg_stage_1_out_pl_reg[3].
+DSP Report: register reg_stage_1_out_pl_reg[3] is absorbed into DSP reg_stage_1_out_pl_reg[3].
+DSP Report: register mult_out_pl_reg[7] is absorbed into DSP reg_stage_1_out_pl_reg[3].
+DSP Report: operator gen_adder_1[3].adder_stage_1/o_res is absorbed into DSP reg_stage_1_out_pl_reg[3].
+DSP Report: operator gen_mult[7].convo_mult/o_res0 is absorbed into DSP reg_stage_1_out_pl_reg[3].
+DSP Report: Generating DSP reg_stage_2_out_pl_reg[1], operation Mode is: (PCIN+A:B)'.
+DSP Report: register reg_stage_2_out_pl_reg[1] is absorbed into DSP reg_stage_2_out_pl_reg[1].
+DSP Report: operator convo_reg_stage_2_1/o_res is absorbed into DSP reg_stage_2_out_pl_reg[1].
+DSP Report: Generating DSP reg_stage_3_out_pl_reg[0], operation Mode is: (PCIN+A:B)'.
+DSP Report: register reg_stage_3_out_pl_reg[0] is absorbed into DSP reg_stage_3_out_pl_reg[0].
+DSP Report: operator convo_reg_stage_3_0/o_res is absorbed into DSP reg_stage_3_out_pl_reg[0].
+WARNING: [Synth 8-3331] design dense_layer_1 has unconnected port i_data[14]
+WARNING: [Synth 8-3331] design dense_layer_1 has unconnected port i_data[13]
+WARNING: [Synth 8-3331] design dense_layer_1 has unconnected port i_data[12]
+WARNING: [Synth 8-3331] design dense_layer_1 has unconnected port i_data[11]
+WARNING: [Synth 8-3331] design dense_layer_1 has unconnected port i_data[10]
+WARNING: [Synth 8-3331] design dense_layer_1 has unconnected port i_data[9]
+WARNING: [Synth 8-3331] design dense_layer_1 has unconnected port i_data[8]
+WARNING: [Synth 8-3331] design dense_layer_1 has unconnected port i_data[7]
+WARNING: [Synth 8-3331] design dense_layer_1 has unconnected port i_data[6]
+WARNING: [Synth 8-3331] design dense_layer_1 has unconnected port i_data[5]
+WARNING: [Synth 8-3331] design dense_layer_1 has unconnected port i_data[4]
+WARNING: [Synth 8-3331] design dense_layer_1 has unconnected port i_data[3]
+WARNING: [Synth 8-3331] design dense_layer_1 has unconnected port i_data[2]
+WARNING: [Synth 8-3331] design dense_layer_1 has unconnected port i_data[1]
+WARNING: [Synth 8-3331] design dense_layer_1 has unconnected port i_data[0]
+WARNING: [Synth 8-3331] design dense_layer_1 has unconnected port i_addr[3]
+WARNING: [Synth 8-3331] design dense_layer_1 has unconnected port i_addr[2]
+WARNING: [Synth 8-3331] design dense_layer_1 has unconnected port i_addr[1]
+WARNING: [Synth 8-3331] design dense_layer_1 has unconnected port i_addr[0]
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (conv_layer_2/\FIFO_reg[0][15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (conv_layer_2/\r_f_reg[2][2][14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (dense_L1/\result_matrix_reg[0][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (padding_maxp2_to_conv3/\padded_image_reg[0][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (padding_maxp2_to_conv3/\padded_image_reg[0][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (padding_maxp2_to_conv3/\padded_image_reg[0][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (padding_maxp2_to_conv3/\padded_image_reg[0][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (padding_maxp2_to_conv3/\padded_image_reg[0][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (padding_maxp2_to_conv3/\padded_image_reg[0][5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (padding_maxp2_to_conv3/\padded_image_reg[0][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (padding_maxp2_to_conv3/\padded_image_reg[0][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (padding_maxp2_to_conv3/\padded_image_reg[0][8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (padding_maxp2_to_conv3/\padded_image_reg[0][9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (padding_maxp2_to_conv3/\padded_image_reg[0][10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (padding_maxp2_to_conv3/\padded_image_reg[0][11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (padding_maxp2_to_conv3/\padded_image_reg[0][12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (padding_maxp2_to_conv3/\padded_image_reg[0][13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (padding_maxp2_to_conv3/\padded_image_reg[0][14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\L1_mem_pix_i_data_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (conv_layer_2/\FIFO_reg[15][15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (conv_layer_2/\FIFO_reg[15][15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (conv_layer_2/\FIFO_reg[32][15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (maxpooling_L2/read_bram_done_reg)
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:08:43 ; elapsed = 00:09:06 . Memory (MB): peak = 1563.535 ; gain = 1227.648
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM:
++------------+------------+---------------+----------------+
+|Module Name | RTL Object | Depth x Width | Implemented As | 
++------------+------------+---------------+----------------+
+|vga_top     | p_0_out    | 524288x4      | LUT            | 
++------------+------------+---------------+----------------+
+
+
+Block RAM: Preliminary Mapping  Report (see note below)
++-------------+-----------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name  | RTL Object      | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++-------------+-----------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|mem_control: | small_image_reg | 1 K x 1(READ_FIRST)    | W |   | 1 K x 1(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
++-------------+-----------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+
+DSP: Preliminary Mapping  Report (see note below)
++------------+-------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping       | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+-------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|CNN_pixel   | (A2*B2)'          | 17     | 15     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|CNN_pixel   | (A''*B2)'         | 17     | 15     | -      | -      | 32     | 2    | 1    | -    | -    | -     | 1    | 0    | 
+|CNN_pixel   | (PCIN+(A''*B2)')' | 17     | 15     | -      | -      | 32     | 2    | 1    | -    | -    | -     | 1    | 1    | 
+|CNN_pixel   | (A''*B2)'         | 17     | 15     | -      | -      | 32     | 2    | 1    | -    | -    | -     | 1    | 0    | 
+|CNN_pixel   | (PCIN+(A''*B2)')' | 17     | 15     | -      | -      | 32     | 2    | 1    | -    | -    | -     | 1    | 1    | 
+|CNN_pixel   | (PCIN+A:B)'       | 14     | 18     | -      | -      | -1     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|CNN_pixel   | (A''*B2)'         | 17     | 15     | -      | -      | 32     | 2    | 1    | -    | -    | -     | 1    | 0    | 
+|CNN_pixel   | (PCIN+(A''*B2)')' | 17     | 15     | -      | -      | 32     | 2    | 1    | -    | -    | -     | 1    | 1    | 
+|CNN_pixel   | (A''*B2)'         | 17     | 15     | -      | -      | 32     | 2    | 1    | -    | -    | -     | 1    | 0    | 
+|CNN_pixel   | (PCIN+(A2*B2)')'  | 17     | 15     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|CNN_pixel   | (PCIN+A:B)'       | 14     | 18     | -      | -      | -1     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|CNN_pixel   | (PCIN+A:B)'       | 14     | 18     | -      | -      | -1     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|CNN_pixel   | (A2*B2)'          | 17     | 15     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|CNN_pixel   | (A''*B2)'         | 17     | 15     | -      | -      | 32     | 2    | 1    | -    | -    | -     | 1    | 0    | 
+|CNN_pixel   | (PCIN+(A''*B2)')' | 17     | 15     | -      | -      | 32     | 2    | 1    | -    | -    | -     | 1    | 1    | 
+|CNN_pixel   | (A''*B2)'         | 17     | 15     | -      | -      | 32     | 2    | 1    | -    | -    | -     | 1    | 0    | 
+|CNN_pixel   | (PCIN+(A''*B2)')' | 17     | 15     | -      | -      | 32     | 2    | 1    | -    | -    | -     | 1    | 1    | 
+|CNN_pixel   | (PCIN+A:B)'       | 14     | 18     | -      | -      | -1     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|CNN_pixel   | (A''*B2)'         | 17     | 15     | -      | -      | 32     | 2    | 1    | -    | -    | -     | 1    | 0    | 
+|CNN_pixel   | (PCIN+(A''*B2)')' | 17     | 15     | -      | -      | 32     | 2    | 1    | -    | -    | -     | 1    | 1    | 
+|CNN_pixel   | (A''*B2)'         | 17     | 15     | -      | -      | 32     | 2    | 1    | -    | -    | -     | 1    | 0    | 
+|CNN_pixel   | (PCIN+(A2*B2)')'  | 17     | 15     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|CNN_pixel   | (PCIN+A:B)'       | 14     | 18     | -      | -      | -1     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|CNN_pixel   | (PCIN+A:B)'       | 14     | 18     | -      | -      | -1     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|CNN_pixel   | (A2*B2)'          | 17     | 15     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|CNN_pixel   | (A''*B2)'         | 17     | 15     | -      | -      | 32     | 2    | 1    | -    | -    | -     | 1    | 0    | 
+|CNN_pixel   | (PCIN+(A''*B2)')' | 17     | 15     | -      | -      | 32     | 2    | 1    | -    | -    | -     | 1    | 1    | 
+|CNN_pixel   | (A''*B2)'         | 17     | 15     | -      | -      | 32     | 2    | 1    | -    | -    | -     | 1    | 0    | 
+|CNN_pixel   | (PCIN+(A''*B2)')' | 17     | 15     | -      | -      | 32     | 2    | 1    | -    | -    | -     | 1    | 1    | 
+|CNN_pixel   | (PCIN+A:B)'       | 14     | 18     | -      | -      | -1     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|CNN_pixel   | (A''*B2)'         | 17     | 15     | -      | -      | 32     | 2    | 1    | -    | -    | -     | 1    | 0    | 
+|CNN_pixel   | (PCIN+(A''*B2)')' | 17     | 15     | -      | -      | 32     | 2    | 1    | -    | -    | -     | 1    | 1    | 
+|CNN_pixel   | (A''*B2)'         | 17     | 15     | -      | -      | 32     | 2    | 1    | -    | -    | -     | 1    | 0    | 
+|CNN_pixel   | (PCIN+(A2*B2)')'  | 17     | 15     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|CNN_pixel   | (PCIN+A:B)'       | 14     | 18     | -      | -      | -1     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|CNN_pixel   | (PCIN+A:B)'       | 14     | 18     | -      | -      | -1     | 0    | 0    | -    | -    | -     | 0    | 1    | 
++------------+-------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6837] The timing for the instance vga_topi_4/i_0/mem_control/small_image_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+
+Report RTL Partitions: 
++------+--------------------+------------+----------+
+|      |RTL Partition       |Replication |Instances |
++------+--------------------+------------+----------+
+|1     |segmentation__GB0   |           1|     21873|
+|2     |segmentation__GB1   |           1|      1190|
+|3     |segmentation__GB2   |           1|     17418|
+|4     |rom_vga_top         |           1|       681|
+|5     |vga_top__GCB1       |           1|       915|
+|6     |padding_zeros__GB0  |           1|     20902|
+|7     |padding_zeros__GB1  |           1|      3361|
+|8     |padding_zeros__GB2  |           1|      2546|
+|9     |padding_zeros__GB3  |           1|      2041|
+|10    |dense_layer_2__GB0  |           1|     12897|
+|11    |dense_layer_2__GB1  |           1|      7688|
+|12    |dense_layer_2__GB2  |           1|      3302|
+|13    |dense_layer_2__GB3  |           1|      8288|
+|14    |cnn_interface__GCB0 |           1|     12147|
+|15    |cnn_interface__GCB1 |           1|      5760|
++------+--------------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\result_matrix_reg[11][9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\padded_image_reg[764][14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\padded_image_reg[763][14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\padded_image_reg[762][14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\padded_image_reg[759][14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\padded_image_reg[756][14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\padded_image_reg[754][14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\padded_image_reg[753][14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\padded_image_reg[752][14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\padded_image_reg[748][14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\padded_image_reg[746][14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\padded_image_reg[745][14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\padded_image_reg[744][14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\padded_image_reg[743][14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\padded_image_reg[742][14] )
+INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:08:52 ; elapsed = 00:09:16 . Memory (MB): peak = 1563.535 ; gain = 1227.648
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+--------------------+------------+----------+
+|      |RTL Partition       |Replication |Instances |
++------+--------------------+------------+----------+
+|1     |segmentation__GB0   |           1|     21873|
+|2     |segmentation__GB1   |           1|      1186|
+|3     |segmentation__GB2   |           1|     17418|
+|4     |rom_vga_top         |           1|       681|
+|5     |vga_top__GCB1       |           1|       816|
+|6     |padding_zeros__GB3  |           1|       133|
+|7     |dense_layer_2__GB0  |           1|     11568|
+|8     |dense_layer_2__GB1  |           1|      7219|
+|9     |dense_layer_2__GB2  |           1|      3094|
+|10    |dense_layer_2__GB3  |           1|      6764|
+|11    |cnn_interface__GCB0 |           1|      1352|
+|12    |cnn_interface__GCB1 |           1|       591|
++------+--------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:08:58 ; elapsed = 00:09:24 . Memory (MB): peak = 1563.535 ; gain = 1227.648
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+--------------------+------------+----------+
+|      |RTL Partition       |Replication |Instances |
++------+--------------------+------------+----------+
+|1     |segmentation__GB0   |           1|     13073|
+|2     |segmentation__GB1   |           1|       655|
+|3     |segmentation__GB2   |           1|     10105|
+|4     |rom_vga_top         |           1|       426|
+|5     |vga_top__GCB1       |           1|       467|
+|6     |padding_zeros__GB3  |           1|        41|
+|7     |dense_layer_2__GB0  |           1|      3065|
+|8     |dense_layer_2__GB1  |           1|      1211|
+|9     |dense_layer_2__GB2  |           1|       406|
+|10    |dense_layer_2__GB3  |           1|      2425|
+|11    |cnn_interface__GCB0 |           1|       816|
+|12    |cnn_interface__GCB1 |           1|       393|
++------+--------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:09:09 ; elapsed = 00:09:37 . Memory (MB): peak = 1563.535 ; gain = 1227.648
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:09:09 ; elapsed = 00:09:37 . Memory (MB): peak = 1563.535 ; gain = 1227.648
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:09:11 ; elapsed = 00:09:39 . Memory (MB): peak = 1563.535 ; gain = 1227.648
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:09:11 ; elapsed = 00:09:39 . Memory (MB): peak = 1563.535 ; gain = 1227.648
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:09:12 ; elapsed = 00:09:40 . Memory (MB): peak = 1563.535 ; gain = 1227.648
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:09:12 ; elapsed = 00:09:40 . Memory (MB): peak = 1563.535 ; gain = 1227.648
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++------------+----------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name | RTL Name                                                 | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++------------+----------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|top         | cnn_interface/conv_layer_1/data_valid_reg_stage_4_pl_reg | 5      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|top         | cnn_interface/conv_layer_3/data_valid_reg_stage_4_pl_reg | 5      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|top         | cnn_interface/conv_layer_2/data_valid_reg_stage_4_pl_reg | 5      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|top         | cnn_interface/conv_layer_1/data_valid_reg[30]            | 28     | 2     | YES          | NO                 | YES               | 0      | 2       | 
+|top         | cnn_interface/conv_layer_3/data_valid_reg[9]             | 7      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|top         | cnn_interface/conv_layer_2/data_valid_reg[16]            | 14     | 2     | YES          | NO                 | YES               | 2      | 0       | 
++------------+----------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |BUFG    |     1|
+|2     |CARRY4  |  1100|
+|3     |LUT1    |   130|
+|4     |LUT2    |   723|
+|5     |LUT3    |   351|
+|6     |LUT4    |  1571|
+|7     |LUT5    |  1120|
+|8     |LUT6    |  8204|
+|9     |MUXF7   |  2853|
+|10    |MUXF8   |  1346|
+|11    |SRL16E  |     7|
+|12    |SRLC32E |     2|
+|13    |FDCE    | 11595|
+|14    |FDPE    |     1|
+|15    |FDRE    |   513|
+|16    |FDSE    |     4|
+|17    |LDC     |     1|
+|18    |IBUF    |     3|
+|19    |OBUF    |    25|
++------+--------+------+
+
+Report Instance Areas: 
++------+---------------------------+------------------------------+------+
+|      |Instance                   |Module                        |Cells |
++------+---------------------------+------------------------------+------+
+|1     |top                        |                              | 29550|
+|2     |  cnn_interface            |cnn_interface                 |  4218|
+|3     |    conv_layer_1           |CNN_pixel                     |   359|
+|4     |    conv_layer_2           |CNN_pixel__parameterized0     |   312|
+|5     |    conv_layer_3           |CNN_pixel__parameterized1     |   104|
+|6     |    dense_L1               |dense_layer_1                 |    17|
+|7     |    dense_L2               |dense_layer_2                 |  3007|
+|8     |    maxpooling_L1          |maxpooling                    |    40|
+|9     |    maxpooling_L2          |maxpooling__parameterized0    |    41|
+|10    |    maxpooling_L3          |maxpooling__parameterized1    |    17|
+|11    |    padding_bram_to_conv1  |padding_zeros                 |    41|
+|12    |    padding_maxp1_to_conv2 |padding_zeros__parameterized0 |    29|
+|13    |    padding_maxp2_to_conv3 |padding_zeros__parameterized1 |    22|
+|14    |    trim_77_to_66          |size_trim                     |   228|
+|15    |  vga_top                  |vga_top                       | 25240|
+|16    |    rescaling              |rescaling                     |   237|
+|17    |    segmentation           |segmentation                  | 21921|
+|18    |      cam_btn_capture_db   |debouncer                     |    36|
+|19    |    vga_timing_signals     |vga_driver                    |  2596|
++------+---------------------------+------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:09:12 ; elapsed = 00:09:40 . Memory (MB): peak = 1563.535 ; gain = 1227.648
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 228 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:09:12 ; elapsed = 00:09:41 . Memory (MB): peak = 1563.535 ; gain = 1227.648
+Synthesis Optimization Complete : Time (s): cpu = 00:09:12 ; elapsed = 00:09:41 . Memory (MB): peak = 1563.535 ; gain = 1227.648
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 5300 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1563.535 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  LDC => LDCE: 1 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+541 Infos, 228 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:09:25 ; elapsed = 00:10:14 . Memory (MB): peak = 1563.535 ; gain = 1240.094
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 1563.535 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Michal/Documents/Vivado_Projects/testbench/v3/seg_mem_integration/seg_mem_integration.runs/synth_1/top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Mar 27 02:47:23 2025...
