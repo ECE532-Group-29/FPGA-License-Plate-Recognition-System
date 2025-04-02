@@ -1,1 +1,1 @@
-#FPGA-License-Plate-Recognition-System
+FPGA-License-Plate-Recognition-System
