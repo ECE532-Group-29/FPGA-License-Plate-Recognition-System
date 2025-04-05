@@ -28,77 +28,77 @@ The CNN predicts the top three possible characters, and the results are displaye
 │   src_structure.txt   
 │   
 ├───constrs_1  
-│   └───imports  
-│       └───OV7670-camera-main  
-│               Nexys-A7-100T-Master.xdc  
+│&emsp;&emsp;&emsp;   └───imports  
+│&emsp;&emsp;&emsp;       └───OV7670-camera-main  
+│&emsp;&emsp;&emsp;               Nexys-A7-100T-Master.xdc  
 │                 
 ├───sim_1  
-│   ├───imports  
-│   │   └───cam_0  
-│   │           tb_top_behav.wcfg  
-│   │                 
-│   └───new  
-│           test_7_seg.v  
+│&emsp;&emsp;&emsp;   ├───imports  
+│&emsp;&emsp;&emsp;   │   └───cam_0  
+│&emsp;&emsp;&emsp;   │           tb_top_behav.wcfg  
+│&emsp;&emsp;&emsp;   │                 
+│&emsp;&emsp;&emsp;   └───new  
+│&emsp;&emsp;&emsp;           test_7_seg.v  
 │           
 └───sources_1  
-    │   verilog_structure.txt  
+    │&emsp;&emsp;&emsp;verilog_structure.txt  
     │   
     ├───imports  
-    │   ├───cam_0  
-    │   │       archive_project_summary.txt  
-    │   │       
-    │   └───rtl  
-    │           cam_capture.v  
-    │           cam_config.v  
-    │           cam_init.v  
-    │           cam_rom.v  
-    │           cam_top.v  
-    │           debounce.v  
-    │           mem_bram.v  
-    │           sccb_master.v  
-    │           top.v  
-    │           vga_driver.v  
-    │           vga_top.v  
+    │&emsp;&emsp;&emsp;   ├───cam_0  
+    │&emsp;&emsp;&emsp;   │       archive_project_summary.txt  
+    │&emsp;&emsp;&emsp;   │       
+    │&emsp;&emsp;&emsp;   └───rtl  
+    │&emsp;&emsp;&emsp;           cam_capture.v  
+    │&emsp;&emsp;&emsp;           cam_config.v  
+    │&emsp;&emsp;&emsp;           cam_init.v  
+    │&emsp;&emsp;&emsp;           cam_rom.v  
+    │&emsp;&emsp;&emsp;           cam_top.v  
+    │&emsp;&emsp;&emsp;           debounce.v  
+    │&emsp;&emsp;&emsp;           mem_bram.v  
+    │&emsp;&emsp;&emsp;           sccb_master.v  
+    │&emsp;&emsp;&emsp;           top.v  
+    │&emsp;&emsp;&emsp;           vga_driver.v  
+    │&emsp;&emsp;&emsp;           vga_top.v  
     │           
     ├───ip  
-    │   └───clk_wiz_0  
-    │       │   clk_wiz_0.dcp  
-    │       │   clk_wiz_0.v  
-    │       │   clk_wiz_0.veo  
-    │       │   clk_wiz_0.xci  
-    │       │   clk_wiz_0.xdc  
-    │       │   clk_wiz_0.xml  
-    │       │   clk_wiz_0_board.xdc  
-    │       │   clk_wiz_0_clk_wiz.v  
-    │       │   clk_wiz_0_ooc.xdc  
-    │       │   clk_wiz_0_sim_netlist.v  
-    │       │   clk_wiz_0_sim_netlist.vhdl  
-    │       │   clk_wiz_0_stub.v  
-    │       │   clk_wiz_0_stub.vhdl  
-    │       │   mmcm_pll_drp_func_7s_mmcm.vh  
-    │       │   mmcm_pll_drp_func_7s_pll.vh  
-    │       │   mmcm_pll_drp_func_us_mmcm.vh  
-    │       │   mmcm_pll_drp_func_us_pll.vh  
-    │       │   mmcm_pll_drp_func_us_plus_mmcm.vh  
-    │       │   mmcm_pll_drp_func_us_plus_pll.vh  
-    │       │   
-    │       └───doc  
-    │               clk_wiz_v6_0_changelog.txt  
+    │   &emsp;└───clk_wiz_0  
+    │      &emsp; │   clk_wiz_0.dcp  
+    │     &emsp;  │   clk_wiz_0.v  
+    │      &emsp; │   clk_wiz_0.veo  
+    │      &emsp; │   clk_wiz_0.xci  
+    │     &emsp;  │   clk_wiz_0.xdc  
+    │      &emsp; │   clk_wiz_0.xml  
+    │      &emsp; │   clk_wiz_0_board.xdc  
+    │      &emsp; │   clk_wiz_0_clk_wiz.v  
+    │     &emsp;  │   clk_wiz_0_ooc.xdc  
+    │   &emsp;    │   clk_wiz_0_sim_netlist.v  
+    │     &emsp;  │   clk_wiz_0_sim_netlist.vhdl  
+    │     &emsp;  │   clk_wiz_0_stub.v  
+    │   &emsp;    │   clk_wiz_0_stub.vhdl  
+    │    &emsp;   │   mmcm_pll_drp_func_7s_mmcm.vh  
+    │    &emsp;   │   mmcm_pll_drp_func_7s_pll.vh  
+    │    &emsp;   │   mmcm_pll_drp_func_us_mmcm.vh  
+    │    &emsp;   │   mmcm_pll_drp_func_us_pll.vh  
+    │    &emsp;   │   mmcm_pll_drp_func_us_plus_mmcm.vh  
+    │   &emsp;    │   mmcm_pll_drp_func_us_plus_pll.vh  
+    │   &emsp;    │   
+    │  &emsp;     └───doc  
+    │               &emsp;&emsp;&emsp;clk_wiz_v6_0_changelog.txt  
     │               
     └───new  
-            cnn_interface.v  
-            CNN_pixel.sv  
-            custom_clk_gen.v  
-            data_flow_loop_control.v  
-            dense_layer_1.sv  
-            dense_layer_2.sv  
-            grayscale.v  
-            maxpooling.v  
-            mem_control.v  
-            padding_zeros.v  
-            rescaling.v  
-            segmentation.v  
-            seven_seg_display_interface.v  
-            size_trim.v  
+&emsp;&emsp;&emsp;            cnn_interface.v  
+&emsp;&emsp;&emsp;                       CNN_pixel.sv  
+&emsp;&emsp;&emsp;            custom_clk_gen.v  
+&emsp;&emsp;&emsp;            data_flow_loop_control.v  
+&emsp;&emsp;&emsp;            dense_layer_1.sv  
+&emsp;&emsp;&emsp;            dense_layer_2.sv  
+&emsp;&emsp;&emsp;            grayscale.v  
+&emsp;&emsp;&emsp;            maxpooling.v  
+&emsp;&emsp;&emsp;            mem_control.v  
+&emsp;&emsp;&emsp;            padding_zeros.v  
+&emsp;&emsp;&emsp;            rescaling.v  
+&emsp;&emsp;&emsp;            segmentation.v  
+&emsp;&emsp;&emsp;            seven_seg_display_interface.v  
+&emsp;&emsp;&emsp;            size_trim.v  
 
 The above tree shows the locations of our project's primary files and folders.  Only the important and custom folders are discussed here.
