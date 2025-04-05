@@ -5,3 +5,10 @@ License plate recognition (LPR) is a crucial technology in modern automated vehi
 
 
 for more infomation, please read our final project report under document
+## Block Diagram
+
+![App Screenshot](https://github.com/ECE532-Group-29/FPGA-License-Plate-Recognition-System/blob/main/documentation/image/data_flow.png)
+
+## Data Flow Diagram
+
+![App Screenshot](https://github.com/ECE532-Group-29/FPGA-License-Plate-Recognition-System/blob/main/documentation/image/data_flow.png)
